@@ -20,6 +20,7 @@ public class BITMiniCC {
 			return;
 		}
 		String file = args[0];
+        // 检测代码是否是以 .c 结尾的 C 语言代码
 		if(file.indexOf(".c") < 0){
 			System.out.println("Incorrect input file:" + file);
 			return;

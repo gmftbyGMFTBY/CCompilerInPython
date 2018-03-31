@@ -101,10 +101,12 @@ public class MiniCCompiler {
 		if(pp.skip.equals("false")){
 			if(pp.type.equals("java")){
 				if(!pp.path.equals("")){
+                    // 运行自己的 java 代码
 					Class<?> c = Class.forName(pp.path);
 					Method method = c.getMethod("run", String.class, String.class);
 					method.invoke(c.newInstance(), cFile, ppOutFile);
 				}else{
+                    // 运行默认的 java 代码
 					MiniCCPreProcessor prep = new MiniCCPreProcessor();
 					prep.run(cFile, ppOutFile);
 				}
