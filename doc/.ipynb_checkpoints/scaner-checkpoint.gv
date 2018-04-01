@@ -1,0 +1,136 @@
+digraph finit_state_machine {
+    rankdir=LR;
+    size="50,50";
+    
+    // the start node
+    node [shape = point]; start;
+    
+    // the number and the string node
+    node [shape = circle, label = "0", fontsize = 10]; 0;
+    node [shape = doublecircle, label = "1", fontsize = 10]; 1;
+    node [shape = circle, label = "2", fontsize = 10]; 2;
+    node [shape = doublecircle, label = "3", fontsize = 10]; 3;
+    node [shape = circle, label = "4", fontsize = 10]; 4;
+    node [shape = circle, label = "5", fontsize = 10]; 5;
+    node [shape = doublecircle, label = "6", fontsize = 10]; 6;
+    
+    node [shape = circle, label = "7", fontsize = 10]; 7;
+    node [shape = doublecircle, label = "8", fontsize = 10]; 8;
+    
+    node [shape = circle, label = "9", fontsize = 10]; 9;
+    node [shape = doublecircle, label = "10", fontsize = 10]; 10;
+    
+    // the separate character
+    node [shape = doublecircle, label = "11", fontsize = 10]; 11;       // ,
+    node [shape = doublecircle, label = "12", fontsize = 10]; 12;       // ;
+    node [shape = doublecircle, label = "13", fontsize = 10]; 13;       // white_space
+    node [shape = doublecircle, label = "14", fontsize = 10]; 14;       // :
+    node [shape = doublecircle, label = "15", fontsize = 10]; 15;       // .
+    node [shape = doublecircle, label = "16", fontsize = 10]; 16;       // (
+    node [shape = doublecircle, label = "17", fontsize = 10]; 17;       // )
+    node [shape = doublecircle, label = "18", fontsize = 10]; 18;       // [
+    node [shape = doublecircle, label = "19", fontsize = 10]; 19;       // ]
+    node [shape = doublecircle, label = "20", fontsize = 10]; 20;       // {
+    node [shape = doublecircle, label = "21", fontsize = 10]; 21;       // }
+    
+    /* the operator characer
+    // (*, &, -, +) need to be foucused on
+    node [shape = doublecircle, label = "22", fontsize = 10]; 22;       // +, ++, +=
+    node [shape = doublecircle, label = "23", fontsize = 10]; 23;       // +
+    node [shape = doublecircle, label = "24", fontsize = 10]; 24;       // ++
+    node [shape = doublecircle, label = "25", fontsize = 10]; 25;       // +=
+    
+    node [shape = doublecircle, label = "26", fontsize = 10]; 26;       // -, --, -=
+    node [shape = doublecircle, label = "27", fontsize = 10]; 27;       // -
+    node [shape = doublecircle, label = "28", fontsize = 10]; 28;       // --
+    node [shape = doublecircle, label = "29", fontsize = 10]; 29;       // -=
+    
+    node [shape = doublecircle, label = "30", fontsize = 10]; 30;       // *, *=
+    node [shape = doublecircle, label = "31", fontsize = 10]; 31;       // *
+    node [shape = doublecircle, label = "32", fontsize = 10]; 32;       // *=
+    
+    node [shape = doublecircle, label = "33", fontsize = 10]; 33;       // /, /=
+    node [shape = doublecircle, label = "34", fontsize = 10]; 34;       // /
+    node [shape = doublecircle, label = "35", fontsize = 10]; 35;       // /=
+    
+    node [shape = doublecircle, label = "36", fontsize = 10]; 36;       // %, %=
+    node [shape = doublecircle, label = "37", fontsize = 10]; 37;       // %
+    node [shape = doublecircle, label = "38", fontsize = 10]; 38;       // %=
+    
+    node [shape = doublecircle, label = "39", fontsize = 10]; 39;       // =, ==
+    node [shape = doublecircle, label = "40", fontsize = 10]; 40;       // =
+    node [shape = doublecircle, label = "41", fontsize = 10]; 41;       // ==
+    
+    node [shape = doublecircle, label = "42", fontsize = 10]; 42;       // !, !=
+    node [shape = doublecircle, label = "43", fontsize = 10]; 43;       // !
+    node [shape = doublecircle, label = "44", fontsize = 10]; 44;       // !=
+    
+    node [shape = doublecircle, label = "45", fontsize = 10]; 45;       // <, <=, <<
+    node [shape = doublecircle, label = "46", fontsize = 10]; 46;       // <
+    node [shape = doublecircle, label = "47", fontsize = 10]; 47;       // <=
+    node [shape = doublecircle, label = "48", fontsize = 10]; 48;       // <<
+    
+    node [shape = doublecircle, label = "49", fontsize = 10]; 49;       // >, >=, >>
+    node [shape = doublecircle, label = "50", fontsize = 10]; 50;       // >
+    node [shape = doublecircle, label = "51", fontsize = 10]; 51;       // >=
+    node [shape = doublecircle, label = "52", fontsize = 10]; 52;       // >>
+    
+    node [shape = doublecircle, label = "53", fontsize = 10]; 53;       // ~
+    
+    node [shape = doublecircle, label = "54", fontsize = 10]; 54;       // &, &&, &=
+    node [shape = doublecircle, label = "55", fontsize = 10]; 55;       // &
+    node [shape = doublecircle, label = "56", fontsize = 10]; 56;       // &&
+    node [shape = doublecircle, label = "57", fontsize = 10]; 58;       // &=
+    
+    node [shape = doublecircle, label = "59", fontsize = 10]; 59;       // |, ||, |=
+    node [shape = doublecircle, label = "60", fontsize = 10]; 60;       // |
+    node [shape = doublecircle, label = "61", fontsize = 10]; 61;       // ||
+    node [shape = doublecircle, label = "62", fontsize = 10]; 62;       // |=
+    
+    */
+    
+    // name node
+    node [shape = circle, label = "63", fontsize = 10]; 63;             
+    node [shape = circle, label = "64", fontsize = 10]; 64;             //
+    node [shape = doublecircle, label = "65", fontsize = 10]; 65;       // 
+    
+    // name edge, need to check the saver name in C
+    0       ->      63      [label="character,_"];
+    63      ->      63      [label="character,digit,_"];
+    63      ->      64      [label="other"];
+    
+    
+    // the number and the string edge
+    start   ->      0;
+    0       ->      1       [label="digit"];
+    0       ->      7       [label="'"];
+    0       ->      9       [label="\""];
+    1       ->      1       [label="digit"];
+    1       ->      2       [label="."];
+    1       ->      4       [label="e/E"];
+    2       ->      3       [label="digit"];
+    3       ->      3       [label="digit"];
+    3       ->      4       [label="e/E"];
+    4       ->      6       [label="digit"];
+    4       ->      5       [label="+/-"];
+    5       ->      6       [label="digit"];
+    6       ->      6       [label="digit"];
+    7       ->      7       [label="not '"];
+    7       ->      8       [label="'"];
+    9       ->      9       [label="not \""];
+    9       ->      10      [label="\""];
+    
+    // the separate character edge
+    0       ->      11      [label=","];
+    0       ->      12      [label=";"];
+    0       ->      13      [label ="white_space"];
+    0       ->      14      [label=":"];
+    0       ->      15      [label="."];
+    0       ->      16      [label="("];
+    0       ->      17      [label=")"];
+    0       ->      18      [label="["];
+    0       ->      19      [label="]"];
+    0       ->      20      [label="{"];
+    0       ->      21      [label="}"];
+    
+}
