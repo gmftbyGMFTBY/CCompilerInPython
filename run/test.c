@@ -7,7 +7,8 @@ int main(int argc, char* argv[]){
     int b = - 5;
 	a = NUM * 5 + 6 - 7; //here is a macro
 
-    a = 019.1;
+    a+++b;
+    a += 017;
 
 	return 0;
 }
