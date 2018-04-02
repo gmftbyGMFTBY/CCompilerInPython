@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+'''
+preprocess need to change the 0x77f; into 0x77f ;
+'''
+
 import sys
 import re
 import xml.etree.ElementTree as ET
@@ -137,12 +141,12 @@ def init_table():
 
     # state 10
     table           = defaultdict(int)
-    table['^[0-9a-zA-z]$'] = 11
+    table['^[0-9a-fA-F]$'] = 11
     main_table[10]  = table
 
     # state 11
     table           = defaultdict(int)
-    table['^[0-9a-zA-Z]$'] = 11
+    table['^[0-9a-fA-F]$'] = 11
     table['^[\s+\-*/%&|?;,]$'] = 7
     main_table[11]  = table
 
@@ -367,6 +371,7 @@ def run(filename, main_table, keyword):
 
     # counter
     count = 0
+    collection = []
 
     with open(filename, 'r') as f:
         data   = f.read()
@@ -406,12 +411,20 @@ def run(filename, main_table, keyword):
                 if res[0].strip():
                     count += 1
                     print(count, '\t', res[0], '\t', res[1])
+                    # add the token into the collection
+                    collection.append(res)
                 state_register = 0
                 char_register  = None
                 string_register = ''
                 begin = end
+    return collection
+
+def write_file(path, tokens):
+    # write the tokens into the file
+    print(tokens)
 
 if __name__ == "__main__":
     main_table = init_table()
     # sys/argv[1]
-    run("../../test.pp.c", main_table, keyword)
+    collection = run('../../test.pp.c', main_table, keyword)
+    write_file('./test.token.xml', collection)

@@ -10,5 +10,7 @@ int main(int argc, char* argv[]){
     a+++b;
     a += 017;
 
+    char* p = "lantian is a huge 'asshole\"\n' for everyone!\n";
+
 	return 0;
 }

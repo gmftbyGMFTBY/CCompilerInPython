@@ -304,37 +304,9 @@
     </token>
     <token>
       <number>44</number>
-      <value>return</value>
-      <type>keyword</type>
-      <line>8</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>45</number>
-      <value>0</value>
-      <type>GjG</type>
-      <line>8</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>46</number>
-      <value>;</value>
-      <type>separator</type>
-      <line>8</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>47</number>
-      <value>}</value>
-      <type>separator</type>
-      <line>9</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>48</number>
       <value>#</value>
       <type>#</type>
-      <line>10</line>
+      <line>8</line>
       <valid>true</valid>
     </token>
   </tokens>

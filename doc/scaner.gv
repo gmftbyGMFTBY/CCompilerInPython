@@ -117,8 +117,8 @@ digraph finit_state_machine {
     9       ->      9       [label="0~7"];
     9       ->      1       [label="8,9"];
     9       ->      7       [label="other_1"]
-    10      ->      11      [label="0~9A~Za~z"];
-    11      ->      11      [label="0~0A~Za~z"];
+    10      ->      11      [label="0~9A~Fa~f"];
+    11      ->      11      [label="0~9A~Fa~f"];
     11      ->      7       [label="other_1"];
 
     0       ->      12      [label="s'"];
