@@ -83,6 +83,11 @@ digraph finit_state_machine {
     node [shape = doublecircle, label = "439", fontsize = 10]; 439;       // |=
 
     node [shape = doublecircle, label = "440", fontsize = 10]; 440;       // .
+    node [shape = doublecircle, label = "441", fontsize = 10]; 441;       // ?
+
+    node [shape = doublecircle, label = "442", fontsize = 10]; 442;       // ^, ^=
+    node [shape = doublecircle, label = "443", fontsize = 10]; 443;       // ^
+    node [shape = doublecircle, label = "444", fontsize = 10]; 444;       // ^=
     
     */
     
@@ -116,9 +121,11 @@ digraph finit_state_machine {
     8       ->      9       [label="0~7"];
     8       ->      10      [label="xX"];
     8       ->      7       [label="other_1"];
+    8       ->      2       [label="."]
     9       ->      9       [label="0~7"];
     9       ->      1       [label="8,9"];
-    9       ->      7       [label="other_1"]
+    9       ->      7       [label="other_1"];
+    9       ->      2       [label="."];
     10      ->      11      [label="0~9A~Fa~f"];
     11      ->      11      [label="0~9A~Fa~f"];
     11      ->      7       [label="other_1"];

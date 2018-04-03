@@ -74,7 +74,7 @@ def init_table():
     table[r'^\'$']  = 12
     table[r'^"$']   = 15
     table['^[a-zA-Z_]$'] = 600
-    table[r'^[,;\(\)\[\]\{\}\s#]$'] = 200
+    table[r'^[,;\(\)\[\]\{\}\s#:]$'] = 200
     table['^[+]$']  = 400
     table['^[-]$']  = 404
     table['^[*]$']  = 408
@@ -88,26 +88,28 @@ def init_table():
     table['^[&]$']  = 432
     table['^[|]$']  = 436
     table['^[\.]$'] = 440
+    table['^[\?]$'] = 441
+    table['^[\^]$'] = 442
     main_table[0]   = table
 
     # ----------- const (number / string) ----------
     # state 1
     table           = defaultdict(int)
     table['^[0-9]$']= 1
-    table[r'^[\.]$'] = 2
+    table[r'^[\.]$']= 2
     table['^[eE]$'] = 4
-    table['^[\s+\-*/%&|?;,]$'] = 7
+    table['^[\s+\-*/%&|?;,:\)\]\}\^]$'] = 7
     main_table[1]   = table
 
     # state 2
     table           = defaultdict(int)
     table['^[0-9]$']= 3
-    main_table[2]   = 3
+    main_table[2]   = table
 
     # state 3
     table           = defaultdict(int)
     table['^[0-9]$']= 3
-    table['^[\s+\-*/%&|?;,]$'] = 7
+    table['^[\s+\-*/%&|?;,:\)\]\}\^]$'] = 7
     table['^[eE]$'] = 4
     main_table[3]   = table
 
@@ -125,7 +127,7 @@ def init_table():
     # state 6
     table           = defaultdict(int)
     table['^[0-9]$']= 6
-    table['^[\s+\-*/%&|?;,]$'] = 7
+    table['^[\s+\-*/%&|?;,:\)\]\}\^]$'] = 7
     main_table[6]   = table
 
     # state 7
@@ -136,14 +138,16 @@ def init_table():
     table['^[8-9]$']= 1
     table['^[0-7]$']= 9
     table['^[xX]$'] = 10
-    table['^[\s+\-*/%&|?;,]$'] = 7
+    table['^[\s+\-*/%&|?;,:\)\]\}\^]$'] = 7
+    table['^[\.]$'] = 2
     main_table[8]   = table
 
     # state 9
     table           = defaultdict(int)
     table['^[0-7]$']= 9
     table['^[8-9]$']= 1
-    table['^[\s+\-*/%&|?;,]$'] = 7
+    table['^[\s+\-*/%&|?;,:\)\]\}\^]$'] = 7
+    table['^[\.]$'] = 2
     main_table[9]   = table
 
     # state 10
@@ -154,7 +158,8 @@ def init_table():
     # state 11
     table           = defaultdict(int)
     table['^[0-9a-fA-F]$'] = 11
-    table['^[\s+\-*/%&|?;,]$'] = 7
+    # careful of the case a[23], function(23)
+    table['^[\s+\-*/%&|?;,:\)\]\}\^]$'] = 7
     main_table[11]  = table
 
     # state 12
@@ -195,7 +200,8 @@ def init_table():
     # state 600
     table           = defaultdict(int)
     table['^[0-9a-zA-Z_]$'] = 600
-    table['^[\s+\-*/%&|?;,.]$'] = 601
+    # carefule of the switch-case struct 
+    table['^[\s+\-><!*/%&|?;,.=\(\)\[\]:\{\^]$'] = 601
     main_table[600] = table
 
     # state 601
@@ -361,6 +367,21 @@ def init_table():
     # state 440
     main_table[440] = [solve_operator, None]
 
+    # state 441
+    main_table[441] = [solve_operator, None]
+    
+    # state 442
+    table           = defaultdict(int)
+    table['^[^=]$'] = 443
+    table['^[=]$']  = 444
+    main_table[442] = table;
+
+    # state 443
+    main_table[443] = [solve_operator, None]
+
+    # state 444
+    main_table[444] = [solve_operator, None]
+
     # state -1, wrong case handle
     main_table[-1]  = [solve_wrong, None]
 
@@ -504,5 +525,6 @@ def write_file(path, collections):
 if __name__ == "__main__":
     main_table = init_table()
     # sys/argv[1]
-    collection = run('../../test.pp.c', main_table, keyword)
+    # test the test_file which I made
+    collection = run('./test_r.pp.c', main_table, keyword)
     write_file('./test.token.xml', collection)

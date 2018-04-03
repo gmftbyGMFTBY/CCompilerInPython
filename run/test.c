@@ -12,6 +12,11 @@ int main(int argc, char* argv[]){
     ppp.cc;
 
     2ppp;
-
+    switch(a) {
+        case 1: a+1;break;
+        case 2: b-1;break;
+        default:c+=1;break;
+    }
+    a*&b;
 	return 0;
 }
