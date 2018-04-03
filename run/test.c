@@ -18,6 +18,6 @@ int main(int argc, char* argv[]){
         default:c+=1;break;
     }
     a*&b;
-    a=0x-2;
+    a=0xza;
 	return 0;
 }

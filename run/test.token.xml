@@ -640,62 +640,48 @@
     </token>
     <token>
       <number>92</number>
-      <value>x</value>
+      <value>xza</value>
       <type>GiG</type>
       <line>16</line>
       <valid>true</valid>
     </token>
     <token>
       <number>93</number>
-      <value>-</value>
-      <type>operator</type>
-      <line>16</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>94</number>
-      <value>2</value>
-      <type>GjG</type>
-      <line>16</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>95</number>
       <value>;</value>
       <type>separator</type>
       <line>16</line>
       <valid>true</valid>
     </token>
     <token>
-      <number>96</number>
+      <number>94</number>
       <value>return</value>
       <type>keyword</type>
       <line>17</line>
       <valid>true</valid>
     </token>
     <token>
-      <number>97</number>
+      <number>95</number>
       <value>0</value>
       <type>GjG</type>
       <line>17</line>
       <valid>true</valid>
     </token>
     <token>
-      <number>98</number>
+      <number>96</number>
       <value>;</value>
       <type>separator</type>
       <line>17</line>
       <valid>true</valid>
     </token>
     <token>
-      <number>99</number>
+      <number>97</number>
       <value>}</value>
       <type>separator</type>
       <line>18</line>
       <valid>true</valid>
     </token>
     <token>
-      <number>100</number>
+      <number>98</number>
       <value>#</value>
       <type>#</type>
       <line>19</line>

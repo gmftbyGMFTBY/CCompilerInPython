@@ -14,10 +14,10 @@ import pprint
     
 # keyword in C
 keyword = ['auto', 'break', 'case', 'char', 'const', 'continue', 'default',
-            'do', 'double', 'else', 'enum', 'extern', 'float', 'for', 'goto',
-            'if', 'int', 'long', 'register', 'return', 'short', 'signed', 'sizeof',
-            'static', 'struct', 'switch', 'typedef', 'union', 'unsigned', 'void',
-            'volatile', 'while']
+           'do', 'double', 'else', 'enum', 'extern', 'float', 'for', 'goto',
+           'if', 'int', 'long', 'register', 'return', 'short', 'signed', 'sizeof',
+           'static', 'struct', 'switch', 'typedef', 'union', 'unsigned', 'void',
+           'volatile', 'while']
 
 # the solve function try to decide whether the token is valid
 # such as 018 is a constant(number), but not valid
@@ -64,6 +64,10 @@ def solve_wrong(string, state, fix):
     # the wrong case handle function
     fix[0] = 2
     return [string, "WRONG", False]
+
+def solve_wrong2(string, state, fix):
+    fix[0] = 1
+    return [string, 'WRONG', False]
 
 def init_table():
     # this function try to create the defaultdict of the DFA 
@@ -392,6 +396,9 @@ def init_table():
     # state -1, wrong case handle
     main_table[-1]  = [solve_wrong, None]
 
+    # state -2, wrong case handle step back 1
+    main_table[-2]  = [solve_wrong2, None]
+
     return main_table
 
 def run(filename, main_table, keyword):
@@ -444,8 +451,14 @@ def run(filename, main_table, keyword):
                             "string -", string_register, "/ char -", char_register)
                     # Once find the wrong case, only need to untread one step
                     state_register = -1
-
             else:
+                # may be need to consider the operater into the check ?
+                check = re.compile('^[,;\(\)\[\]\{\}\s#:+\-*\%^&|=!]$')
+                if (state_register == -1 or state_register == -2) \
+                        and len(check.findall(char_register)) == 0:
+                    state_register = -2
+                    continue
+
                 # end process
                 # only in this case, change the begin
                 # back to one character age
@@ -537,3 +550,10 @@ if __name__ == "__main__":
     print("-" * 50)
     collection = run('./test_w.pp.c', main_table, keyword)
     write_file('./test.token.xml', collection)
+
+    '''
+    # using
+    main_table = init_table()
+    collection = run(sys.argv[1], main_table, keyword)
+    write_file(sys.argv[2], collection)
+    '''
