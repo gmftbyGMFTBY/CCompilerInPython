@@ -4,7 +4,9 @@ int main ( int argc , char * argv [ ] ) {
  int b = - 5 ; 
  a = 4 * 5 + 6 - 7 ; 
  a ++ + b ; 
- a += 017 ;
- char* p = "lantian is a huge 'asshole\"\n' for everyone!\n" ;
- return 0 ;
-}
+ a += 018 ; 
+ ppp.cc ; 
+ 2ppp ; 
+ a+b/2,a-1;
+ return 0 ; 
+ } 

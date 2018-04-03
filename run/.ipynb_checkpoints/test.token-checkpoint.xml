@@ -290,107 +290,23 @@
     </token>
     <token>
       <number>42</number>
-      <value>01</value>
+      <value>017</value>
       <type>GjG</type>
       <line>7</line>
       <valid>true</valid>
     </token>
     <token>
       <number>43</number>
-      <value>8</value>
-      <type>GjG</type>
+      <value>;</value>
+      <type>separator</type>
       <line>7</line>
       <valid>true</valid>
     </token>
     <token>
       <number>44</number>
-      <value>;</value>
-      <type>separator</type>
-      <line>7</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>45</number>
-      <value>ppp</value>
-      <type>GiG</type>
-      <line>8</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>46</number>
-      <value>.</value>
-      <type>operator</type>
-      <line>8</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>47</number>
-      <value>cc</value>
-      <type>GiG</type>
-      <line>8</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>48</number>
-      <value>;</value>
-      <type>separator</type>
-      <line>8</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>49</number>
-      <value>2</value>
-      <type>GjG</type>
-      <line>9</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>50</number>
-      <value>ppp</value>
-      <type>GiG</type>
-      <line>9</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>51</number>
-      <value>;</value>
-      <type>separator</type>
-      <line>9</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>52</number>
-      <value>return</value>
-      <type>keyword</type>
-      <line>10</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>53</number>
-      <value>0</value>
-      <type>GjG</type>
-      <line>10</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>54</number>
-      <value>;</value>
-      <type>separator</type>
-      <line>10</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>55</number>
-      <value>}</value>
-      <type>separator</type>
-      <line>11</line>
-      <valid>true</valid>
-    </token>
-    <token>
-      <number>56</number>
       <value>#</value>
       <type>#</type>
-      <line>12</line>
+      <line>8</line>
       <valid>true</valid>
     </token>
   </tokens>

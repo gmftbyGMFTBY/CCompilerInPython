@@ -8,9 +8,10 @@ int main(int argc, char* argv[]){
 	a = NUM * 5 + 6 - 7; //here is a macro
 
     a+++b;
-    a += 017;
+    a += 018;
+    ppp.cc;
 
-    char* p = "lantian is a huge 'asshole\"\n' for everyone!\n";
+    2ppp;
 
 	return 0;
 }

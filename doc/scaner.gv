@@ -25,7 +25,7 @@ digraph finit_state_machine {
     node [shape = doublecircle, label = "const_s", fontsize = 10]; 17
     
     // the separate character  200 ~ 300
-    // , ; white_space : . ( ) [ ] { } 
+    // , ; white_space : ( ) [ ] { } 
     node [shape = doublecircle, label = "separate", fontsize = 10]; 200;  // ,
     
     /* the operator characer 400 ~ 500
@@ -81,6 +81,8 @@ digraph finit_state_machine {
     node [shape = doublecircle, label = "437", fontsize = 10]; 437;       // |
     node [shape = doublecircle, label = "438", fontsize = 10]; 438;       // ||
     node [shape = doublecircle, label = "439", fontsize = 10]; 439;       // |=
+
+    node [shape = doublecircle, label = "440", fontsize = 10]; 440;       // .
     
     */
     

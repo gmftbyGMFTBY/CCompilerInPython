@@ -1,11 +1,9 @@
 #!/usr/bin/python
 
-'''
-preprocess need to change the 0x77f; into 0x77f ;
-'''
-
 import sys
 import re
+import os
+from lxml import etree
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 import pprint
@@ -16,11 +14,14 @@ keyword = ['auto', 'break', 'case', 'char', 'const', 'continue', 'default',
             'static', 'struct', 'switch', 'typedef', 'union', 'unsigned', 'void',
             'volatile', 'while']
 
+# the solve function try to decide whether the token is valid
+# such as 018 is a constant(number), but not valid
+
 def solve_separate(string, state, fix):
     # this function solve the separate
     # fix the offset
     fix[0] = 1
-    return [string, "separate"]
+    return [string, "separate", True]
 
 def solve_constant(string, state, fix):
     # solve the constant - string, number
@@ -30,8 +31,8 @@ def solve_constant(string, state, fix):
     if "'" in string or '"' in string:
         fix[0] = 1
     else:
-        fix[0] = 1
-    return [string, "constant"]
+        fix[0] = 2
+    return [string, "constant", True]
 
 def solve_name(string, state, fix):
     # this function solve the word: name or the keyword
@@ -41,8 +42,8 @@ def solve_name(string, state, fix):
     fix[0] = 2
     for i in keyword:
         if i in string:
-            return [i, "keyword"]
-    return [string, "name"]
+            return [i, "keyword", True]
+    return [string, "name", True]
 
 def solve_operator(string, state, fix):
     # solve the operator
@@ -50,7 +51,12 @@ def solve_operator(string, state, fix):
         fix[0] = 2
     else:
         fix[0] = 1
-    return [string, "operator"]
+    return [string, "operator", True]
+
+def solve_wrong(string, state, fix):
+    # the wrong case handle function
+    fix[0] = 2
+    return [string, "WRONG", False]
 
 def init_table():
     # this function try to create the defaultdict of the DFA 
@@ -68,7 +74,7 @@ def init_table():
     table[r'^\'$']  = 12
     table[r'^"$']   = 15
     table['^[a-zA-Z_]$'] = 600
-    table[r'^[,;.\(\)\[\]\{\}\s]$'] = 200
+    table[r'^[,;\(\)\[\]\{\}\s#]$'] = 200
     table['^[+]$']  = 400
     table['^[-]$']  = 404
     table['^[*]$']  = 408
@@ -81,6 +87,7 @@ def init_table():
     table['^[~]$']  = 431
     table['^[&]$']  = 432
     table['^[|]$']  = 436
+    table['^[\.]$'] = 440
     main_table[0]   = table
 
     # ----------- const (number / string) ----------
@@ -188,7 +195,7 @@ def init_table():
     # state 600
     table           = defaultdict(int)
     table['^[0-9a-zA-Z_]$'] = 600
-    table['^[\s+\-*/%&|?;,]$'] = 601
+    table['^[\s+\-*/%&|?;,.]$'] = 601
     main_table[600] = table
 
     # state 601
@@ -354,6 +361,9 @@ def init_table():
     # state 440
     main_table[440] = [solve_operator, None]
 
+    # state -1, wrong case handle
+    main_table[-1]  = [solve_wrong, None]
+
     return main_table
 
 def run(filename, main_table, keyword):
@@ -373,6 +383,17 @@ def run(filename, main_table, keyword):
     count = 0
     collection = []
 
+    # line counter
+    l_count = 0
+
+    # preprocess, get all lines
+    with open(filename, 'r') as f:
+        data = f.read()
+        ll = []
+        for index, i in enumerate(data):
+            if i == '\n':
+                ll.append(index)
+
     with open(filename, 'r') as f:
         data   = f.read()
         length = len(data)
@@ -390,9 +411,12 @@ def run(filename, main_table, keyword):
                         state_register   = main_table[state_register][i]
                         break
                 else:
-                    # wrong case
-                    print("Scaner find the wrong in the file,", \
-                            string_register, char_register)
+                    # Error wrong case
+                    print("Scaner find wrong:", \
+                            "string -", string_register, "/ char -", char_register)
+                    # Once find the wrong case, only need to untread one step
+                    state_register = -1
+
             else:
                 # end process
                 # only in this case, change the begin
@@ -407,21 +431,75 @@ def run(filename, main_table, keyword):
                 res[0] = string_register
 
                 end -= fix[0]
+                
+                # add the line msg
+                index = 0
+                for line_number, line_index in enumerate(ll):
+                    if end <= line_index:
+                        index = line_number + 1
+                        break
+                res.append(index)
 
                 if res[0].strip():
                     count += 1
                     print(count, '\t', res[0], '\t', res[1])
                     # add the token into the collection
                     collection.append(res)
+
                 state_register = 0
                 char_register  = None
                 string_register = ''
                 begin = end
+
     return collection
 
-def write_file(path, tokens):
+def write_file(path, collections):
     # write the tokens into the file
-    print(tokens)
+    root = ET.Element('project')
+
+    # fix the project name
+    filename = os.path.split(path)[1]
+    end = filename.index('.')
+    filename = filename[0:end + 1]
+    filename += 'c'
+
+    root.set('name', filename)
+
+    # tokens
+    tokens = ET.SubElement(root, 'tokens')
+
+    # add token into XML tree
+    for index, value in enumerate(collections):
+        token = ET.SubElement(tokens, 'token')
+        
+        number = ET.Element('number')
+        number.text = str(index + 1)
+        
+        val  = ET.Element('value')
+        val.text = value[0]
+
+        ty   = ET.Element('type')
+        ty.text  = value[1]
+
+        line = ET.Element('line')
+        line.text = str(value[3])
+
+        va   = ET.Element('valid')
+        va.text   = str(value[2])
+
+        token.append(number)
+        token.append(val)
+        token.append(ty)
+        token.append(line)
+        token.append(va)
+
+    tree = ET.ElementTree(root)
+    root = tree.getroot()
+    v = ET.tostring(root)
+    res = etree.tostring(etree.fromstring(v), pretty_print=True).decode()
+
+    with open(path, 'w') as f:
+        f.write(res)
 
 if __name__ == "__main__":
     main_table = init_table()
