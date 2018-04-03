@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+'''
+ready to add some fixing into the DFA, to create the WRONG case find ...
+'''
+
 import sys
 import re
 import os
@@ -8,6 +12,7 @@ import xml.etree.ElementTree as ET
 from collections import defaultdict
 import pprint
     
+# keyword in C
 keyword = ['auto', 'break', 'case', 'char', 'const', 'continue', 'default',
             'do', 'double', 'else', 'enum', 'extern', 'float', 'for', 'goto',
             'if', 'int', 'long', 'register', 'return', 'short', 'signed', 'sizeof',
@@ -32,6 +37,8 @@ def solve_constant(string, state, fix):
         fix[0] = 1
     else:
         fix[0] = 2
+        # the regrex string for check the wrong case of the number constant
+        # 088, 0x-2(put in the solve_wrong function) 
     return [string, "constant", True]
 
 def solve_name(string, state, fix):
@@ -47,7 +54,7 @@ def solve_name(string, state, fix):
 
 def solve_operator(string, state, fix):
     # solve the operator
-    if state in [401, 405, 409, 412, 415, 418, 421, 424, 428, 433, 437]:
+    if state in [401, 405, 409, 412, 415, 418, 421, 424, 428, 433, 437, 443]:
         fix[0] = 2
     else:
         fix[0] = 1
@@ -463,7 +470,7 @@ def run(filename, main_table, keyword):
 
                 if res[0].strip():
                     count += 1
-                    print(count, '\t', res[0], '\t', res[1])
+                    print(str(count) + '\t' + res[0] + '\t\t\t' + res[1])
                     # add the token into the collection
                     collection.append(res)
 
@@ -526,5 +533,7 @@ if __name__ == "__main__":
     main_table = init_table()
     # sys/argv[1]
     # test the test_file which I made
-    collection = run('./test_r.pp.c', main_table, keyword)
+    print("Number" + '\t' + "Key" + '\t\t\t' + "Value")
+    print("-" * 50)
+    collection = run('./test_w.pp.c', main_table, keyword)
     write_file('./test.token.xml', collection)

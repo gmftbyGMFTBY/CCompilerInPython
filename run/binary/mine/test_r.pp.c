@@ -33,17 +33,19 @@ int main(int argc, char* argv[])
     switch (a){
         case 1: a=1;break;
         case 2:b=1;break;
+        case 3 : b=222.2;break
         default:printf("something is here!\n");break;
     }
     c=a>b?a:b;
     c!=a;
     if(a!=23){
-        c=a;b%=3;
+        c=a;b%=3;a=018;
     }else{
        function(23); 
     }
     for(int i=1;i<10;i++){
         a=-2012.34E-301;
+        b=+2.13;
         printf(&unix["\021%six\012\0"],(unix)["have"]+"fun"-0x60);
     }
     while(a&&1){

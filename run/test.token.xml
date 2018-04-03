@@ -619,37 +619,86 @@
     </token>
     <token>
       <number>89</number>
-      <value>return</value>
-      <type>keyword</type>
+      <value>a</value>
+      <type>GiG</type>
       <line>16</line>
       <valid>true</valid>
     </token>
     <token>
       <number>90</number>
+      <value>=</value>
+      <type>operator</type>
+      <line>16</line>
+      <valid>true</valid>
+    </token>
+    <token>
+      <number>91</number>
       <value>0</value>
       <type>GjG</type>
       <line>16</line>
       <valid>true</valid>
     </token>
     <token>
-      <number>91</number>
+      <number>92</number>
+      <value>x</value>
+      <type>GiG</type>
+      <line>16</line>
+      <valid>true</valid>
+    </token>
+    <token>
+      <number>93</number>
+      <value>-</value>
+      <type>operator</type>
+      <line>16</line>
+      <valid>true</valid>
+    </token>
+    <token>
+      <number>94</number>
+      <value>2</value>
+      <type>GjG</type>
+      <line>16</line>
+      <valid>true</valid>
+    </token>
+    <token>
+      <number>95</number>
       <value>;</value>
       <type>separator</type>
       <line>16</line>
       <valid>true</valid>
     </token>
     <token>
-      <number>92</number>
-      <value>}</value>
+      <number>96</number>
+      <value>return</value>
+      <type>keyword</type>
+      <line>17</line>
+      <valid>true</valid>
+    </token>
+    <token>
+      <number>97</number>
+      <value>0</value>
+      <type>GjG</type>
+      <line>17</line>
+      <valid>true</valid>
+    </token>
+    <token>
+      <number>98</number>
+      <value>;</value>
       <type>separator</type>
       <line>17</line>
       <valid>true</valid>
     </token>
     <token>
-      <number>93</number>
+      <number>99</number>
+      <value>}</value>
+      <type>separator</type>
+      <line>18</line>
+      <valid>true</valid>
+    </token>
+    <token>
+      <number>100</number>
       <value>#</value>
       <type>#</type>
-      <line>18</line>
+      <line>19</line>
       <valid>true</valid>
     </token>
   </tokens>
