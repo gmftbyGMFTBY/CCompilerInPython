@@ -1,3 +1,4 @@
+#define NUM 2
 int main()
 {
     2ppp;
@@ -13,5 +14,17 @@ int main()
     if {
         scanf("%d", &(*a));
         a=0x-2;
+    for (int i=1,b=2; i < 100;i+=1){
+        _name@163*=(2-23:2);
+        a=0810;
+        char w = '\'';
+    }
+
+    2013.2e-301a;
+    2013.2eabc;
+    2013.2e+a;
+    a=20.+2;
+    name    =2;
+    p<=2;
     return 0;
 }

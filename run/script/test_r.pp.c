@@ -41,17 +41,21 @@ int main(int argc, char* argv[])
     if(a!=23){
         c=a;b%=3;a=018;
     }else{
-       function(23); 
+        &pp->c;
+        pp-/21.3;
+        function(23); 
     }
     for(int i=1;i<10;i++){
         a=-2012.34E-301;
         b=+2.13;
         printf(&unix["\021%six\012\0"],(unix)["have"]+"fun"-0x60);
+        c=(20.*3)/2;
     }
     while(a&&1){
         b=a^1;
         c^=2;
         a=0X278e;
+        a=2013.1E&1;
     }
     return 0;
 }

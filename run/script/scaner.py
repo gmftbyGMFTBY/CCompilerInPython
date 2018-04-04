@@ -1,9 +1,5 @@
 #!/usr/bin/python
 
-'''
-ready to add some fixing into the DFA, to create the WRONG case find ...
-'''
-
 import sys
 import re
 import os
@@ -84,7 +80,7 @@ def init_table():
     table[r'^\'$']  = 12
     table[r'^"$']   = 15
     table['^[a-zA-Z_]$'] = 600
-    table[r'^[,;\(\)\[\]\{\}\s#:]$'] = 200
+    table[r'^[,;\{\}\s#:]$'] = 200
     table['^[+]$']  = 400
     table['^[-]$']  = 404
     table['^[*]$']  = 408
@@ -96,10 +92,11 @@ def init_table():
     table['^[>]$']  = 427
     table['^[~]$']  = 431
     table['^[&]$']  = 432
-    table['^[|]$']  = 436
+    table['^[\|]$']  = 436
     table['^[\.]$'] = 440
     table['^[\?]$'] = 441
     table['^[\^]$'] = 442
+    table['^[\[\]\(\)]$'] = 446
     main_table[0]   = table
 
     # ----------- const (number / string) ----------
@@ -108,25 +105,28 @@ def init_table():
     table['^[0-9]$']= 1
     table[r'^[\.]$']= 2
     table['^[eE]$'] = 4
-    table['^[\s+\-*/%&|?;,:\)\]\}\^]$'] = 7
+    table['^[\s+\-*/%&\|?;,:\)\]\}\^<>!=]$'] = 7
     main_table[1]   = table
 
     # state 2
     table           = defaultdict(int)
     table['^[0-9]$']= 3
+    table['^[\s+\-*/%&\|?;,:\)\]\}\^<>!=]$'] = 7
     main_table[2]   = table
 
     # state 3
     table           = defaultdict(int)
     table['^[0-9]$']= 3
-    table['^[\s+\-*/%&|?;,:\)\]\}\^]$'] = 7
+    table['^[\s+\-*/%&\|?;,:\)\]\}\^<>!=]$'] = 7
     table['^[eE]$'] = 4
     main_table[3]   = table
 
-    # state 4
+    # state 4, the wrong case like: 2013.2e+a, Gcc cut into 2013.2e+a as a whole word
     table           = defaultdict(int)
     table['^[0-9]$']= 6
     table['^[+\-]$']= 5
+    # different because +/- turn the state into 5 state
+    table['^[\s*/%&\|?;,:\)\]\}\^<>!=]$'] = 7
     main_table[4]   = table
 
     # state 5
@@ -137,7 +137,7 @@ def init_table():
     # state 6
     table           = defaultdict(int)
     table['^[0-9]$']= 6
-    table['^[\s+\-*/%&|?;,:\)\]\}\^]$'] = 7
+    table['^[\s+\-*/%&\|?;,:\)\]\}\^<>!=]$'] = 7
     main_table[6]   = table
 
     # state 7
@@ -148,7 +148,7 @@ def init_table():
     table['^[8-9]$']= 1
     table['^[0-7]$']= 9
     table['^[xX]$'] = 10
-    table['^[\s+\-*/%&|?;,:\)\]\}\^]$'] = 7
+    table['^[\s+\-*/%&\|?;,:\)\]\}\^<>!=]$'] = 7
     table['^[\.]$'] = 2
     main_table[8]   = table
 
@@ -156,7 +156,7 @@ def init_table():
     table           = defaultdict(int)
     table['^[0-7]$']= 9
     table['^[8-9]$']= 1
-    table['^[\s+\-*/%&|?;,:\)\]\}\^]$'] = 7
+    table['^[\s+\-*/%&\|?;,:\)\]\}\^<>!=]$'] = 7
     table['^[\.]$'] = 2
     main_table[9]   = table
 
@@ -169,7 +169,7 @@ def init_table():
     table           = defaultdict(int)
     table['^[0-9a-fA-F]$'] = 11
     # careful of the case a[23], function(23)
-    table['^[\s+\-*/%&|?;,:\)\]\}\^]$'] = 7
+    table['^[\s+\-*/%&\|?;,:\)\]\}\^<>!=]$'] = 7
     main_table[11]  = table
 
     # state 12
@@ -236,9 +236,10 @@ def init_table():
     
     # state 404
     table           = defaultdict(int)
-    table['^[^-=]$']= 405
+    table['^[^-=>]$']= 405
     table['^[-]$']  = 406
     table['^[=]$']  = 407
+    table['^[>]$']  = 445
     main_table[404] = table
 
     # state 405
@@ -324,7 +325,7 @@ def init_table():
     main_table[425] = [solve_operator, None]
 
     # state 426
-    main_table[403] = [solve_operator, None]
+    main_table[426] = [solve_operator, None]
     
     # state 427
     table           = defaultdict(int)
@@ -363,10 +364,13 @@ def init_table():
     
     # state 436
     table           = defaultdict(int)
-    table['^[^|=]$']= 437
-    table['^[|]$']  = 438
+    table['^[^\|=]$']= 437
+    table['^[\|]$']  = 438
     table['^[=]$']  = 439
     main_table[436] = table
+
+    # state 437
+    main_table[437] = [solve_operator, None]
 
     # state 438
     main_table[438] = [solve_operator, None]
@@ -391,6 +395,12 @@ def init_table():
 
     # state 444
     main_table[444] = [solve_operator, None]
+
+    # state 445
+    main_table[445] = [solve_operator, None]
+
+    # state 446
+    main_table[446] = [solve_operator, None]
 
     # state -1, wrong case handle
     main_table[-1]  = [solve_wrong, None]
@@ -430,6 +440,8 @@ def run(filename, main_table, keyword):
 
     with open(filename, 'r') as f:
         data   = f.read()
+        # fix the file end without any separate
+        data += ' '
         length = len(data)
         while end < length:
             if state_register != -1:
@@ -454,7 +466,7 @@ def run(filename, main_table, keyword):
             else:
                 # these lines try to find and label the error like: 0xxyz
                 # but can not find the error like: 0x-2
-                check = re.compile('^[,;\(\)\[\]\{\}\s#:+\-*\%^&|=!]$')
+                check = re.compile('^[,;\(\)\[\]\{\}\s#:+\-*\%^&\|=!]$')
                 if (state_register == -1 or state_register == -2) \
                         and len(check.findall(char_register)) == 0:
                     state_register = -2
@@ -550,7 +562,7 @@ if __name__ == "__main__":
     # test the test_file which I made
     print("Number" + '\t' + "Key" + '\t\t\t' + "Value")
     print("-" * 50)
-    collection = run('./test_r.pp.c', main_table, keyword)
+    collection = run('./test_w.pp.c', main_table, keyword)
     write_file('./test.token.xml', collection)
 
     '''
