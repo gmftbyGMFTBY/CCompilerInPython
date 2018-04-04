@@ -47,7 +47,7 @@ def solve_name(string, state, fix):
     global keyword
     fix[0] = 2
     for i in keyword:
-        if i in string:
+        if i in string and len(i) == len(string) - 2:
             return [i, "keyword", True]
     return [string, "name", True]
 
@@ -562,7 +562,7 @@ if __name__ == "__main__":
     # test the test_file which I made
     print("Number" + '\t' + "Key" + '\t\t\t' + "Value")
     print("-" * 50)
-    collection = run('./test_w.pp.c', main_table, keyword)
+    collection = run('./test_r.pp.c', main_table, keyword)
     write_file('./test.token.xml', collection)
 
     '''

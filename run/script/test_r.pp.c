@@ -56,6 +56,7 @@ int main(int argc, char* argv[])
         c^=2;
         a=0X278e;
         a=2013.1E&1;
+        putchar(W);
     }
     return 0;
 }
