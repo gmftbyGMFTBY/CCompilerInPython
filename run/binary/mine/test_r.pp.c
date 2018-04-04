@@ -51,6 +51,7 @@ int main(int argc, char* argv[])
     while(a&&1){
         b=a^1;
         c^=2;
+        a=0X278e;
     }
     return 0;
 }

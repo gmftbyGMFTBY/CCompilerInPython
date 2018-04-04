@@ -39,6 +39,9 @@ def solve_constant(string, state, fix):
         fix[0] = 2
         # the regrex string for check the wrong case of the number constant
         # 088, 0x-2(put in the solve_wrong function) 
+        check1 = re.compile('^0[0-7]*[8-9]+[0-7]*')
+        if check1.findall(string) and '.' not in string:
+            return [string, "WRONG", False]
     return [string, "constant", True]
 
 def solve_name(string, state, fix):
@@ -62,7 +65,7 @@ def solve_operator(string, state, fix):
 
 def solve_wrong(string, state, fix):
     # the wrong case handle function
-    fix[0] = 2
+    fix[0] = 1
     return [string, "WRONG", False]
 
 def solve_wrong2(string, state, fix):
@@ -433,10 +436,11 @@ def run(filename, main_table, keyword):
         data   = f.read()
         length = len(data)
         while end < length:
-            char_register = data[end]
-            end += 1
-            # renew the string_register
-            string_register += char_register
+            if state_register != -1:
+                char_register = data[end]
+                end += 1
+                # renew the string_register
+                string_register += char_register
             if isinstance(main_table[state_register], defaultdict):
                 # the middle 
                 for i in main_table[state_register]:
@@ -452,7 +456,8 @@ def run(filename, main_table, keyword):
                     # Once find the wrong case, only need to untread one step
                     state_register = -1
             else:
-                # may be need to consider the operater into the check ?
+                # these lines try to find and label the error like: 0xxyz
+                # but can not find the error like: 0x-2
                 check = re.compile('^[,;\(\)\[\]\{\}\s#:+\-*\%^&|=!]$')
                 if (state_register == -1 or state_register == -2) \
                         and len(check.findall(char_register)) == 0:
