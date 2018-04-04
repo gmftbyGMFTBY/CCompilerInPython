@@ -68,10 +68,6 @@ def solve_wrong(string, state, fix):
     fix[0] = 1
     return [string, "WRONG", False]
 
-def solve_wrong2(string, state, fix):
-    fix[0] = 1
-    return [string, 'WRONG', False]
-
 def init_table():
     # this function try to create the defaultdict of the DFA 
     # and return to use
@@ -400,7 +396,7 @@ def init_table():
     main_table[-1]  = [solve_wrong, None]
 
     # state -2, wrong case handle step back 1
-    main_table[-2]  = [solve_wrong2, None]
+    main_table[-2]  = [solve_wrong, None]
 
     return main_table
 
@@ -545,6 +541,7 @@ def write_file(path, collections):
     res = etree.tostring(etree.fromstring(v), pretty_print=True).decode()
 
     with open(path, 'w') as f:
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         f.write(res)
 
 if __name__ == "__main__":
@@ -553,7 +550,7 @@ if __name__ == "__main__":
     # test the test_file which I made
     print("Number" + '\t' + "Key" + '\t\t\t' + "Value")
     print("-" * 50)
-    collection = run('./test_w.pp.c', main_table, keyword)
+    collection = run('./test_r.pp.c', main_table, keyword)
     write_file('./test.token.xml', collection)
 
     '''
