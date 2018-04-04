@@ -4,6 +4,7 @@ digraph finit_state_machine {
     
     // the number and the string node 1 ~ 100
     node [shape = circle, label = "0", fontsize = 10]; 0;
+    /*
     node [shape = circle, label = "1", fontsize = 10]; 1;
     node [shape = circle, label = "2", fontsize = 10]; 2;
     node [shape = circle, label = "3", fontsize = 10]; 3;
@@ -23,6 +24,7 @@ digraph finit_state_machine {
     node [shape = circle, label = "15", fontsize = 10]; 15;
     node [shape = circle, label = "16", fontsize = 10]; 16;
     node [shape = doublecircle, label = "const_s", fontsize = 10]; 17
+    */
     
     // the separate character  200 ~ 300
     // , ; white_space : ( ) [ ] { } 
@@ -35,7 +37,7 @@ digraph finit_state_machine {
     node [shape = doublecircle, label = "402", fontsize = 10]; 402;       // ++
     node [shape = doublecircle, label = "403", fontsize = 10]; 403;       // +=
     
-    node [shape = doublecircle, label = "404", fontsize = 10]; 404;       // -, --, -=
+    node [shape = doublecircle, label = "404", fontsize = 10]; 404;       // -, --, -=, ->
     node [shape = doublecircle, label = "405", fontsize = 10]; 405;       // -
     node [shape = doublecircle, label = "406", fontsize = 10]; 406;       // --
     node [shape = doublecircle, label = "407", fontsize = 10]; 407;       // -=
@@ -88,19 +90,23 @@ digraph finit_state_machine {
     node [shape = doublecircle, label = "442", fontsize = 10]; 442;       // ^, ^=
     node [shape = doublecircle, label = "443", fontsize = 10]; 443;       // ^
     node [shape = doublecircle, label = "444", fontsize = 10]; 444;       // ^=
+
+    node [shape = doublecircle, label = "445", fontsize = 10]; 445;       // ->
     
     */
-    
+
+    /*
     // name node 600 ~ 700
     node [shape = circle, label = "600", fontsize = 10]; 600;             
-    node [shape = doublecircle, label = "name", fontsize = 10]; 601;             //
+    node [shape = doublecircle, label = "identifier", fontsize = 10]; 601;             //
     
     // name edge, need to check the saver name in C
     0       ->      600      [label="character,_"];
     600     ->      600      [label="character,digit,_"];
-    600     ->      601      [label="other_2"];
-    
-    
+    600     ->      601      [label="other"];
+    */
+
+    /*
     // the number and the string edge
     0       ->      1       [label="not 0"];
     0       ->      8       [label="0"];
@@ -109,11 +115,13 @@ digraph finit_state_machine {
     1       ->      4       [label="e/E"];
     1       ->      7       [label="other_1"];
     2       ->      3       [label="digit"];
+    2       ->      7       [label="digit"];
     3       ->      3       [label="digit"];
     3       ->      7       [label="other_1"];
     3       ->      4       [label="e/E"];
     4       ->      6       [label="digit"];
     4       ->      5       [label="+/-"];
+    4       ->      7       [label="other_1"];
     5       ->      6       [label="digit"];
     6       ->      6       [label="digit"];
     6       ->      7       [label="other_1"];
@@ -140,8 +148,9 @@ digraph finit_state_machine {
     15      ->      15      [label="not\nots\""];
     15      ->      16      [label="\\"];
     15      ->      17      [label="s\""];
-    16      ->      15      [label="char"]      
-    
+    16      ->      15      [label="char"];
+    */
+
     // the separate character edge
     0       ->      200    [label=",;white_space:.()[]{}"];
 }
