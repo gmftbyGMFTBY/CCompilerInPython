@@ -31,6 +31,8 @@ def solve_constant(string, state, fix):
     # string - character - 0
     if "'" in string or '"' in string:
         fix[0] = 1
+        if len(string) == 3:
+            return [string, "WRONG", False]
     else:
         fix[0] = 2
         # the regrex string for check the wrong case of the number constant
@@ -38,6 +40,7 @@ def solve_constant(string, state, fix):
         check1 = re.compile('^0[0-7]*[8-9]+[0-7]*')
         if check1.findall(string) and '.' not in string:
             return [string, "WRONG", False]
+
     return [string, "constant", True]
 
 def solve_name(string, state, fix):
@@ -562,7 +565,7 @@ if __name__ == "__main__":
     # test the test_file which I made
     print("Number" + '\t' + "Key" + '\t\t\t' + "Value")
     print("-" * 50)
-    collection = run('./test_r.pp.c', main_table, keyword)
+    collection = run('./test_w.pp.c', main_table, keyword)
     write_file('./test.token.xml', collection)
 
     '''

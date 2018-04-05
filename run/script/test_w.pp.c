@@ -26,5 +26,6 @@ int main()
     a=20.+2;
     name    =2;
     p<=2;
+    char a='';
     return 0;
 }
