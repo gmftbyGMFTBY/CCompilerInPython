@@ -711,9 +711,9 @@
     <token>
       <number>102</number>
       <value>'\''</value>
-      <type>constant</type>
+      <type>WRONG</type>
       <line>20</line>
-      <valid>True</valid>
+      <valid>False</valid>
     </token>
     <token>
       <number>103</number>
@@ -878,7 +878,7 @@
     </token>
     <token>
       <number>126</number>
-      <value>a</value>
+      <value>b</value>
       <type>name</type>
       <line>29</line>
       <valid>True</valid>
@@ -892,7 +892,7 @@
     </token>
     <token>
       <number>128</number>
-      <value>''</value>
+      <value>'la'</value>
       <type>WRONG</type>
       <line>29</line>
       <valid>False</valid>
@@ -906,31 +906,39 @@
     </token>
     <token>
       <number>130</number>
-      <value>return</value>
+      <value>char</value>
       <type>keyword</type>
       <line>30</line>
       <valid>True</valid>
     </token>
     <token>
       <number>131</number>
-      <value>0</value>
-      <type>constant</type>
+      <value>*</value>
+      <type>operator</type>
       <line>30</line>
       <valid>True</valid>
     </token>
     <token>
       <number>132</number>
-      <value>;</value>
-      <type>separate</type>
+      <value>a</value>
+      <type>name</type>
       <line>30</line>
       <valid>True</valid>
     </token>
     <token>
       <number>133</number>
-      <value>}</value>
-      <type>separate</type>
-      <line>31</line>
+      <value>=</value>
+      <type>operator</type>
+      <line>30</line>
       <valid>True</valid>
+    </token>
+    <token>
+      <number>134</number>
+      <value>'ADSDASDAD 
+ </value>
+      <type>WRONG</type>
+      <line>30</line>
+      <valid>False</valid>
     </token>
   </tokens>
 </project>

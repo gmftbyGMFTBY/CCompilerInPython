@@ -31,7 +31,10 @@ def solve_constant(string, state, fix):
     # string - character - 0
     if "'" in string or '"' in string:
         fix[0] = 1
+        # wrong case handle
         if len(string) == 3:
+            return [string, "WRONG", False]
+        if "'" in string and len(string) > 4:
             return [string, "WRONG", False]
     else:
         fix[0] = 2
@@ -507,6 +510,13 @@ def run(filename, main_table, keyword):
                 char_register  = None
                 string_register = ''
                 begin = end
+                
+        if len(string_register) > 0:
+            # need to after process
+            # just for the case like the file end with "abcd and without "
+            count += 1
+            print(str(count) + '\t' + string_register + '\t\t\t' + "WRONG")
+            collection.append([string_register, "WRONG", False, len(ll)])
 
     return collection
 
