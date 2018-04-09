@@ -55,7 +55,7 @@ def solve_name(string, state, fix):
     for i in keyword:
         if i in string and len(i) == len(string) - 2:
             return [i, "keyword", True]
-    return [string, "name", True]
+    return [string, "identifier", True]
 
 def solve_operator(string, state, fix):
     # solve the operator
@@ -511,7 +511,8 @@ def run(filename, main_table, keyword):
                 string_register = ''
                 begin = end
                 
-        if len(string_register) > 0:
+        check = re.compile('^[\s]$')
+        if len(string_register) > 0 and not check.findall(string_register):
             # need to after process
             # just for the case like the file end with "abcd and without "
             count += 1
@@ -575,7 +576,7 @@ if __name__ == "__main__":
     # test the test_file which I made
     print("Number" + '\t' + "Key" + '\t\t\t' + "Value")
     print("-" * 50)
-    collection = run('./test_w.pp.c', main_table, keyword)
+    collection = run('./mix/misaka.c', main_table, keyword)
     write_file('./test.token.xml', collection)
 
     '''

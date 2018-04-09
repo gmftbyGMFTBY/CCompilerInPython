@@ -26,60 +26,64 @@ digraph finit_state_machine {
     node [shape = doublecircle, label = "const_s", fontsize = 10]; 17
     */
     
+    /*
     // the separate character  200 ~ 300
     // , ; white_space : ( ) [ ] { } 
     node [shape = doublecircle, label = "separate", fontsize = 10]; 200;  // ,
+    */
     
-    /* the operator characer 400 ~ 500
+    // the operator characer 400 ~ 500
     // ([point - operator *, &], -, +) need to be foucused on
-    node [shape = doublecircle, label = "400", fontsize = 10]; 400;       // +, ++, +=
+    /*
+    node [shape = circle, label = "400", fontsize = 10]; 400;       // +, ++, +=
     node [shape = doublecircle, label = "401", fontsize = 10]; 401;       // +
     node [shape = doublecircle, label = "402", fontsize = 10]; 402;       // ++
     node [shape = doublecircle, label = "403", fontsize = 10]; 403;       // +=
     
-    node [shape = doublecircle, label = "404", fontsize = 10]; 404;       // -, --, -=, ->
+    node [shape = circle, label = "404", fontsize = 10]; 404;       // -, --, -=, ->
     node [shape = doublecircle, label = "405", fontsize = 10]; 405;       // -
     node [shape = doublecircle, label = "406", fontsize = 10]; 406;       // --
     node [shape = doublecircle, label = "407", fontsize = 10]; 407;       // -=
     
-    node [shape = doublecircle, label = "408", fontsize = 10]; 408;       // *, *=
+    node [shape = circle, label = "408", fontsize = 10]; 408;       // *, *=
     node [shape = doublecircle, label = "409", fontsize = 10]; 409;       // *
     node [shape = doublecircle, label = "410", fontsize = 10]; 410;       // *=
     
-    node [shape = doublecircle, label = "411", fontsize = 10]; 411;       // /, /=
+    node [shape = circle, label = "411", fontsize = 10]; 411;       // /, /=
     node [shape = doublecircle, label = "412", fontsize = 10]; 412;       // /
     node [shape = doublecircle, label = "413", fontsize = 10]; 413;       // /=
     
-    node [shape = doublecircle, label = "414", fontsize = 10]; 414;       // %, %=
+    node [shape = circle, label = "414", fontsize = 10]; 414;       // %, %=
     node [shape = doublecircle, label = "415", fontsize = 10]; 415;       // %
     node [shape = doublecircle, label = "416", fontsize = 10]; 416;       // %=
+    */ 
     
-    node [shape = doublecircle, label = "417", fontsize = 10]; 417;       // =, ==
+    node [shape = circle, label = "417", fontsize = 10]; 417;       // =, ==
     node [shape = doublecircle, label = "418", fontsize = 10]; 418;       // =
     node [shape = doublecircle, label = "419", fontsize = 10]; 419;       // ==
     
-    node [shape = doublecircle, label = "420", fontsize = 10]; 420;       // !, !=
+    node [shape = circle, label = "420", fontsize = 10]; 420;       // !, !=
     node [shape = doublecircle, label = "421", fontsize = 10]; 421;       // !
     node [shape = doublecircle, label = "422", fontsize = 10]; 422;       // !=
     
-    node [shape = doublecircle, label = "423", fontsize = 10]; 423;       // <, <=, <<
+    node [shape = circle, label = "423", fontsize = 10]; 423;       // <, <=, <<
     node [shape = doublecircle, label = "424", fontsize = 10]; 424;       // <
     node [shape = doublecircle, label = "425", fontsize = 10]; 425;       // <=
     node [shape = doublecircle, label = "426", fontsize = 10]; 426;       // <<
     
-    node [shape = doublecircle, label = "427", fontsize = 10]; 427;       // >, >=, >>
+    node [shape = circle, label = "427", fontsize = 10]; 427;       // >, >=, >>
     node [shape = doublecircle, label = "428", fontsize = 10]; 428;       // >
     node [shape = doublecircle, label = "429", fontsize = 10]; 429;       // >=
     node [shape = doublecircle, label = "430", fontsize = 10]; 430;       // >>
     
-    node [shape = doublecircle, label = "431", fontsize = 10]; 431;       // ~
+    node [shape = circle, label = "431", fontsize = 10]; 431;       // ~
     
-    node [shape = doublecircle, label = "432", fontsize = 10]; 432;       // &, &&, &=
+    node [shape = circle, label = "432", fontsize = 10]; 432;       // &, &&, &=
     node [shape = doublecircle, label = "433", fontsize = 10]; 433;       // &
     node [shape = doublecircle, label = "434", fontsize = 10]; 434;       // &&
     node [shape = doublecircle, label = "435", fontsize = 10]; 435;       // &=
     
-    node [shape = doublecircle, label = "436", fontsize = 10]; 436;       // |, ||, |=
+    node [shape = circle, label = "436", fontsize = 10]; 436;       // |, ||, |=
     node [shape = doublecircle, label = "437", fontsize = 10]; 437;       // |
     node [shape = doublecircle, label = "438", fontsize = 10]; 438;       // ||
     node [shape = doublecircle, label = "439", fontsize = 10]; 439;       // |=
@@ -87,13 +91,61 @@ digraph finit_state_machine {
     node [shape = doublecircle, label = "440", fontsize = 10]; 440;       // .
     node [shape = doublecircle, label = "441", fontsize = 10]; 441;       // ?
 
-    node [shape = doublecircle, label = "442", fontsize = 10]; 442;       // ^, ^=
+    node [shape = circle, label = "442", fontsize = 10]; 442;       // ^, ^=
     node [shape = doublecircle, label = "443", fontsize = 10]; 443;       // ^
     node [shape = doublecircle, label = "444", fontsize = 10]; 444;       // ^=
 
-    node [shape = doublecircle, label = "445", fontsize = 10]; 445;       // ->
-    
+    // node [shape = doublecircle, label = "445", fontsize = 10]; 445;       // ->
+
+    // operator edge
+    /*
+    0       ->      400     [label="+"];
+    400     ->      401     [label="other"];
+    400     ->      402     [label="+"];
+    400     ->      403     [label="="];
+    0       ->      404     [label="-"];
+    404     ->      405     [label="other"];
+    404     ->      406     [label="-"];
+    404     ->      407     [label="="];
+    404     ->      445     [label=">"];
+    0       ->      408     [label="*"];
+    408     ->      409     [label="other"];
+    408     ->      410     [label="="];
+    0       ->      411     [label="/"];
+    411     ->      412     [label="other"];
+    411     ->      413     [label="="];
+    0       ->      414     [label="%"];
+    414     ->      415     [label="other"];
+    414     ->      416     [label="="];
     */
+    0       ->      417     [label="="];
+    417     ->      418     [label="other"];
+    417     ->      419     [label="="];
+    0       ->      420     [label="!"];
+    420     ->      421     [label="other"];
+    420     ->      422     [label="="];
+    0       ->      423     [label="<"];
+    423     ->      424     [label="other"];
+    423     ->      425     [label="="];
+    423     ->      426     [label="<"];
+    0       ->      427     [label=">"];
+    427     ->      428     [label="other"];
+    427     ->      429     [label="="];
+    427     ->      430     [label=">"];
+    0       ->      431     [label="~"];
+    0       ->      432     [label="&"];
+    432     ->      433     [label="other"];
+    432     ->      434     [label="&"];
+    432     ->      435     [label="="];
+    0       ->      436     [label="|"];
+    436     ->      437     [label="other"];
+    436     ->      438     [label="|"];
+    436     ->      439     [label="="];
+    0       ->      440     [label="."];
+    0       ->      441     [label="?"];
+    0       ->      442     [label="^"];
+    442     ->      443     [label="other"];
+    442     ->      444     [label="="];
 
     /*
     // name node 600 ~ 700
@@ -149,8 +201,8 @@ digraph finit_state_machine {
     15      ->      16      [label="\\"];
     15      ->      17      [label="s\""];
     16      ->      15      [label="char"];
-    */
 
     // the separate character edge
     0       ->      200    [label=",;white_space:.()[]{}"];
+    */
 }
