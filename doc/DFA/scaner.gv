@@ -3,7 +3,7 @@ digraph finit_state_machine {
     size="50,50";
     
     // the number and the string node 1 ~ 100
-    node [shape = circle, label = "0", fontsize = 10]; 0;
+    node [shape = circle, label = "0\n2", fontsize = 10]; 0;
     /*
     node [shape = circle, label = "1", fontsize = 10]; 1;
     node [shape = circle, label = "2", fontsize = 10]; 2;

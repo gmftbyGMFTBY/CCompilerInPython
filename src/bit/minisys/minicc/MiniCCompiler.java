@@ -130,8 +130,8 @@ public class MiniCCompiler {
 					MiniCCScanner sc = new MiniCCScanner();
 					sc.run(ppOutFile, scOutFile);
 				}
-			}else if(pp.type.equals("python")){
-				this.runPy(ppOutFile, scOutFile, scanning.path);
+			}else if(scanning.type.equals("python")){
+				this.run(ppOutFile, scOutFile, scanning.path);
 			}else{
 				this.run(ppOutFile, scOutFile, scanning.path);
 			}
@@ -150,8 +150,8 @@ public class MiniCCompiler {
 					MiniCCParser p = new MiniCCParser();
 					p.run(scOutFile, pOutFile);
 				}
-			}else if(pp.type.equals("python")){
-				this.runPy(scOutFile, pOutFile, parsing.path);
+			}else if(parsing.type.equals("python")){
+				this.run(scOutFile, pOutFile, parsing.path);
 			}else{
 				this.run(scOutFile, pOutFile, parsing.path);
 			}
@@ -170,8 +170,8 @@ public class MiniCCompiler {
 					MiniCCSemantic se = new MiniCCSemantic();
 					se.run(pOutFile, seOutFile);
 				}
-			}else if(pp.type.equals("python")){
-				this.runPy(pOutFile, seOutFile, semantic.path);
+			}else if(semantic.type.equals("python")){
+				this.run(pOutFile, seOutFile, semantic.path);
 			}else{
 				this.run(pOutFile, seOutFile, semantic.path);
 			}
@@ -190,8 +190,8 @@ public class MiniCCompiler {
 					MiniCCICGen ic = new MiniCCICGen();
 					ic.run(seOutFile, icOutFile);
 				}
-			}else if(pp.type.equals("python")){
-				this.runPy(seOutFile, icOutFile, icgen.path);
+			}else if(icgen.type.equals("python")){
+				this.run(seOutFile, icOutFile, icgen.path);
 			}else{
 				this.run(seOutFile, icOutFile, icgen.path);
 			}
@@ -210,8 +210,8 @@ public class MiniCCompiler {
 					MiniCCOptimizer o = new MiniCCOptimizer();
 					o.run(icOutFile, oOutFile);
 				}
-			}else if(pp.type.equals("python")){
-				this.runPy(icOutFile, oOutFile, optimizing.path);
+			}else if(optimizing.type.equals("python")){
+				this.run(icOutFile, oOutFile, optimizing.path);
 			}else{
 				this.run(icOutFile, oOutFile, optimizing.path);
 			}
@@ -230,8 +230,8 @@ public class MiniCCompiler {
 					MiniCCCodeGen g = new MiniCCCodeGen();
 					g.run(oOutFile, cOutFile);
 				}
-			}else if(pp.type.equals("python")){
-				this.runPy(oOutFile, cOutFile, codegen.path);
+			}else if(codegen.type.equals("python")){
+				this.run(oOutFile, cOutFile, codegen.path);
 			}else{
 				this.run(oOutFile, cOutFile, codegen.path);
 			}
@@ -249,7 +249,7 @@ public class MiniCCompiler {
 		Runtime rt = Runtime.getRuntime();//格式：exe名 输入文件 输出文件
 		Process p = rt.exec(path + " " + iFile + " " + oFile);
 		try {
-			p.wait();
+			p.waitFor();
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

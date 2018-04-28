@@ -3,7 +3,7 @@
   <phases>
     <phase>
       <phase skip="false" type="java" path="" name="pp" />
-      <phase skip="false" type="python" path="./script/scaner.py" name="scanning" />
+      <phase skip="false" type="python" path="./script/scaner/scaner.py" name="scanning" />
       <phase skip="false" type="java" path="" name="parsing" />
       <phase skip="true" type="java" path="" name="semantic" />
       <phase skip="true" type="java" path="" name="icgen" />
