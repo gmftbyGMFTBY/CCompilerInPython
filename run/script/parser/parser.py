@@ -338,10 +338,7 @@ class LR:
             exit(0)
 
 if __name__ == "__main__":
-    # _, rule, infile, outfile = sys.argv
-    rule = './rule/rules'
-    infile = 'test.token.xml'
-    outfile = 'test.parser.xml'
+    _, rule, infile, outfile = sys.argv
     app = LR(rule, "CMPL_UNIT")
     # app.write_table()
     # start the main control to run for the analysing
