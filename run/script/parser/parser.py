@@ -6,7 +6,6 @@
 Use LR(1) Algorithm to create the parser of the C language.
 '''
 
-import sys
 import pprint
 
 class LR:
@@ -35,11 +34,17 @@ class LR:
         # get the LR group, GO is a dict saving the transmit information
         # group is the Project group
         self.group, self.GO = self.get_group()
-        print('-' * 50)
-        pprint.pprint(self.goto(self.get_closure(self.BLRP), '='))
+
         # init the action and the goto table
-        self.init_table()
-        # print("Init the LR(1) analyser table successfully!")
+        self.action, self.goto = self.init_table()
+
+        # test print
+        for index, group in enumerate(self.group):
+            print(index, end = ' ')
+            pprint.pprint(group)
+        pprint.pprint(self.action)
+        pprint.pprint(self.goto)
+        print("Init the LR(1) analyser table successfully!")
 
     def get_character(self):
         V_t = set(['*', '=', 'i'])
@@ -122,16 +127,48 @@ class LR:
                     res = self.goto(group, char)
                     if res:
                         if res not in C:
+                            if not GO.get((index, char)):
+                                GO[(index, char)] = len(C)
                             C.append(res)
-                            GO[index] = (len(C) - 1, char)
                         else:
-                            GO[index] = (index, char)
+                            if res == group: GO[(index, char)] = index
+                            elif not GO.get((index, char)):
+                                GO[(index, char)] = index
             if len(C) == size: break
         return C, GO
 
     def init_table(self):
         # init the action and the goto table for the LR(1)
-        pass
+        # create action table
+        action = {}
+        goto   = {}
+        for index, group in enumerate(self.group):
+            for project in group:
+                # for action
+                left, right = project[0].split('->')
+                creators = right.split()
+                point_index = creators.index('·')
+                if index + 1 < len(creators):
+                    # shift
+                    X = creators[index + 1]
+                    if self.IsV_t(X):
+                        if self.GO.get((index, X)):
+                            action[(index, X)] = 'S' + str(self.GO.get((index, X)))
+                    elif self.IsV_n(X):
+                        # goto table
+                        if self.GO.get((index, X)):
+                            goto[(index, X)] = str(self.GO.get((index, X)))
+                    else:
+                        print('Meet the unexpected character!')
+                        exit(0)
+                else:
+                    # reduce
+                    # delete the ' ·'
+                    string = project[0][:-2]
+                    for jindex, rule in enumerate(self.rules):
+                        if rule == string:
+                            action[(index, project[1])] = 'r' + str(jindex)
+        return action, goto
 
     def get_first(self, char):
         # get the first set of the special V_n
