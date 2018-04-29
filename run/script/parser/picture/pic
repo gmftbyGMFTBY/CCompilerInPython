@@ -1,0 +1,5701 @@
+[node|0]: [begin]
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, i
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, d
+TYPE_SPEC -> · void, D
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, b
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, u
+TYPE_SPEC -> · int, I
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, o
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, v
+TYPE_SPEC -> · double, I
+FUNC_LIST -> · FUNC_DEF FUNC_LIST, #
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, t
+CMPL_UNIT -> · FUNC_LIST, #
+TYPE_SPEC -> · float, D
+TYPE_SPEC -> · double, D
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, f
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, l
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, n
+TYPE_SPEC -> · void, I
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, e
+FUNC_LIST -> ·, #
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, #
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, a
+TYPE_SPEC -> · float, I
+TYPE_SPEC -> · int, D
+
+[node|1]: [begin]
+TYPE_SPEC -> float ·, I
+TYPE_SPEC -> float ·, D
+
+[node|2]: [begin]
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, i
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, d
+TYPE_SPEC -> · void, D
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, b
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, u
+TYPE_SPEC -> · int, I
+FUNC_LIST -> FUNC_DEF · FUNC_LIST, #
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, o
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, v
+TYPE_SPEC -> · double, I
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, t
+FUNC_LIST -> · FUNC_DEF FUNC_LIST, #
+TYPE_SPEC -> · float, D
+TYPE_SPEC -> · double, D
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, f
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, l
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, n
+TYPE_SPEC -> · void, I
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, e
+FUNC_LIST -> ·, #
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, #
+FUNC_DEF -> · TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK, a
+TYPE_SPEC -> · float, I
+TYPE_SPEC -> · int, D
+
+[node|3]: [begin]
+TYPE_SPEC -> int ·, I
+TYPE_SPEC -> int ·, D
+
+[node|4]: [begin]
+TYPE_SPEC -> void ·, I
+TYPE_SPEC -> void ·, D
+
+[node|5]: [begin]
+CMPL_UNIT -> FUNC_LIST ·, #
+
+[node|6]: [begin]
+TYPE_SPEC -> double ·, I
+TYPE_SPEC -> double ·, D
+
+[node|7]: [begin]
+FUNC_DEF -> TYPE_SPEC · ID ( ARG_LIST ) CODE_BLOCK, d
+FUNC_DEF -> TYPE_SPEC · ID ( ARG_LIST ) CODE_BLOCK, f
+FUNC_DEF -> TYPE_SPEC · ID ( ARG_LIST ) CODE_BLOCK, t
+FUNC_DEF -> TYPE_SPEC · ID ( ARG_LIST ) CODE_BLOCK, u
+FUNC_DEF -> TYPE_SPEC · ID ( ARG_LIST ) CODE_BLOCK, v
+FUNC_DEF -> TYPE_SPEC · ID ( ARG_LIST ) CODE_BLOCK, n
+FUNC_DEF -> TYPE_SPEC · ID ( ARG_LIST ) CODE_BLOCK, b
+FUNC_DEF -> TYPE_SPEC · ID ( ARG_LIST ) CODE_BLOCK, a
+FUNC_DEF -> TYPE_SPEC · ID ( ARG_LIST ) CODE_BLOCK, l
+FUNC_DEF -> TYPE_SPEC · ID ( ARG_LIST ) CODE_BLOCK, i
+FUNC_DEF -> TYPE_SPEC · ID ( ARG_LIST ) CODE_BLOCK, o
+FUNC_DEF -> TYPE_SPEC · ID ( ARG_LIST ) CODE_BLOCK, e
+FUNC_DEF -> TYPE_SPEC · ID ( ARG_LIST ) CODE_BLOCK, #
+
+[node|8]: [begin]
+FUNC_LIST -> FUNC_DEF FUNC_LIST ·, #
+
+[node|9]: [begin]
+FUNC_DEF -> TYPE_SPEC ID · ( ARG_LIST ) CODE_BLOCK, d
+FUNC_DEF -> TYPE_SPEC ID · ( ARG_LIST ) CODE_BLOCK, t
+FUNC_DEF -> TYPE_SPEC ID · ( ARG_LIST ) CODE_BLOCK, f
+FUNC_DEF -> TYPE_SPEC ID · ( ARG_LIST ) CODE_BLOCK, u
+FUNC_DEF -> TYPE_SPEC ID · ( ARG_LIST ) CODE_BLOCK, v
+FUNC_DEF -> TYPE_SPEC ID · ( ARG_LIST ) CODE_BLOCK, n
+FUNC_DEF -> TYPE_SPEC ID · ( ARG_LIST ) CODE_BLOCK, b
+FUNC_DEF -> TYPE_SPEC ID · ( ARG_LIST ) CODE_BLOCK, a
+FUNC_DEF -> TYPE_SPEC ID · ( ARG_LIST ) CODE_BLOCK, l
+FUNC_DEF -> TYPE_SPEC ID · ( ARG_LIST ) CODE_BLOCK, i
+FUNC_DEF -> TYPE_SPEC ID · ( ARG_LIST ) CODE_BLOCK, o
+FUNC_DEF -> TYPE_SPEC ID · ( ARG_LIST ) CODE_BLOCK, e
+FUNC_DEF -> TYPE_SPEC ID · ( ARG_LIST ) CODE_BLOCK, #
+
+[node|10]: [begin]
+ARGUMENT -> · TYPE_SPEC ID, )
+ARG_LIST -> · ARGUMENT, )
+TYPE_SPEC -> · double, I
+FUNC_DEF -> TYPE_SPEC ID ( · ARG_LIST ) CODE_BLOCK, o
+FUNC_DEF -> TYPE_SPEC ID ( · ARG_LIST ) CODE_BLOCK, e
+FUNC_DEF -> TYPE_SPEC ID ( · ARG_LIST ) CODE_BLOCK, #
+TYPE_SPEC -> · float, D
+FUNC_DEF -> TYPE_SPEC ID ( · ARG_LIST ) CODE_BLOCK, u
+TYPE_SPEC -> · double, D
+ARG_LIST -> ·, )
+TYPE_SPEC -> · void, D
+FUNC_DEF -> TYPE_SPEC ID ( · ARG_LIST ) CODE_BLOCK, f
+FUNC_DEF -> TYPE_SPEC ID ( · ARG_LIST ) CODE_BLOCK, b
+FUNC_DEF -> TYPE_SPEC ID ( · ARG_LIST ) CODE_BLOCK, n
+ARGUMENT -> · TYPE_SPEC ID, ,
+TYPE_SPEC -> · int, I
+FUNC_DEF -> TYPE_SPEC ID ( · ARG_LIST ) CODE_BLOCK, l
+TYPE_SPEC -> · void, I
+FUNC_DEF -> TYPE_SPEC ID ( · ARG_LIST ) CODE_BLOCK, i
+FUNC_DEF -> TYPE_SPEC ID ( · ARG_LIST ) CODE_BLOCK, d
+FUNC_DEF -> TYPE_SPEC ID ( · ARG_LIST ) CODE_BLOCK, t
+ARG_LIST -> · ARGUMENT , ARG_LIST, )
+FUNC_DEF -> TYPE_SPEC ID ( · ARG_LIST ) CODE_BLOCK, a
+TYPE_SPEC -> · float, I
+TYPE_SPEC -> · int, D
+FUNC_DEF -> TYPE_SPEC ID ( · ARG_LIST ) CODE_BLOCK, v
+
+[node|11]: [begin]
+ARGUMENT -> TYPE_SPEC · ID, ,
+ARGUMENT -> TYPE_SPEC · ID, )
+
+[node|12]: [begin]
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST · ) CODE_BLOCK, #
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST · ) CODE_BLOCK, d
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST · ) CODE_BLOCK, o
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST · ) CODE_BLOCK, b
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST · ) CODE_BLOCK, f
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST · ) CODE_BLOCK, l
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST · ) CODE_BLOCK, a
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST · ) CODE_BLOCK, u
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST · ) CODE_BLOCK, n
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST · ) CODE_BLOCK, v
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST · ) CODE_BLOCK, i
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST · ) CODE_BLOCK, e
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST · ) CODE_BLOCK, t
+
+[node|13]: [begin]
+ARG_LIST -> ARGUMENT · , ARG_LIST, )
+ARG_LIST -> ARGUMENT ·, )
+
+[node|14]: [begin]
+ARGUMENT -> TYPE_SPEC ID ·, ,
+ARGUMENT -> TYPE_SPEC ID ·, )
+
+[node|15]: [begin]
+CODE_BLOCK -> · { STMT_LIST }, i
+CODE_BLOCK -> · { STMT_LIST }, t
+CODE_BLOCK -> · { STMT_LIST }, a
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) · CODE_BLOCK, f
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) · CODE_BLOCK, d
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) · CODE_BLOCK, n
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) · CODE_BLOCK, b
+CODE_BLOCK -> · { STMT_LIST }, e
+CODE_BLOCK -> · { STMT_LIST }, v
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) · CODE_BLOCK, e
+CODE_BLOCK -> · { STMT_LIST }, b
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) · CODE_BLOCK, v
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) · CODE_BLOCK, a
+CODE_BLOCK -> · { STMT_LIST }, f
+CODE_BLOCK -> · { STMT_LIST }, n
+CODE_BLOCK -> · { STMT_LIST }, d
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) · CODE_BLOCK, i
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) · CODE_BLOCK, u
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) · CODE_BLOCK, t
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) · CODE_BLOCK, l
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) · CODE_BLOCK, #
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) · CODE_BLOCK, o
+CODE_BLOCK -> · { STMT_LIST }, o
+CODE_BLOCK -> · { STMT_LIST }, #
+CODE_BLOCK -> · { STMT_LIST }, l
+CODE_BLOCK -> · { STMT_LIST }, u
+
+[node|16]: [begin]
+ARGUMENT -> · TYPE_SPEC ID, )
+ARG_LIST -> · ARGUMENT, )
+TYPE_SPEC -> · double, I
+TYPE_SPEC -> · float, D
+TYPE_SPEC -> · double, D
+ARG_LIST -> ·, )
+TYPE_SPEC -> · void, D
+ARGUMENT -> · TYPE_SPEC ID, ,
+TYPE_SPEC -> · int, I
+TYPE_SPEC -> · void, I
+ARG_LIST -> · ARGUMENT , ARG_LIST, )
+TYPE_SPEC -> · float, I
+TYPE_SPEC -> · int, D
+ARG_LIST -> ARGUMENT , · ARG_LIST, )
+
+[node|17]: [begin]
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK ·, u
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK ·, b
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK ·, f
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK ·, d
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK ·, t
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK ·, n
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK ·, #
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK ·, e
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK ·, o
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK ·, i
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK ·, l
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK ·, a
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK ·, v
+
+[node|18]: [begin]
+STMT -> · ASSIGN_STMT, r
+RTN_STMT -> · return EXPR ; , }
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, r
+CODE_BLOCK -> { · STMT_LIST }, d
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, D
+ASSIGN_STMT -> · ID = EXPR ;, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, w
+ASSIGN_STMT -> · ID = EXPR ;, b
+RTN_STMT -> · return EXPR ; , w
+ITER_STMT -> · while ( EXPR ) STMT, o
+STMT -> · ITER_STMT, }
+STMT -> · ITER_STMT, n
+STMT -> · RTN_STMT, o
+RTN_STMT -> · return EXPR ; , r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, a
+STMT -> · ITER_STMT, r
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) STMT, o
+INIT_STMT -> · TYPE_SPEC ID ;, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, w
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, r
+STMT -> · ASSIGN_STMT, h
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, b
+CODE_BLOCK -> { · STMT_LIST }, #
+ITER_STMT -> · while ( EXPR ) STMT, d
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, v
+IF_STMT -> · if ( EXPR ) STMT, e
+STMT -> · ASSIGN_STMT, D
+RTN_STMT -> · return EXPR ; , d
+STMT -> · IF_STMT, r
+STMT -> · ITER_STMT, D
+STMT -> · IF_STMT, v
+ITER_STMT -> · while ( EXPR ) STMT, u
+RTN_STMT -> · return EXPR ; , a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, e
+TYPE_SPEC -> · float, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, f
+STMT -> · RTN_STMT, n
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, D
+STMT -> · ITER_STMT, l
+STMT -> · IF_STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, i
+RTN_STMT -> · return EXPR ; , h
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, n
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, u
+IF_STMT -> · if ( EXPR ) STMT, }
+STMT -> · ASSIGN_STMT, e
+CODE_BLOCK -> { · STMT_LIST }, o
+STMT -> · ASSIGN_STMT, a
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, i
+STMT -> · IF_STMT, i
+CODE_BLOCK -> { · STMT_LIST }, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, n
+ASSIGN_STMT -> · ID = EXPR ;, n
+IF_STMT -> · if ( EXPR ) STMT, r
+STMT -> · ASSIGN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, }
+STMT -> · ASSIGN_STMT, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, f
+STMT -> · IF_STMT, t
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, o
+STMT -> · IF_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, o
+TYPE_SPEC -> · void, D
+STMT -> · ASSIGN_STMT, o
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, o
+ASSIGN_STMT -> · ID = EXPR ;, D
+CODE_BLOCK -> { · STMT_LIST }, n
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, u
+STMT -> · ITER_STMT, t
+ASSIGN_STMT -> · ID = EXPR ;, l
+INIT_STMT -> · TYPE_SPEC ID ;, i
+STMT -> · INIT_STMT, o
+ITER_STMT -> · while ( EXPR ) STMT, b
+ASSIGN_STMT -> · ID = EXPR ;, o
+INIT_STMT -> · TYPE_SPEC ID ;, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, h
+RTN_STMT -> · return EXPR ; , I
+INIT_STMT -> · TYPE_SPEC ID ;, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, l
+STMT -> · ITER_STMT, I
+STMT -> · INIT_STMT, v
+IF_STMT -> · if ( EXPR ) STMT, v
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, l
+STMT -> · ITER_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, u
+TYPE_SPEC -> · double, I
+STMT -> · RTN_STMT, t
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, I
+STMT -> · ASSIGN_STMT, i
+STMT -> · INIT_STMT, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, b
+STMT -> · IF_STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, v
+ASSIGN_STMT -> · ID = EXPR ;, e
+STMT -> · RTN_STMT, h
+STMT -> · RTN_STMT, i
+ITER_STMT -> · while ( EXPR ) STMT, n
+IF_STMT -> · if ( EXPR ) STMT, a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, w
+CODE_BLOCK -> { · STMT_LIST }, b
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, o
+CODE_BLOCK -> { · STMT_LIST }, u
+ASSIGN_STMT -> · ID = EXPR ;, v
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, i
+RTN_STMT -> · return EXPR ; , i
+ASSIGN_STMT -> · ID = EXPR ;, r
+IF_STMT -> · if ( EXPR ) STMT, n
+STMT -> · INIT_STMT, b
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, e
+ITER_STMT -> · while ( EXPR ) STMT, a
+INIT_STMT -> · TYPE_SPEC ID ;, }
+STMT -> · ITER_STMT, v
+INIT_STMT -> · TYPE_SPEC ID ;, I
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, u
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, r
+INIT_STMT -> · TYPE_SPEC ID ;, r
+STMT -> · RTN_STMT, e
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, I
+CODE_BLOCK -> { · STMT_LIST }, e
+STMT -> · INIT_STMT, D
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, v
+ITER_STMT -> · while ( EXPR ) STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, r
+STMT -> · INIT_STMT, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, f
+STMT -> · IF_STMT, h
+INIT_STMT -> · TYPE_SPEC ID ;, d
+ITER_STMT -> · while ( EXPR ) STMT, l
+RTN_STMT -> · return EXPR ; , l
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, d
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, d
+ASSIGN_STMT -> · ID = EXPR ;, w
+STMT -> · INIT_STMT, w
+IF_STMT -> · if ( EXPR ) STMT, l
+STMT -> · INIT_STMT, r
+CODE_BLOCK -> { · STMT_LIST }, a
+STMT -> · ASSIGN_STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, w
+IF_STMT -> · if ( EXPR ) STMT, i
+TYPE_SPEC -> · int, I
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, t
+STMT -> · INIT_STMT, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, t
+STMT -> · ASSIGN_STMT, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, w
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, t
+STMT -> · ITER_STMT, u
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, h
+ASSIGN_STMT -> · ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, a
+STMT -> · ASSIGN_STMT, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, b
+ASSIGN_STMT -> · ID = EXPR ;, }
+ASSIGN_STMT -> · ID = EXPR ;, h
+ITER_STMT -> · while ( EXPR ) STMT, t
+ITER_STMT -> · while ( EXPR ) STMT, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, a
+STMT -> · ASSIGN_STMT, b
+IF_STMT -> · if ( EXPR ) STMT, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, }
+STMT -> · RTN_STMT, r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, e
+STMT -> · RTN_STMT, a
+STMT -> · RTN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, h
+ITER_STMT -> · while ( EXPR ) STMT, f
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, l
+STMT -> · ASSIGN_STMT, l
+STMT -> · RTN_STMT, }
+STMT -> · RTN_STMT, b
+RTN_STMT -> · return EXPR ; , n
+INIT_STMT -> · TYPE_SPEC ID ;, u
+IF_STMT -> · if ( EXPR ) STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, b
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, v
+STMT -> · ASSIGN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, l
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, b
+STMT -> · INIT_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, b
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, o
+ASSIGN_STMT -> · ID = EXPR ;, I
+ITER_STMT -> · while ( EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, w
+STMT -> · ITER_STMT, b
+RTN_STMT -> · return EXPR ; , D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, n
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, f
+ITER_STMT -> · while ( EXPR ) STMT, r
+STMT -> · RTN_STMT, w
+STMT -> · ITER_STMT, a
+CODE_BLOCK -> { · STMT_LIST }, v
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, i
+RTN_STMT -> · return EXPR ; , o
+ITER_STMT -> · while ( EXPR ) STMT, w
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, o
+RTN_STMT -> · return EXPR ; , v
+STMT -> · RTN_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, f
+CODE_BLOCK -> { · STMT_LIST }, t
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, u
+STMT -> · IF_STMT, o
+STMT -> · IF_STMT, l
+CODE_BLOCK -> { · STMT_LIST }, i
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, n
+STMT -> · ASSIGN_STMT, t
+ASSIGN_STMT -> · ID = EXPR ;, d
+RTN_STMT -> · return EXPR ; , b
+RTN_STMT -> · return EXPR ; , e
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, f
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) STMT, b
+STMT -> · INIT_STMT, d
+STMT -> · ITER_STMT, o
+STMT -> · INIT_STMT, u
+STMT -> · IF_STMT, d
+STMT -> · ASSIGN_STMT, d
+ASSIGN_STMT -> · ID = EXPR ;, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, l
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, d
+STMT -> · INIT_STMT, a
+ITER_STMT -> · while ( EXPR ) STMT, v
+STMT -> · INIT_STMT, t
+INIT_STMT -> · TYPE_SPEC ID ;, D
+STMT -> · IF_STMT, n
+STMT -> · RTN_STMT, d
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, a
+ASSIGN_STMT -> · ID = EXPR ;, i
+INIT_STMT -> · TYPE_SPEC ID ;, l
+STMT -> · ITER_STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, o
+STMT_LIST -> · STMT STMT_LIST, }
+INIT_STMT -> · TYPE_SPEC ID ;, v
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, b
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, I
+STMT -> · RTN_STMT, v
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, a
+STMT_LIST -> ·, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, d
+STMT -> · RTN_STMT, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, i
+TYPE_SPEC -> · void, I
+STMT -> · ITER_STMT, h
+RTN_STMT -> · return EXPR ; , f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, u
+STMT -> · ITER_STMT, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, t
+STMT -> · INIT_STMT, I
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, D
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, }
+STMT -> · RTN_STMT, f
+STMT -> · INIT_STMT, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, i
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, I
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, n
+STMT -> · IF_STMT, b
+IF_STMT -> · if ( EXPR ) STMT, D
+STMT -> · IF_STMT, }
+STMT -> · IF_STMT, u
+INIT_STMT -> · TYPE_SPEC ID ;, w
+RTN_STMT -> · return EXPR ; , t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, n
+STMT -> · IF_STMT, a
+ASSIGN_STMT -> · ID = EXPR ;, f
+RTN_STMT -> · return EXPR ; , u
+STMT -> · INIT_STMT, n
+TYPE_SPEC -> · float, I
+INIT_STMT -> · TYPE_SPEC ID ;, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, d
+STMT -> · ITER_STMT, w
+STMT -> · RTN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, h
+STMT -> · ITER_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, l
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, r
+INIT_STMT -> · TYPE_SPEC ID ;, a
+ITER_STMT -> · while ( EXPR ) STMT, i
+CODE_BLOCK -> { · STMT_LIST }, f
+TYPE_SPEC -> · double, D
+IF_STMT -> · if ( EXPR ) STMT, I
+STMT -> · ASSIGN_STMT, }
+STMT -> · IF_STMT, w
+STMT -> · INIT_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, v
+TYPE_SPEC -> · int, D
+STMT -> · IF_STMT, f
+
+[node|19]: [begin]
+ARG_LIST -> ARGUMENT , ARG_LIST ·, )
+
+[node|20]: [begin]
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, u
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, t
+ITER_STMT -> while · ( EXPR ) STMT, a
+ITER_STMT -> while · ( EXPR ) STMT, }
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, v
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, r
+ITER_STMT -> while · ( EXPR ) STMT, w
+ITER_STMT -> while · ( EXPR ) STMT, d
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, o
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, e
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, i
+ITER_STMT -> while · ( EXPR ) STMT, b
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, f
+ITER_STMT -> while · ( EXPR ) STMT, u
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, n
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, a
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, }
+ITER_STMT -> while · ( EXPR ) STMT, v
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, D
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, w
+ITER_STMT -> while · ( EXPR ) STMT, o
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, d
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, I
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, b
+ITER_STMT -> while · ( EXPR ) STMT, f
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, h
+ITER_STMT -> while · ( EXPR ) STMT, l
+ITER_STMT -> while · ( EXPR ) STMT, h
+ITER_STMT -> while · ( EXPR ) STMT, n
+ITER_STMT -> while · ( EXPR ) STMT, t
+ITER_STMT -> while · ( EXPR ) STMT, D
+ITER_STMT -> while · ( EXPR ) STMT, r
+ITER_STMT -> while · ( EXPR ) STMT, I
+ITER_STMT -> while · ( EXPR ) STMT, e
+ITER_STMT -> while · ( EXPR ) CODE_BLOCK, l
+ITER_STMT -> while · ( EXPR ) STMT, i
+
+[node|21]: [begin]
+IF_STMT -> if · ( EXPR ) STMT, e
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, l
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, I
+IF_STMT -> if · ( EXPR ) STMT, i
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, d
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, o
+IF_STMT -> if · ( EXPR ) STMT, a
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, D
+IF_STMT -> if · ( EXPR ) STMT, }
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, }
+IF_STMT -> if · ( EXPR ) STMT, d
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, v
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, b
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, n
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, f
+IF_STMT -> if · ( EXPR ) STMT, h
+IF_STMT -> if · ( EXPR ) STMT, v
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, w
+IF_STMT -> if · ( EXPR ) STMT, u
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, e
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, o
+IF_STMT -> if · ( EXPR ) STMT, b
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, d
+IF_STMT -> if · ( EXPR ) STMT, r
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, u
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, }
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, r
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, a
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, v
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, b
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, t
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, i
+IF_STMT -> if · ( EXPR ) STMT, n
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, w
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, e
+IF_STMT -> if · ( EXPR ) STMT, l
+IF_STMT -> if · ( EXPR ) STMT, f
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, l
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, I
+IF_STMT -> if · ( EXPR ) STMT, D
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, h
+IF_STMT -> if · ( EXPR ) STMT, t
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, r
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, a
+IF_STMT -> if · ( EXPR ) STMT, w
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, u
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, i
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, D
+IF_STMT -> if · ( EXPR ) STMT, I
+IF_STMT -> if · ( EXPR ) STMT, o
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, t
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, f
+IF_STMT -> if · ( EXPR ) CODE_BLOCK, h
+IF_STMT -> if · ( EXPR ) CODE_BLOCK else CODE_BLOCK, n
+
+[node|22]: [begin]
+ASSIGN_STMT -> ID · = EXPR ;, D
+ASSIGN_STMT -> ID · = EXPR ;, l
+ASSIGN_STMT -> ID · = EXPR ;, }
+ASSIGN_STMT -> ID · = EXPR ;, h
+ASSIGN_STMT -> ID · = EXPR ;, r
+ASSIGN_STMT -> ID · = EXPR ;, b
+ASSIGN_STMT -> ID · = EXPR ;, n
+ASSIGN_STMT -> ID · = EXPR ;, v
+ASSIGN_STMT -> ID · = EXPR ;, a
+ASSIGN_STMT -> ID · = EXPR ;, I
+ASSIGN_STMT -> ID · = EXPR ;, f
+ASSIGN_STMT -> ID · = EXPR ;, d
+ASSIGN_STMT -> ID · = EXPR ;, u
+ASSIGN_STMT -> ID · = EXPR ;, t
+ASSIGN_STMT -> ID · = EXPR ;, i
+ASSIGN_STMT -> ID · = EXPR ;, w
+ASSIGN_STMT -> ID · = EXPR ;, e
+ASSIGN_STMT -> ID · = EXPR ;, o
+
+[node|23]: [begin]
+RTN_STMT -> return · EXPR ;, I
+FACTOR -> · ( EXPR ), *
+RTN_STMT -> return · EXPR ;, d
+FACTOR -> · ID, -
+FACTOR -> · ID, /
+RTN_STMT -> return · EXPR ;, D
+RTN_STMT -> return · EXPR ;, }
+FACTOR -> · ( EXPR ), +
+FACTOR -> · ID, ;
+CALL_STMT -> · ID ( PARG_LIST ), ;
+RTN_STMT -> return · EXPR ;, b
+FACTOR -> · CONST, +
+RTN_STMT -> return · EXPR ;, n
+RTN_STMT -> return · EXPR ;, f
+FACTOR -> · ( EXPR ), /
+RTN_STMT -> return · EXPR ;, w
+FACTOR -> · CALL_STMT, /
+CALL_STMT -> · ID ( PARG_LIST ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+RTN_STMT -> return · EXPR ;, e
+TERM -> · FACTOR TERM2 , -
+RTN_STMT -> return · EXPR ;, o
+FACTOR -> · CALL_STMT, +
+CALL_STMT -> · ID ( PARG_LIST ), /
+RTN_STMT -> return · EXPR ;, r
+EXPR -> · TERM EXPR2, ;
+RTN_STMT -> return · EXPR ;, v
+RTN_STMT -> return · EXPR ;, a
+TERM -> · FACTOR TERM2 , ;
+FACTOR -> · CONST, ;
+RTN_STMT -> return · EXPR ;, t
+RTN_STMT -> return · EXPR ;, i
+FACTOR -> · ID, +
+FACTOR -> · CONST, -
+RTN_STMT -> return · EXPR ;, l
+FACTOR -> · ID, *
+FACTOR -> · CALL_STMT, ;
+FACTOR -> · CONST, /
+FACTOR -> · ( EXPR ), -
+TERM -> · FACTOR TERM2 , +
+RTN_STMT -> return · EXPR ;, u
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CALL_STMT, -
+FACTOR -> · ( EXPR ), ;
+CALL_STMT -> · ID ( PARG_LIST ), *
+RTN_STMT -> return · EXPR ;, h
+FACTOR -> · CONST, *
+
+[node|24]: [begin]
+STMT -> RTN_STMT ·, d
+STMT -> RTN_STMT ·, f
+STMT -> RTN_STMT ·, t
+STMT -> RTN_STMT ·, I
+STMT -> RTN_STMT ·, h
+STMT -> RTN_STMT ·, u
+STMT -> RTN_STMT ·, }
+STMT -> RTN_STMT ·, n
+STMT -> RTN_STMT ·, v
+STMT -> RTN_STMT ·, r
+STMT -> RTN_STMT ·, a
+STMT -> RTN_STMT ·, b
+STMT -> RTN_STMT ·, l
+STMT -> RTN_STMT ·, i
+STMT -> RTN_STMT ·, o
+STMT -> RTN_STMT ·, w
+STMT -> RTN_STMT ·, e
+STMT -> RTN_STMT ·, D
+
+[node|25]: [begin]
+CODE_BLOCK -> { STMT_LIST · }, e
+CODE_BLOCK -> { STMT_LIST · }, f
+CODE_BLOCK -> { STMT_LIST · }, u
+CODE_BLOCK -> { STMT_LIST · }, d
+CODE_BLOCK -> { STMT_LIST · }, n
+CODE_BLOCK -> { STMT_LIST · }, v
+CODE_BLOCK -> { STMT_LIST · }, t
+CODE_BLOCK -> { STMT_LIST · }, b
+CODE_BLOCK -> { STMT_LIST · }, a
+CODE_BLOCK -> { STMT_LIST · }, l
+CODE_BLOCK -> { STMT_LIST · }, #
+CODE_BLOCK -> { STMT_LIST · }, i
+CODE_BLOCK -> { STMT_LIST · }, o
+
+[node|26]: [begin]
+STMT -> ITER_STMT ·, l
+STMT -> ITER_STMT ·, D
+STMT -> ITER_STMT ·, b
+STMT -> ITER_STMT ·, r
+STMT -> ITER_STMT ·, a
+STMT -> ITER_STMT ·, o
+STMT -> ITER_STMT ·, }
+STMT -> ITER_STMT ·, t
+STMT -> ITER_STMT ·, d
+STMT -> ITER_STMT ·, e
+STMT -> ITER_STMT ·, w
+STMT -> ITER_STMT ·, n
+STMT -> ITER_STMT ·, i
+STMT -> ITER_STMT ·, v
+STMT -> ITER_STMT ·, h
+STMT -> ITER_STMT ·, u
+STMT -> ITER_STMT ·, I
+STMT -> ITER_STMT ·, f
+
+[node|27]: [begin]
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, d
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, w
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, u
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, I
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, b
+INIT_STMT -> TYPE_SPEC · ID ;, o
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, h
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, r
+INIT_STMT -> TYPE_SPEC · ID ;, v
+INIT_STMT -> TYPE_SPEC · ID ;, e
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, e
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, i
+INIT_STMT -> TYPE_SPEC · ID ;, r
+INIT_STMT -> TYPE_SPEC · ID ;, D
+INIT_STMT -> TYPE_SPEC · ID ;, a
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, f
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, a
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, n
+INIT_STMT -> TYPE_SPEC · ID ;, d
+INIT_STMT -> TYPE_SPEC · ID ;, n
+INIT_STMT -> TYPE_SPEC · ID ;, i
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, l
+INIT_STMT -> TYPE_SPEC · ID ;, f
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, D
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, t
+INIT_STMT -> TYPE_SPEC · ID ;, }
+INIT_STMT -> TYPE_SPEC · ID ;, b
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, v
+INIT_STMT -> TYPE_SPEC · ID ;, w
+INIT_STMT -> TYPE_SPEC · ID ;, h
+INIT_STMT -> TYPE_SPEC · ID ;, I
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, o
+INIT_STMT -> TYPE_SPEC · ID = EXPR ;, }
+INIT_STMT -> TYPE_SPEC · ID ;, t
+INIT_STMT -> TYPE_SPEC · ID ;, u
+INIT_STMT -> TYPE_SPEC · ID ;, l
+
+[node|28]: [begin]
+STMT -> · ASSIGN_STMT, r
+RTN_STMT -> · return EXPR ; , }
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, r
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, D
+ASSIGN_STMT -> · ID = EXPR ;, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, w
+ASSIGN_STMT -> · ID = EXPR ;, b
+RTN_STMT -> · return EXPR ; , w
+ITER_STMT -> · while ( EXPR ) STMT, o
+STMT -> · ITER_STMT, }
+STMT -> · ITER_STMT, n
+STMT -> · RTN_STMT, o
+RTN_STMT -> · return EXPR ; , r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, a
+STMT -> · ITER_STMT, r
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) STMT, o
+INIT_STMT -> · TYPE_SPEC ID ;, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, w
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, r
+STMT -> · ASSIGN_STMT, h
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, b
+ITER_STMT -> · while ( EXPR ) STMT, d
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, v
+IF_STMT -> · if ( EXPR ) STMT, e
+STMT -> · ASSIGN_STMT, D
+RTN_STMT -> · return EXPR ; , d
+STMT -> · IF_STMT, r
+STMT -> · ITER_STMT, D
+STMT -> · IF_STMT, v
+ITER_STMT -> · while ( EXPR ) STMT, u
+RTN_STMT -> · return EXPR ; , a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, e
+TYPE_SPEC -> · float, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, f
+STMT -> · RTN_STMT, n
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, D
+STMT -> · ITER_STMT, l
+STMT -> · IF_STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, i
+RTN_STMT -> · return EXPR ; , h
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, n
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, u
+IF_STMT -> · if ( EXPR ) STMT, }
+STMT -> · ASSIGN_STMT, e
+STMT -> · ASSIGN_STMT, a
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, i
+STMT -> · IF_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, n
+ASSIGN_STMT -> · ID = EXPR ;, n
+IF_STMT -> · if ( EXPR ) STMT, r
+STMT -> · ASSIGN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, }
+STMT -> · ASSIGN_STMT, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, f
+STMT -> · IF_STMT, t
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, o
+STMT -> · IF_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, o
+TYPE_SPEC -> · void, D
+STMT_LIST -> STMT · STMT_LIST, }
+STMT -> · ASSIGN_STMT, o
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, o
+ASSIGN_STMT -> · ID = EXPR ;, D
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, u
+STMT -> · ITER_STMT, t
+ASSIGN_STMT -> · ID = EXPR ;, l
+INIT_STMT -> · TYPE_SPEC ID ;, i
+STMT -> · INIT_STMT, o
+ITER_STMT -> · while ( EXPR ) STMT, b
+ASSIGN_STMT -> · ID = EXPR ;, o
+INIT_STMT -> · TYPE_SPEC ID ;, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, h
+RTN_STMT -> · return EXPR ; , I
+INIT_STMT -> · TYPE_SPEC ID ;, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, l
+STMT -> · ITER_STMT, I
+STMT -> · INIT_STMT, v
+IF_STMT -> · if ( EXPR ) STMT, v
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, l
+STMT -> · ITER_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, u
+TYPE_SPEC -> · double, I
+STMT -> · RTN_STMT, t
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, I
+STMT -> · ASSIGN_STMT, i
+STMT -> · INIT_STMT, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, b
+STMT -> · IF_STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, v
+ASSIGN_STMT -> · ID = EXPR ;, e
+STMT -> · RTN_STMT, h
+STMT -> · RTN_STMT, i
+ITER_STMT -> · while ( EXPR ) STMT, n
+IF_STMT -> · if ( EXPR ) STMT, a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, o
+ASSIGN_STMT -> · ID = EXPR ;, v
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, i
+RTN_STMT -> · return EXPR ; , i
+ASSIGN_STMT -> · ID = EXPR ;, r
+IF_STMT -> · if ( EXPR ) STMT, n
+STMT -> · INIT_STMT, b
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, e
+ITER_STMT -> · while ( EXPR ) STMT, a
+INIT_STMT -> · TYPE_SPEC ID ;, }
+STMT -> · ITER_STMT, v
+INIT_STMT -> · TYPE_SPEC ID ;, I
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, u
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, r
+INIT_STMT -> · TYPE_SPEC ID ;, r
+STMT -> · RTN_STMT, e
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, I
+STMT -> · INIT_STMT, D
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, v
+ITER_STMT -> · while ( EXPR ) STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, r
+STMT -> · INIT_STMT, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, f
+STMT -> · IF_STMT, h
+INIT_STMT -> · TYPE_SPEC ID ;, d
+ITER_STMT -> · while ( EXPR ) STMT, l
+RTN_STMT -> · return EXPR ; , l
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, d
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, d
+ASSIGN_STMT -> · ID = EXPR ;, w
+STMT -> · INIT_STMT, w
+IF_STMT -> · if ( EXPR ) STMT, l
+STMT -> · INIT_STMT, r
+STMT -> · ASSIGN_STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, w
+IF_STMT -> · if ( EXPR ) STMT, i
+TYPE_SPEC -> · int, I
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, t
+STMT -> · INIT_STMT, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, t
+STMT -> · ASSIGN_STMT, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, w
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, t
+STMT -> · ITER_STMT, u
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, h
+ASSIGN_STMT -> · ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, a
+STMT -> · ASSIGN_STMT, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, b
+ASSIGN_STMT -> · ID = EXPR ;, }
+ASSIGN_STMT -> · ID = EXPR ;, h
+ITER_STMT -> · while ( EXPR ) STMT, t
+ITER_STMT -> · while ( EXPR ) STMT, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, a
+STMT -> · ASSIGN_STMT, b
+IF_STMT -> · if ( EXPR ) STMT, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, }
+STMT -> · RTN_STMT, r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, e
+STMT -> · RTN_STMT, a
+STMT -> · RTN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, h
+ITER_STMT -> · while ( EXPR ) STMT, f
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, l
+STMT -> · ASSIGN_STMT, l
+STMT -> · RTN_STMT, }
+STMT -> · RTN_STMT, b
+RTN_STMT -> · return EXPR ; , n
+INIT_STMT -> · TYPE_SPEC ID ;, u
+IF_STMT -> · if ( EXPR ) STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, b
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, v
+STMT -> · ASSIGN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, l
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, b
+STMT -> · INIT_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, b
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, o
+ASSIGN_STMT -> · ID = EXPR ;, I
+ITER_STMT -> · while ( EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, w
+STMT -> · ITER_STMT, b
+RTN_STMT -> · return EXPR ; , D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, n
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, f
+ITER_STMT -> · while ( EXPR ) STMT, r
+STMT -> · RTN_STMT, w
+STMT -> · ITER_STMT, a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, i
+RTN_STMT -> · return EXPR ; , o
+ITER_STMT -> · while ( EXPR ) STMT, w
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, o
+RTN_STMT -> · return EXPR ; , v
+STMT -> · RTN_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, f
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, u
+STMT -> · IF_STMT, o
+STMT -> · IF_STMT, l
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, n
+STMT -> · ASSIGN_STMT, t
+ASSIGN_STMT -> · ID = EXPR ;, d
+RTN_STMT -> · return EXPR ; , b
+RTN_STMT -> · return EXPR ; , e
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, f
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) STMT, b
+STMT -> · INIT_STMT, d
+STMT -> · ITER_STMT, o
+STMT -> · INIT_STMT, u
+STMT -> · IF_STMT, d
+STMT -> · ASSIGN_STMT, d
+ASSIGN_STMT -> · ID = EXPR ;, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, l
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, d
+STMT -> · INIT_STMT, a
+ITER_STMT -> · while ( EXPR ) STMT, v
+STMT -> · INIT_STMT, t
+INIT_STMT -> · TYPE_SPEC ID ;, D
+STMT -> · IF_STMT, n
+STMT -> · RTN_STMT, d
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, a
+ASSIGN_STMT -> · ID = EXPR ;, i
+INIT_STMT -> · TYPE_SPEC ID ;, l
+STMT -> · ITER_STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, o
+STMT_LIST -> · STMT STMT_LIST, }
+INIT_STMT -> · TYPE_SPEC ID ;, v
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, b
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, I
+STMT -> · RTN_STMT, v
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, a
+STMT_LIST -> ·, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, d
+STMT -> · RTN_STMT, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, i
+TYPE_SPEC -> · void, I
+STMT -> · ITER_STMT, h
+RTN_STMT -> · return EXPR ; , f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, u
+STMT -> · ITER_STMT, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, t
+STMT -> · INIT_STMT, I
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, D
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, }
+STMT -> · RTN_STMT, f
+STMT -> · INIT_STMT, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, i
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, I
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, n
+STMT -> · IF_STMT, b
+IF_STMT -> · if ( EXPR ) STMT, D
+STMT -> · IF_STMT, }
+STMT -> · IF_STMT, u
+INIT_STMT -> · TYPE_SPEC ID ;, w
+RTN_STMT -> · return EXPR ; , t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, n
+STMT -> · IF_STMT, a
+ASSIGN_STMT -> · ID = EXPR ;, f
+RTN_STMT -> · return EXPR ; , u
+STMT -> · INIT_STMT, n
+TYPE_SPEC -> · float, I
+INIT_STMT -> · TYPE_SPEC ID ;, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, d
+STMT -> · ITER_STMT, w
+STMT -> · RTN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, h
+STMT -> · ITER_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, l
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, r
+INIT_STMT -> · TYPE_SPEC ID ;, a
+ITER_STMT -> · while ( EXPR ) STMT, i
+TYPE_SPEC -> · double, D
+IF_STMT -> · if ( EXPR ) STMT, I
+STMT -> · ASSIGN_STMT, }
+STMT -> · IF_STMT, w
+STMT -> · INIT_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, v
+TYPE_SPEC -> · int, D
+STMT -> · IF_STMT, f
+
+[node|29]: [begin]
+STMT -> ASSIGN_STMT ·, e
+STMT -> ASSIGN_STMT ·, i
+STMT -> ASSIGN_STMT ·, h
+STMT -> ASSIGN_STMT ·, w
+STMT -> ASSIGN_STMT ·, v
+STMT -> ASSIGN_STMT ·, n
+STMT -> ASSIGN_STMT ·, u
+STMT -> ASSIGN_STMT ·, t
+STMT -> ASSIGN_STMT ·, l
+STMT -> ASSIGN_STMT ·, f
+STMT -> ASSIGN_STMT ·, a
+STMT -> ASSIGN_STMT ·, b
+STMT -> ASSIGN_STMT ·, o
+STMT -> ASSIGN_STMT ·, I
+STMT -> ASSIGN_STMT ·, }
+STMT -> ASSIGN_STMT ·, D
+STMT -> ASSIGN_STMT ·, r
+STMT -> ASSIGN_STMT ·, d
+
+[node|30]: [begin]
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, I
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, h
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, l
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, w
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, i
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, b
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, t
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, }
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, v
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, a
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, r
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, f
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, i
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, n
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, d
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, o
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, e
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, w
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, a
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, D
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, f
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, r
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, n
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, b
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, }
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, e
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, v
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, D
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, o
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, d
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, I
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, l
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, u
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, h
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, t
+ITER_STMT -> for · ( EXPR ; EXPR ; EXPR ) STMT, u
+
+[node|31]: [begin]
+STMT -> IF_STMT ·, I
+STMT -> IF_STMT ·, f
+STMT -> IF_STMT ·, u
+STMT -> IF_STMT ·, w
+STMT -> IF_STMT ·, t
+STMT -> IF_STMT ·, d
+STMT -> IF_STMT ·, i
+STMT -> IF_STMT ·, D
+STMT -> IF_STMT ·, e
+STMT -> IF_STMT ·, o
+STMT -> IF_STMT ·, b
+STMT -> IF_STMT ·, l
+STMT -> IF_STMT ·, r
+STMT -> IF_STMT ·, v
+STMT -> IF_STMT ·, }
+STMT -> IF_STMT ·, n
+STMT -> IF_STMT ·, h
+STMT -> IF_STMT ·, a
+
+[node|32]: [begin]
+STMT -> INIT_STMT ·, h
+STMT -> INIT_STMT ·, u
+STMT -> INIT_STMT ·, i
+STMT -> INIT_STMT ·, v
+STMT -> INIT_STMT ·, n
+STMT -> INIT_STMT ·, w
+STMT -> INIT_STMT ·, e
+STMT -> INIT_STMT ·, d
+STMT -> INIT_STMT ·, t
+STMT -> INIT_STMT ·, }
+STMT -> INIT_STMT ·, I
+STMT -> INIT_STMT ·, o
+STMT -> INIT_STMT ·, r
+STMT -> INIT_STMT ·, b
+STMT -> INIT_STMT ·, D
+STMT -> INIT_STMT ·, a
+STMT -> INIT_STMT ·, f
+STMT -> INIT_STMT ·, l
+
+[node|33]: [begin]
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, a
+EXPR -> · TERM EXPR2, )
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, i
+ITER_STMT -> while ( · EXPR ) STMT, w
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, u
+FACTOR -> · CONST, +
+FACTOR -> · CALL_STMT, /
+TERM -> · FACTOR TERM2 , -
+FACTOR -> · CALL_STMT, +
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, I
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, d
+ITER_STMT -> while ( · EXPR ) STMT, r
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, e
+FACTOR -> · ( EXPR ), *
+FACTOR -> · ID, -
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, t
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, l
+ITER_STMT -> while ( · EXPR ) STMT, b
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, o
+ITER_STMT -> while ( · EXPR ) STMT, u
+CALL_STMT -> · ID ( PARG_LIST ), +
+FACTOR -> · CALL_STMT, )
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, w
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, r
+FACTOR -> · ID, +
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · ( EXPR ), -
+TERM -> · FACTOR TERM2 , +
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, }
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, b
+FACTOR -> · CALL_STMT, -
+ITER_STMT -> while ( · EXPR ) STMT, I
+CALL_STMT -> · ID ( PARG_LIST ), *
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, h
+ITER_STMT -> while ( · EXPR ) STMT, h
+ITER_STMT -> while ( · EXPR ) STMT, }
+FACTOR -> · ID, /
+FACTOR -> · ( EXPR ), +
+CALL_STMT -> · ID ( PARG_LIST ), )
+CALL_STMT -> · ID ( PARG_LIST ), -
+FACTOR -> · ( EXPR ), )
+ITER_STMT -> while ( · EXPR ) STMT, v
+ITER_STMT -> while ( · EXPR ) STMT, o
+ITER_STMT -> while ( · EXPR ) STMT, l
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, n
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, f
+FACTOR -> · CONST, /
+ITER_STMT -> while ( · EXPR ) STMT, t
+ITER_STMT -> while ( · EXPR ) STMT, D
+FACTOR -> · CALL_STMT, *
+TERM -> · FACTOR TERM2 , )
+ITER_STMT -> while ( · EXPR ) STMT, e
+ITER_STMT -> while ( · EXPR ) STMT, i
+FACTOR -> · CONST, )
+FACTOR -> · CONST, *
+ITER_STMT -> while ( · EXPR ) STMT, a
+ITER_STMT -> while ( · EXPR ) STMT, d
+FACTOR -> · ( EXPR ), /
+CALL_STMT -> · ID ( PARG_LIST ), /
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, D
+FACTOR -> · ID, )
+ITER_STMT -> while ( · EXPR ) STMT, f
+ITER_STMT -> while ( · EXPR ) STMT, n
+ITER_STMT -> while ( · EXPR ) CODE_BLOCK, v
+
+[node|34]: [begin]
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, I
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, r
+EXPR -> · TERM EXPR2, )
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, D
+FACTOR -> · CONST, +
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, d
+FACTOR -> · CALL_STMT, /
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, b
+TERM -> · FACTOR TERM2 , -
+IF_STMT -> if ( · EXPR ) STMT, b
+FACTOR -> · CALL_STMT, +
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, v
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, a
+IF_STMT -> if ( · EXPR ) STMT, a
+IF_STMT -> if ( · EXPR ) STMT, t
+FACTOR -> · ( EXPR ), *
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, t
+FACTOR -> · ID, -
+IF_STMT -> if ( · EXPR ) STMT, o
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, o
+CALL_STMT -> · ID ( PARG_LIST ), +
+FACTOR -> · CALL_STMT, )
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, }
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, w
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, i
+IF_STMT -> if ( · EXPR ) STMT, w
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, d
+FACTOR -> · ID, +
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, h
+IF_STMT -> if ( · EXPR ) STMT, }
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · ( EXPR ), -
+TERM -> · FACTOR TERM2 , +
+FACTOR -> · CALL_STMT, -
+IF_STMT -> if ( · EXPR ) STMT, I
+CALL_STMT -> · ID ( PARG_LIST ), *
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, l
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, f
+IF_STMT -> if ( · EXPR ) STMT, n
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, n
+IF_STMT -> if ( · EXPR ) STMT, f
+FACTOR -> · ID, /
+FACTOR -> · ( EXPR ), +
+CALL_STMT -> · ID ( PARG_LIST ), )
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, u
+CALL_STMT -> · ID ( PARG_LIST ), -
+IF_STMT -> if ( · EXPR ) STMT, u
+FACTOR -> · ( EXPR ), )
+IF_STMT -> if ( · EXPR ) STMT, d
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, e
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, }
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, i
+FACTOR -> · CONST, /
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, w
+IF_STMT -> if ( · EXPR ) STMT, i
+IF_STMT -> if ( · EXPR ) STMT, e
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, I
+FACTOR -> · CALL_STMT, *
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, h
+TERM -> · FACTOR TERM2 , )
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, r
+IF_STMT -> if ( · EXPR ) STMT, r
+IF_STMT -> if ( · EXPR ) STMT, D
+FACTOR -> · CONST, )
+FACTOR -> · CONST, *
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, D
+IF_STMT -> if ( · EXPR ) STMT, l
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, l
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, b
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, f
+IF_STMT -> if ( · EXPR ) STMT, v
+FACTOR -> · ( EXPR ), /
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, n
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, v
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, a
+CALL_STMT -> · ID ( PARG_LIST ), /
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, u
+FACTOR -> · ID, )
+IF_STMT -> if ( · EXPR ) CODE_BLOCK, e
+IF_STMT -> if ( · EXPR ) STMT, h
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, t
+IF_STMT -> if ( · EXPR ) CODE_BLOCK else CODE_BLOCK, o
+
+[node|35]: [begin]
+FACTOR -> · ( EXPR ), *
+ASSIGN_STMT -> ID = · EXPR ;, n
+ASSIGN_STMT -> ID = · EXPR ;, l
+ASSIGN_STMT -> ID = · EXPR ;, f
+FACTOR -> · ID, -
+FACTOR -> · ID, /
+ASSIGN_STMT -> ID = · EXPR ;, o
+FACTOR -> · ( EXPR ), +
+FACTOR -> · ID, ;
+CALL_STMT -> · ID ( PARG_LIST ), ;
+FACTOR -> · CONST, +
+ASSIGN_STMT -> ID = · EXPR ;, v
+FACTOR -> · ( EXPR ), /
+FACTOR -> · CALL_STMT, /
+CALL_STMT -> · ID ( PARG_LIST ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+ASSIGN_STMT -> ID = · EXPR ;, u
+TERM -> · FACTOR TERM2 , -
+ASSIGN_STMT -> ID = · EXPR ;, b
+FACTOR -> · CALL_STMT, +
+CALL_STMT -> · ID ( PARG_LIST ), /
+EXPR -> · TERM EXPR2, ;
+ASSIGN_STMT -> ID = · EXPR ;, d
+TERM -> · FACTOR TERM2 , ;
+FACTOR -> · CONST, ;
+ASSIGN_STMT -> ID = · EXPR ;, w
+FACTOR -> · ID, +
+ASSIGN_STMT -> ID = · EXPR ;, }
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+ASSIGN_STMT -> ID = · EXPR ;, a
+FACTOR -> · CALL_STMT, ;
+FACTOR -> · CONST, /
+FACTOR -> · ( EXPR ), -
+ASSIGN_STMT -> ID = · EXPR ;, i
+TERM -> · FACTOR TERM2 , +
+ASSIGN_STMT -> ID = · EXPR ;, h
+ASSIGN_STMT -> ID = · EXPR ;, e
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CALL_STMT, -
+ASSIGN_STMT -> ID = · EXPR ;, I
+FACTOR -> · ( EXPR ), ;
+CALL_STMT -> · ID ( PARG_LIST ), *
+ASSIGN_STMT -> ID = · EXPR ;, r
+ASSIGN_STMT -> ID = · EXPR ;, D
+ASSIGN_STMT -> ID = · EXPR ;, t
+FACTOR -> · CONST, *
+
+[node|36]: [begin]
+CALL_STMT -> ID · ( PARG_LIST ), *
+CALL_STMT -> ID · ( PARG_LIST ), /
+FACTOR -> ID ·, +
+FACTOR -> ID ·, -
+CALL_STMT -> ID · ( PARG_LIST ), -
+FACTOR -> ID ·, /
+CALL_STMT -> ID · ( PARG_LIST ), +
+FACTOR -> ID ·, *
+FACTOR -> ID ·, ;
+CALL_STMT -> ID · ( PARG_LIST ), ;
+
+[node|37]: [begin]
+FACTOR -> CALL_STMT ·, +
+FACTOR -> CALL_STMT ·, ;
+FACTOR -> CALL_STMT ·, *
+FACTOR -> CALL_STMT ·, -
+FACTOR -> CALL_STMT ·, /
+
+[node|38]: [begin]
+TERM -> FACTOR · TERM2, ;
+TERM2 -> · / FACTOR TERM2, -
+TERM -> FACTOR · TERM2, -
+TERM2 -> · / FACTOR TERM2, ;
+TERM2 -> · * FACTOR TERM2, ;
+TERM2 -> ·, -
+TERM -> FACTOR · TERM2, +
+TERM2 -> ·, +
+TERM2 -> · * FACTOR TERM2, +
+TERM2 -> · * FACTOR TERM2, -
+TERM2 -> ·, ;
+TERM2 -> · / FACTOR TERM2, +
+
+[node|39]: [begin]
+EXPR -> TERM · EXPR2, ;
+EXPR2 -> · + TERM EXPR2, ;
+EXPR2 -> · - TERM EXPR2, ;
+EXPR2 -> ·, ;
+
+[node|40]: [begin]
+FACTOR -> CONST ·, +
+FACTOR -> CONST ·, -
+FACTOR -> CONST ·, *
+FACTOR -> CONST ·, /
+FACTOR -> CONST ·, ;
+
+[node|41]: [begin]
+FACTOR -> · ( EXPR ), *
+FACTOR -> ( · EXPR ), -
+FACTOR -> · ID, -
+EXPR -> · TERM EXPR2, )
+FACTOR -> · ID, /
+FACTOR -> · ( EXPR ), +
+FACTOR -> · CONST, +
+CALL_STMT -> · ID ( PARG_LIST ), )
+FACTOR -> · ( EXPR ), /
+FACTOR -> · CALL_STMT, /
+FACTOR -> · CALL_STMT, )
+CALL_STMT -> · ID ( PARG_LIST ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+TERM -> · FACTOR TERM2 , -
+FACTOR -> · ( EXPR ), )
+FACTOR -> · CALL_STMT, +
+CALL_STMT -> · ID ( PARG_LIST ), /
+FACTOR -> ( · EXPR ), /
+FACTOR -> ( · EXPR ), *
+FACTOR -> · ID, )
+FACTOR -> · ID, +
+FACTOR -> ( · EXPR ), +
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · CONST, /
+FACTOR -> ( · EXPR ), ;
+FACTOR -> · ( EXPR ), -
+TERM -> · FACTOR TERM2 , +
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CALL_STMT, -
+TERM -> · FACTOR TERM2 , )
+CALL_STMT -> · ID ( PARG_LIST ), *
+FACTOR -> · CONST, )
+FACTOR -> · CONST, *
+
+[node|42]: [begin]
+RTN_STMT -> return EXPR · ;, h
+RTN_STMT -> return EXPR · ;, u
+RTN_STMT -> return EXPR · ;, i
+RTN_STMT -> return EXPR · ;, n
+RTN_STMT -> return EXPR · ;, v
+RTN_STMT -> return EXPR · ;, w
+RTN_STMT -> return EXPR · ;, e
+RTN_STMT -> return EXPR · ;, I
+RTN_STMT -> return EXPR · ;, d
+RTN_STMT -> return EXPR · ;, t
+RTN_STMT -> return EXPR · ;, }
+RTN_STMT -> return EXPR · ;, o
+RTN_STMT -> return EXPR · ;, r
+RTN_STMT -> return EXPR · ;, b
+RTN_STMT -> return EXPR · ;, D
+RTN_STMT -> return EXPR · ;, l
+RTN_STMT -> return EXPR · ;, a
+RTN_STMT -> return EXPR · ;, f
+
+[node|43]: [begin]
+CODE_BLOCK -> { STMT_LIST } ·, l
+CODE_BLOCK -> { STMT_LIST } ·, #
+CODE_BLOCK -> { STMT_LIST } ·, b
+CODE_BLOCK -> { STMT_LIST } ·, a
+CODE_BLOCK -> { STMT_LIST } ·, o
+CODE_BLOCK -> { STMT_LIST } ·, d
+CODE_BLOCK -> { STMT_LIST } ·, t
+CODE_BLOCK -> { STMT_LIST } ·, e
+CODE_BLOCK -> { STMT_LIST } ·, n
+CODE_BLOCK -> { STMT_LIST } ·, v
+CODE_BLOCK -> { STMT_LIST } ·, u
+CODE_BLOCK -> { STMT_LIST } ·, i
+CODE_BLOCK -> { STMT_LIST } ·, f
+
+[node|44]: [begin]
+INIT_STMT -> TYPE_SPEC ID · ;, d
+INIT_STMT -> TYPE_SPEC ID · ;, w
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, D
+INIT_STMT -> TYPE_SPEC ID · ;, u
+INIT_STMT -> TYPE_SPEC ID · ;, I
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, f
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, l
+INIT_STMT -> TYPE_SPEC ID · ;, b
+INIT_STMT -> TYPE_SPEC ID · ;, h
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, n
+INIT_STMT -> TYPE_SPEC ID · ;, r
+INIT_STMT -> TYPE_SPEC ID · ;, e
+INIT_STMT -> TYPE_SPEC ID · ;, i
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, r
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, b
+INIT_STMT -> TYPE_SPEC ID · ;, a
+INIT_STMT -> TYPE_SPEC ID · ;, f
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, u
+INIT_STMT -> TYPE_SPEC ID · ;, n
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, v
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, h
+INIT_STMT -> TYPE_SPEC ID · ;, l
+INIT_STMT -> TYPE_SPEC ID · ;, D
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, d
+INIT_STMT -> TYPE_SPEC ID · ;, t
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, }
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, a
+INIT_STMT -> TYPE_SPEC ID · ;, v
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, i
+INIT_STMT -> TYPE_SPEC ID · ;, o
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, e
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, o
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, I
+INIT_STMT -> TYPE_SPEC ID · ;, }
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, w
+INIT_STMT -> TYPE_SPEC ID · = EXPR ;, t
+
+[node|45]: [begin]
+STMT_LIST -> STMT STMT_LIST ·, }
+
+[node|46]: [begin]
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, }
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, d
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, u
+CALL_STMT -> · ID ( PARG_LIST ), ;
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, I
+FACTOR -> · CONST, +
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, a
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, r
+FACTOR -> · CALL_STMT, /
+TERM -> · FACTOR TERM2 , -
+FACTOR -> · CALL_STMT, +
+TERM -> · FACTOR TERM2 , ;
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, I
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, h
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, }
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, D
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, i
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, w
+FACTOR -> · ( EXPR ), *
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, r
+FACTOR -> · ID, -
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, v
+FACTOR -> · ID, ;
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, l
+CALL_STMT -> · ID ( PARG_LIST ), +
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, e
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, f
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, D
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, t
+FACTOR -> · ID, +
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · ( EXPR ), -
+TERM -> · FACTOR TERM2 , +
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, o
+FACTOR -> · CALL_STMT, -
+FACTOR -> · ( EXPR ), ;
+CALL_STMT -> · ID ( PARG_LIST ), *
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, e
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, u
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, b
+FACTOR -> · ID, /
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, i
+FACTOR -> · ( EXPR ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, n
+EXPR -> · TERM EXPR2, ;
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, b
+FACTOR -> · CONST, /
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, a
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CONST, *
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, o
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, h
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, t
+FACTOR -> · ( EXPR ), /
+CALL_STMT -> · ID ( PARG_LIST ), /
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, l
+FACTOR -> · CONST, ;
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, w
+FACTOR -> · CALL_STMT, ;
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) STMT, v
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, d
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, f
+ITER_STMT -> for ( · EXPR ; EXPR ; EXPR ) CODE_BLOCK, n
+
+[node|47]: [begin]
+CALL_STMT -> ID · ( PARG_LIST ), *
+CALL_STMT -> ID · ( PARG_LIST ), /
+FACTOR -> ID ·, )
+FACTOR -> ID ·, +
+FACTOR -> ID ·, -
+CALL_STMT -> ID · ( PARG_LIST ), -
+FACTOR -> ID ·, /
+CALL_STMT -> ID · ( PARG_LIST ), +
+CALL_STMT -> ID · ( PARG_LIST ), )
+FACTOR -> ID ·, *
+
+[node|48]: [begin]
+FACTOR -> CALL_STMT ·, +
+FACTOR -> CALL_STMT ·, *
+FACTOR -> CALL_STMT ·, -
+FACTOR -> CALL_STMT ·, /
+FACTOR -> CALL_STMT ·, )
+
+[node|49]: [begin]
+TERM2 -> ·, )
+TERM2 -> · / FACTOR TERM2, -
+TERM -> FACTOR · TERM2, -
+TERM2 -> · / FACTOR TERM2, )
+TERM2 -> ·, -
+TERM -> FACTOR · TERM2, +
+TERM2 -> ·, +
+TERM2 -> · * FACTOR TERM2, )
+TERM2 -> · * FACTOR TERM2, +
+TERM2 -> · * FACTOR TERM2, -
+TERM2 -> · / FACTOR TERM2, +
+TERM -> FACTOR · TERM2, )
+
+[node|50]: [begin]
+EXPR2 -> · + TERM EXPR2, )
+EXPR2 -> · - TERM EXPR2, )
+EXPR2 -> ·, )
+EXPR -> TERM · EXPR2, )
+
+[node|51]: [begin]
+FACTOR -> CONST ·, )
+FACTOR -> CONST ·, +
+FACTOR -> CONST ·, -
+FACTOR -> CONST ·, *
+FACTOR -> CONST ·, /
+
+[node|52]: [begin]
+FACTOR -> · ( EXPR ), *
+FACTOR -> ( · EXPR ), -
+FACTOR -> · ID, -
+EXPR -> · TERM EXPR2, )
+FACTOR -> · ID, /
+FACTOR -> ( · EXPR ), )
+FACTOR -> · ( EXPR ), +
+FACTOR -> · CONST, +
+CALL_STMT -> · ID ( PARG_LIST ), )
+FACTOR -> · ( EXPR ), /
+FACTOR -> · CALL_STMT, /
+FACTOR -> · CALL_STMT, )
+CALL_STMT -> · ID ( PARG_LIST ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+TERM -> · FACTOR TERM2 , -
+FACTOR -> · ( EXPR ), )
+FACTOR -> · CALL_STMT, +
+CALL_STMT -> · ID ( PARG_LIST ), /
+FACTOR -> ( · EXPR ), /
+FACTOR -> ( · EXPR ), *
+FACTOR -> · ID, )
+FACTOR -> · ID, +
+FACTOR -> ( · EXPR ), +
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · CONST, /
+FACTOR -> · ( EXPR ), -
+TERM -> · FACTOR TERM2 , +
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CALL_STMT, -
+TERM -> · FACTOR TERM2 , )
+CALL_STMT -> · ID ( PARG_LIST ), *
+FACTOR -> · CONST, )
+FACTOR -> · CONST, *
+
+[node|53]: [begin]
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, o
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, a
+ITER_STMT -> while ( EXPR · ) STMT, h
+ITER_STMT -> while ( EXPR · ) STMT, w
+ITER_STMT -> while ( EXPR · ) STMT, u
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, l
+ITER_STMT -> while ( EXPR · ) STMT, I
+ITER_STMT -> while ( EXPR · ) STMT, b
+ITER_STMT -> while ( EXPR · ) STMT, r
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, t
+ITER_STMT -> while ( EXPR · ) STMT, e
+ITER_STMT -> while ( EXPR · ) STMT, i
+ITER_STMT -> while ( EXPR · ) STMT, n
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, u
+ITER_STMT -> while ( EXPR · ) STMT, l
+ITER_STMT -> while ( EXPR · ) STMT, f
+ITER_STMT -> while ( EXPR · ) STMT, a
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, I
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, h
+ITER_STMT -> while ( EXPR · ) STMT, D
+ITER_STMT -> while ( EXPR · ) STMT, t
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, }
+ITER_STMT -> while ( EXPR · ) STMT, v
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, f
+ITER_STMT -> while ( EXPR · ) STMT, o
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, n
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, d
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, w
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, b
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, D
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, r
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, e
+ITER_STMT -> while ( EXPR · ) STMT, }
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, i
+ITER_STMT -> while ( EXPR · ) CODE_BLOCK, v
+ITER_STMT -> while ( EXPR · ) STMT, d
+
+[node|54]: [begin]
+IF_STMT -> if ( EXPR · ) STMT, r
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, w
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, l
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, h
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, I
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, i
+IF_STMT -> if ( EXPR · ) STMT, w
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, b
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, t
+IF_STMT -> if ( EXPR · ) STMT, f
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, v
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, a
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, r
+IF_STMT -> if ( EXPR · ) STMT, n
+IF_STMT -> if ( EXPR · ) STMT, l
+IF_STMT -> if ( EXPR · ) STMT, D
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, o
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, e
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, w
+IF_STMT -> if ( EXPR · ) STMT, i
+IF_STMT -> if ( EXPR · ) STMT, t
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, l
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, f
+IF_STMT -> if ( EXPR · ) STMT, I
+IF_STMT -> if ( EXPR · ) STMT, a
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, n
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, t
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, b
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, }
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, v
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, D
+IF_STMT -> if ( EXPR · ) STMT, o
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, u
+IF_STMT -> if ( EXPR · ) STMT, e
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, d
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, r
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, o
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, I
+IF_STMT -> if ( EXPR · ) STMT, u
+IF_STMT -> if ( EXPR · ) STMT, b
+IF_STMT -> if ( EXPR · ) STMT, }
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, h
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, e
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, n
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, i
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, f
+IF_STMT -> if ( EXPR · ) STMT, d
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, D
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, a
+IF_STMT -> if ( EXPR · ) CODE_BLOCK else CODE_BLOCK, u
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, }
+IF_STMT -> if ( EXPR · ) STMT, h
+IF_STMT -> if ( EXPR · ) CODE_BLOCK, d
+IF_STMT -> if ( EXPR · ) STMT, v
+
+[node|55]: [begin]
+ASSIGN_STMT -> ID = EXPR · ;, l
+ASSIGN_STMT -> ID = EXPR · ;, b
+ASSIGN_STMT -> ID = EXPR · ;, n
+ASSIGN_STMT -> ID = EXPR · ;, i
+ASSIGN_STMT -> ID = EXPR · ;, o
+ASSIGN_STMT -> ID = EXPR · ;, w
+ASSIGN_STMT -> ID = EXPR · ;, e
+ASSIGN_STMT -> ID = EXPR · ;, D
+ASSIGN_STMT -> ID = EXPR · ;, d
+ASSIGN_STMT -> ID = EXPR · ;, f
+ASSIGN_STMT -> ID = EXPR · ;, I
+ASSIGN_STMT -> ID = EXPR · ;, t
+ASSIGN_STMT -> ID = EXPR · ;, h
+ASSIGN_STMT -> ID = EXPR · ;, u
+ASSIGN_STMT -> ID = EXPR · ;, }
+ASSIGN_STMT -> ID = EXPR · ;, v
+ASSIGN_STMT -> ID = EXPR · ;, r
+ASSIGN_STMT -> ID = EXPR · ;, a
+
+[node|56]: [begin]
+CALL_STMT -> ID ( · PARG_LIST ), /
+CALL_STMT -> ID ( · PARG_LIST ), *
+CALL_STMT -> ID ( · PARG_LIST ), -
+PARG_LIST -> · PARG , PARG_LIST, )
+CALL_STMT -> ID ( · PARG_LIST ), +
+PARG_LIST -> ·, )
+PARG_LIST -> · PARG, )
+PARG -> · ID, )
+PARG -> · ID, ,
+CALL_STMT -> ID ( · PARG_LIST ), ;
+
+[node|57]: [begin]
+FACTOR -> · ( EXPR ), *
+FACTOR -> · ID, -
+FACTOR -> · ID, /
+FACTOR -> · ( EXPR ), +
+FACTOR -> · ID, ;
+CALL_STMT -> · ID ( PARG_LIST ), ;
+FACTOR -> · CONST, +
+FACTOR -> · ( EXPR ), /
+FACTOR -> · CALL_STMT, /
+CALL_STMT -> · ID ( PARG_LIST ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+CALL_STMT -> · ID ( PARG_LIST ), /
+FACTOR -> · CALL_STMT, +
+TERM2 -> / · FACTOR TERM2, -
+FACTOR -> · CONST, ;
+FACTOR -> · ID, +
+TERM2 -> / · FACTOR TERM2, ;
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · CALL_STMT, ;
+FACTOR -> · CONST, /
+FACTOR -> · ( EXPR ), -
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CALL_STMT, -
+FACTOR -> · ( EXPR ), ;
+CALL_STMT -> · ID ( PARG_LIST ), *
+TERM2 -> / · FACTOR TERM2, +
+FACTOR -> · CONST, *
+
+[node|58]: [begin]
+TERM -> FACTOR TERM2 ·, ;
+TERM -> FACTOR TERM2 ·, +
+TERM -> FACTOR TERM2 ·, -
+
+[node|59]: [begin]
+FACTOR -> · ( EXPR ), *
+FACTOR -> · ID, -
+FACTOR -> · ID, /
+FACTOR -> · ( EXPR ), +
+FACTOR -> · ID, ;
+CALL_STMT -> · ID ( PARG_LIST ), ;
+FACTOR -> · CONST, +
+FACTOR -> · ( EXPR ), /
+FACTOR -> · CALL_STMT, /
+CALL_STMT -> · ID ( PARG_LIST ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+CALL_STMT -> · ID ( PARG_LIST ), /
+FACTOR -> · CALL_STMT, +
+FACTOR -> · CONST, ;
+FACTOR -> · ID, +
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · CALL_STMT, ;
+FACTOR -> · CONST, /
+FACTOR -> · ( EXPR ), -
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CALL_STMT, -
+TERM2 -> * · FACTOR TERM2, -
+TERM2 -> * · FACTOR TERM2, +
+FACTOR -> · ( EXPR ), ;
+CALL_STMT -> · ID ( PARG_LIST ), *
+TERM2 -> * · FACTOR TERM2, ;
+FACTOR -> · CONST, *
+
+[node|60]: [begin]
+FACTOR -> · ( EXPR ), *
+FACTOR -> · ID, -
+FACTOR -> · ID, /
+FACTOR -> · ( EXPR ), +
+FACTOR -> · ID, ;
+CALL_STMT -> · ID ( PARG_LIST ), ;
+FACTOR -> · CONST, +
+FACTOR -> · ( EXPR ), /
+FACTOR -> · CALL_STMT, /
+CALL_STMT -> · ID ( PARG_LIST ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+TERM -> · FACTOR TERM2 , -
+FACTOR -> · CALL_STMT, +
+CALL_STMT -> · ID ( PARG_LIST ), /
+TERM -> · FACTOR TERM2 , ;
+FACTOR -> · CONST, ;
+EXPR2 -> + · TERM EXPR2, ;
+FACTOR -> · ID, +
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · CALL_STMT, ;
+FACTOR -> · CONST, /
+FACTOR -> · ( EXPR ), -
+TERM -> · FACTOR TERM2 , +
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CALL_STMT, -
+FACTOR -> · ( EXPR ), ;
+CALL_STMT -> · ID ( PARG_LIST ), *
+FACTOR -> · CONST, *
+
+[node|61]: [begin]
+EXPR -> TERM EXPR2 ·, ;
+
+[node|62]: [begin]
+FACTOR -> · ( EXPR ), *
+FACTOR -> · ID, -
+FACTOR -> · ID, /
+FACTOR -> · ( EXPR ), +
+FACTOR -> · ID, ;
+CALL_STMT -> · ID ( PARG_LIST ), ;
+FACTOR -> · CONST, +
+FACTOR -> · ( EXPR ), /
+FACTOR -> · CALL_STMT, /
+CALL_STMT -> · ID ( PARG_LIST ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+TERM -> · FACTOR TERM2 , -
+FACTOR -> · CALL_STMT, +
+CALL_STMT -> · ID ( PARG_LIST ), /
+TERM -> · FACTOR TERM2 , ;
+FACTOR -> · CONST, ;
+FACTOR -> · ID, +
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · CALL_STMT, ;
+FACTOR -> · CONST, /
+EXPR2 -> - · TERM EXPR2, ;
+FACTOR -> · ( EXPR ), -
+TERM -> · FACTOR TERM2 , +
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CALL_STMT, -
+FACTOR -> · ( EXPR ), ;
+CALL_STMT -> · ID ( PARG_LIST ), *
+FACTOR -> · CONST, *
+
+[node|63]: [begin]
+FACTOR -> ( EXPR · ), *
+FACTOR -> ( EXPR · ), /
+FACTOR -> ( EXPR · ), -
+FACTOR -> ( EXPR · ), +
+FACTOR -> ( EXPR · ), ;
+
+[node|64]: [begin]
+RTN_STMT -> return EXPR ; ·, r
+RTN_STMT -> return EXPR ; ·, }
+RTN_STMT -> return EXPR ; ·, D
+RTN_STMT -> return EXPR ; ·, b
+RTN_STMT -> return EXPR ; ·, a
+RTN_STMT -> return EXPR ; ·, o
+RTN_STMT -> return EXPR ; ·, w
+RTN_STMT -> return EXPR ; ·, d
+RTN_STMT -> return EXPR ; ·, v
+RTN_STMT -> return EXPR ; ·, n
+RTN_STMT -> return EXPR ; ·, i
+RTN_STMT -> return EXPR ; ·, h
+RTN_STMT -> return EXPR ; ·, t
+RTN_STMT -> return EXPR ; ·, e
+RTN_STMT -> return EXPR ; ·, I
+RTN_STMT -> return EXPR ; ·, f
+RTN_STMT -> return EXPR ; ·, u
+RTN_STMT -> return EXPR ; ·, l
+
+[node|65]: [begin]
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, h
+FACTOR -> · ( EXPR ), *
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, v
+FACTOR -> · ID, -
+FACTOR -> · ID, /
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, r
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, D
+FACTOR -> · ( EXPR ), +
+FACTOR -> · ID, ;
+CALL_STMT -> · ID ( PARG_LIST ), ;
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, t
+FACTOR -> · CONST, +
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, w
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, n
+FACTOR -> · ( EXPR ), /
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, l
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, f
+FACTOR -> · CALL_STMT, /
+CALL_STMT -> · ID ( PARG_LIST ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+TERM -> · FACTOR TERM2 , -
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, a
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, o
+FACTOR -> · CALL_STMT, +
+CALL_STMT -> · ID ( PARG_LIST ), /
+EXPR -> · TERM EXPR2, ;
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, i
+TERM -> · FACTOR TERM2 , ;
+FACTOR -> · CONST, ;
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, e
+FACTOR -> · ID, +
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, I
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, u
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, b
+FACTOR -> · CALL_STMT, ;
+FACTOR -> · CONST, /
+FACTOR -> · ( EXPR ), -
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, d
+TERM -> · FACTOR TERM2 , +
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CALL_STMT, -
+FACTOR -> · ( EXPR ), ;
+INIT_STMT -> TYPE_SPEC ID = · EXPR ;, }
+CALL_STMT -> · ID ( PARG_LIST ), *
+FACTOR -> · CONST, *
+
+[node|66]: [begin]
+INIT_STMT -> TYPE_SPEC ID ; ·, d
+INIT_STMT -> TYPE_SPEC ID ; ·, w
+INIT_STMT -> TYPE_SPEC ID ; ·, t
+INIT_STMT -> TYPE_SPEC ID ; ·, u
+INIT_STMT -> TYPE_SPEC ID ; ·, I
+INIT_STMT -> TYPE_SPEC ID ; ·, b
+INIT_STMT -> TYPE_SPEC ID ; ·, a
+INIT_STMT -> TYPE_SPEC ID ; ·, h
+INIT_STMT -> TYPE_SPEC ID ; ·, f
+INIT_STMT -> TYPE_SPEC ID ; ·, }
+INIT_STMT -> TYPE_SPEC ID ; ·, n
+INIT_STMT -> TYPE_SPEC ID ; ·, v
+INIT_STMT -> TYPE_SPEC ID ; ·, r
+INIT_STMT -> TYPE_SPEC ID ; ·, l
+INIT_STMT -> TYPE_SPEC ID ; ·, o
+INIT_STMT -> TYPE_SPEC ID ; ·, e
+INIT_STMT -> TYPE_SPEC ID ; ·, D
+INIT_STMT -> TYPE_SPEC ID ; ·, i
+
+[node|67]: [begin]
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, r
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, a
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, b
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, I
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, u
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, t
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, w
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, h
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, i
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, u
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, l
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, d
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, }
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, o
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, w
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, I
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, r
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, D
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, o
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, v
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, d
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, n
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, f
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, t
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, }
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, D
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, b
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, a
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, f
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, l
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, n
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, v
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, i
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, h
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) STMT, e
+ITER_STMT -> for ( EXPR · ; EXPR ; EXPR ) CODE_BLOCK, e
+
+[node|68]: [begin]
+CALL_STMT -> ID ( · PARG_LIST ), /
+CALL_STMT -> ID ( · PARG_LIST ), *
+CALL_STMT -> ID ( · PARG_LIST ), -
+PARG_LIST -> · PARG , PARG_LIST, )
+CALL_STMT -> ID ( · PARG_LIST ), +
+PARG_LIST -> ·, )
+PARG_LIST -> · PARG, )
+PARG -> · ID, )
+PARG -> · ID, ,
+CALL_STMT -> ID ( · PARG_LIST ), )
+
+[node|69]: [begin]
+FACTOR -> · ( EXPR ), *
+FACTOR -> · ID, -
+FACTOR -> · ID, /
+TERM2 -> / · FACTOR TERM2, )
+FACTOR -> · ( EXPR ), +
+FACTOR -> · CONST, +
+CALL_STMT -> · ID ( PARG_LIST ), )
+FACTOR -> · ( EXPR ), /
+FACTOR -> · CALL_STMT, /
+FACTOR -> · CALL_STMT, )
+CALL_STMT -> · ID ( PARG_LIST ), -
+CALL_STMT -> · ID ( PARG_LIST ), +
+FACTOR -> · ( EXPR ), )
+CALL_STMT -> · ID ( PARG_LIST ), /
+FACTOR -> · CALL_STMT, +
+TERM2 -> / · FACTOR TERM2, -
+FACTOR -> · ID, )
+FACTOR -> · ID, +
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · CONST, /
+FACTOR -> · ( EXPR ), -
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CALL_STMT, -
+CALL_STMT -> · ID ( PARG_LIST ), *
+TERM2 -> / · FACTOR TERM2, +
+FACTOR -> · CONST, )
+FACTOR -> · CONST, *
+
+[node|70]: [begin]
+TERM -> FACTOR TERM2 ·, -
+TERM -> FACTOR TERM2 ·, +
+TERM -> FACTOR TERM2 ·, )
+
+[node|71]: [begin]
+FACTOR -> · ( EXPR ), *
+FACTOR -> · ID, -
+FACTOR -> · ID, /
+FACTOR -> · ( EXPR ), +
+FACTOR -> · CONST, +
+CALL_STMT -> · ID ( PARG_LIST ), )
+FACTOR -> · ( EXPR ), /
+FACTOR -> · CALL_STMT, /
+CALL_STMT -> · ID ( PARG_LIST ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+FACTOR -> · CALL_STMT, )
+FACTOR -> · ( EXPR ), )
+CALL_STMT -> · ID ( PARG_LIST ), /
+FACTOR -> · CALL_STMT, +
+FACTOR -> · ID, )
+FACTOR -> · ID, +
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · CONST, /
+FACTOR -> · ( EXPR ), -
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CALL_STMT, -
+TERM2 -> * · FACTOR TERM2, -
+TERM2 -> * · FACTOR TERM2, +
+CALL_STMT -> · ID ( PARG_LIST ), *
+TERM2 -> * · FACTOR TERM2, )
+FACTOR -> · CONST, )
+FACTOR -> · CONST, *
+
+[node|72]: [begin]
+FACTOR -> · ( EXPR ), *
+FACTOR -> · ID, -
+FACTOR -> · ID, /
+FACTOR -> · ( EXPR ), +
+FACTOR -> · CONST, +
+CALL_STMT -> · ID ( PARG_LIST ), )
+FACTOR -> · ( EXPR ), /
+FACTOR -> · CALL_STMT, /
+FACTOR -> · CALL_STMT, )
+CALL_STMT -> · ID ( PARG_LIST ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+TERM -> · FACTOR TERM2 , -
+FACTOR -> · ( EXPR ), )
+FACTOR -> · CALL_STMT, +
+CALL_STMT -> · ID ( PARG_LIST ), /
+EXPR2 -> + · TERM EXPR2, )
+FACTOR -> · ID, )
+FACTOR -> · ID, +
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · CONST, /
+FACTOR -> · ( EXPR ), -
+TERM -> · FACTOR TERM2 , +
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CALL_STMT, -
+TERM -> · FACTOR TERM2 , )
+CALL_STMT -> · ID ( PARG_LIST ), *
+FACTOR -> · CONST, )
+FACTOR -> · CONST, *
+
+[node|73]: [begin]
+EXPR -> TERM EXPR2 ·, )
+
+[node|74]: [begin]
+FACTOR -> · ( EXPR ), *
+FACTOR -> · ID, -
+FACTOR -> · ID, /
+FACTOR -> · ( EXPR ), +
+FACTOR -> · CONST, +
+CALL_STMT -> · ID ( PARG_LIST ), )
+FACTOR -> · ( EXPR ), /
+FACTOR -> · CALL_STMT, /
+FACTOR -> · CALL_STMT, )
+CALL_STMT -> · ID ( PARG_LIST ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+TERM -> · FACTOR TERM2 , -
+FACTOR -> · ( EXPR ), )
+FACTOR -> · CALL_STMT, +
+CALL_STMT -> · ID ( PARG_LIST ), /
+FACTOR -> · ID, )
+FACTOR -> · ID, +
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · CONST, /
+FACTOR -> · ( EXPR ), -
+TERM -> · FACTOR TERM2 , +
+FACTOR -> · CALL_STMT, *
+FACTOR -> · CALL_STMT, -
+TERM -> · FACTOR TERM2 , )
+EXPR2 -> - · TERM EXPR2, )
+CALL_STMT -> · ID ( PARG_LIST ), *
+FACTOR -> · CONST, )
+FACTOR -> · CONST, *
+
+[node|75]: [begin]
+FACTOR -> ( EXPR · ), *
+FACTOR -> ( EXPR · ), /
+FACTOR -> ( EXPR · ), -
+FACTOR -> ( EXPR · ), +
+FACTOR -> ( EXPR · ), )
+
+[node|76]: [begin]
+STMT -> · ASSIGN_STMT, r
+RTN_STMT -> · return EXPR ; , }
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, r
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, D
+ASSIGN_STMT -> · ID = EXPR ;, u
+ITER_STMT -> while ( EXPR ) · STMT, f
+ASSIGN_STMT -> · ID = EXPR ;, b
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, w
+RTN_STMT -> · return EXPR ; , w
+ITER_STMT -> · while ( EXPR ) STMT, o
+STMT -> · ITER_STMT, }
+CODE_BLOCK -> · { STMT_LIST }, v
+STMT -> · ITER_STMT, n
+STMT -> · RTN_STMT, o
+RTN_STMT -> · return EXPR ; , r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, a
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, D
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, }
+STMT -> · ITER_STMT, r
+IF_STMT -> · if ( EXPR ) STMT, o
+INIT_STMT -> · TYPE_SPEC ID ;, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, w
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, r
+STMT -> · ASSIGN_STMT, h
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, b
+ITER_STMT -> · while ( EXPR ) STMT, d
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, t
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, v
+ITER_STMT -> while ( EXPR ) · STMT, d
+CODE_BLOCK -> · { STMT_LIST }, i
+IF_STMT -> · if ( EXPR ) STMT, e
+STMT -> · ASSIGN_STMT, D
+RTN_STMT -> · return EXPR ; , d
+STMT -> · IF_STMT, r
+STMT -> · ITER_STMT, D
+STMT -> · IF_STMT, v
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, h
+ITER_STMT -> · while ( EXPR ) STMT, u
+RTN_STMT -> · return EXPR ; , a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, e
+ITER_STMT -> while ( EXPR ) · STMT, l
+TYPE_SPEC -> · float, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, f
+STMT -> · RTN_STMT, n
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, D
+STMT -> · ITER_STMT, l
+STMT -> · IF_STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, h
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, i
+RTN_STMT -> · return EXPR ; , h
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, n
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, u
+IF_STMT -> · if ( EXPR ) STMT, }
+STMT -> · ASSIGN_STMT, e
+STMT -> · ASSIGN_STMT, a
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, i
+STMT -> · IF_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, n
+ASSIGN_STMT -> · ID = EXPR ;, n
+IF_STMT -> · if ( EXPR ) STMT, r
+STMT -> · ASSIGN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, }
+STMT -> · ASSIGN_STMT, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, f
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, a
+CODE_BLOCK -> · { STMT_LIST }, t
+STMT -> · IF_STMT, t
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, o
+STMT -> · IF_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, o
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, e
+TYPE_SPEC -> · void, D
+CODE_BLOCK -> · { STMT_LIST }, h
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, b
+STMT -> · ASSIGN_STMT, o
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, o
+ITER_STMT -> while ( EXPR ) · STMT, t
+ASSIGN_STMT -> · ID = EXPR ;, D
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, u
+STMT -> · ITER_STMT, t
+INIT_STMT -> · TYPE_SPEC ID ;, i
+ASSIGN_STMT -> · ID = EXPR ;, l
+CODE_BLOCK -> · { STMT_LIST }, I
+STMT -> · INIT_STMT, o
+ITER_STMT -> · while ( EXPR ) STMT, b
+ASSIGN_STMT -> · ID = EXPR ;, o
+INIT_STMT -> · TYPE_SPEC ID ;, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, h
+RTN_STMT -> · return EXPR ; , I
+ITER_STMT -> while ( EXPR ) · STMT, I
+INIT_STMT -> · TYPE_SPEC ID ;, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, l
+STMT -> · ITER_STMT, I
+STMT -> · INIT_STMT, v
+ITER_STMT -> while ( EXPR ) · STMT, n
+IF_STMT -> · if ( EXPR ) STMT, v
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, l
+STMT -> · ITER_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, u
+TYPE_SPEC -> · double, I
+STMT -> · RTN_STMT, t
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, I
+STMT -> · ASSIGN_STMT, i
+CODE_BLOCK -> · { STMT_LIST }, D
+STMT -> · INIT_STMT, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, b
+STMT -> · IF_STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, v
+ASSIGN_STMT -> · ID = EXPR ;, e
+STMT -> · RTN_STMT, h
+STMT -> · RTN_STMT, i
+ITER_STMT -> · while ( EXPR ) STMT, n
+IF_STMT -> · if ( EXPR ) STMT, a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, o
+ASSIGN_STMT -> · ID = EXPR ;, v
+ITER_STMT -> while ( EXPR ) · STMT, r
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, i
+RTN_STMT -> · return EXPR ; , i
+IF_STMT -> · if ( EXPR ) STMT, n
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, I
+STMT -> · INIT_STMT, b
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, e
+ASSIGN_STMT -> · ID = EXPR ;, r
+ITER_STMT -> · while ( EXPR ) STMT, a
+INIT_STMT -> · TYPE_SPEC ID ;, }
+STMT -> · ITER_STMT, v
+INIT_STMT -> · TYPE_SPEC ID ;, I
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, u
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, r
+INIT_STMT -> · TYPE_SPEC ID ;, r
+STMT -> · RTN_STMT, e
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, I
+STMT -> · INIT_STMT, D
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, v
+ITER_STMT -> · while ( EXPR ) STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, r
+STMT -> · INIT_STMT, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, f
+STMT -> · IF_STMT, h
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, v
+ITER_STMT -> while ( EXPR ) · STMT, a
+INIT_STMT -> · TYPE_SPEC ID ;, d
+ITER_STMT -> · while ( EXPR ) STMT, l
+RTN_STMT -> · return EXPR ; , l
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, d
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, d
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, u
+ASSIGN_STMT -> · ID = EXPR ;, w
+STMT -> · INIT_STMT, w
+IF_STMT -> · if ( EXPR ) STMT, l
+STMT -> · INIT_STMT, r
+STMT -> · ASSIGN_STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, w
+IF_STMT -> · if ( EXPR ) STMT, i
+TYPE_SPEC -> · int, I
+CODE_BLOCK -> · { STMT_LIST }, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, t
+STMT -> · INIT_STMT, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, t
+STMT -> · ASSIGN_STMT, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, w
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, w
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, t
+STMT -> · ITER_STMT, u
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, h
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, r
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, I
+ASSIGN_STMT -> · ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, a
+STMT -> · ASSIGN_STMT, n
+ITER_STMT -> while ( EXPR ) · STMT, }
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, b
+ASSIGN_STMT -> · ID = EXPR ;, }
+ASSIGN_STMT -> · ID = EXPR ;, h
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, d
+ITER_STMT -> · while ( EXPR ) STMT, t
+CODE_BLOCK -> · { STMT_LIST }, d
+ITER_STMT -> while ( EXPR ) · STMT, i
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, f
+ITER_STMT -> · while ( EXPR ) STMT, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, a
+STMT -> · ASSIGN_STMT, b
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, o
+IF_STMT -> · if ( EXPR ) STMT, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, }
+STMT -> · RTN_STMT, r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, e
+CODE_BLOCK -> · { STMT_LIST }, u
+STMT -> · RTN_STMT, a
+STMT -> · RTN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, h
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, l
+ITER_STMT -> · while ( EXPR ) STMT, f
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, l
+STMT -> · ASSIGN_STMT, l
+STMT -> · RTN_STMT, }
+STMT -> · RTN_STMT, b
+RTN_STMT -> · return EXPR ; , n
+INIT_STMT -> · TYPE_SPEC ID ;, u
+IF_STMT -> · if ( EXPR ) STMT, d
+ITER_STMT -> while ( EXPR ) · STMT, e
+INIT_STMT -> · TYPE_SPEC ID ;, b
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, v
+STMT -> · ASSIGN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, l
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, b
+STMT -> · INIT_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, b
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, o
+ASSIGN_STMT -> · ID = EXPR ;, I
+ITER_STMT -> while ( EXPR ) · STMT, h
+ITER_STMT -> · while ( EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, w
+STMT -> · ITER_STMT, b
+RTN_STMT -> · return EXPR ; , D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, n
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, f
+ITER_STMT -> · while ( EXPR ) STMT, r
+STMT -> · RTN_STMT, w
+STMT -> · ITER_STMT, a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, i
+RTN_STMT -> · return EXPR ; , o
+ITER_STMT -> · while ( EXPR ) STMT, w
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, o
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, }
+RTN_STMT -> · return EXPR ; , v
+STMT -> · RTN_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, f
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, u
+STMT -> · IF_STMT, o
+CODE_BLOCK -> · { STMT_LIST }, l
+STMT -> · IF_STMT, l
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, n
+ASSIGN_STMT -> · ID = EXPR ;, d
+STMT -> · ASSIGN_STMT, t
+RTN_STMT -> · return EXPR ; , b
+RTN_STMT -> · return EXPR ; , e
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, f
+ITER_STMT -> while ( EXPR ) · STMT, w
+CODE_BLOCK -> · { STMT_LIST }, b
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) STMT, b
+STMT -> · INIT_STMT, d
+STMT -> · ITER_STMT, o
+STMT -> · INIT_STMT, u
+STMT -> · IF_STMT, d
+STMT -> · ASSIGN_STMT, d
+ASSIGN_STMT -> · ID = EXPR ;, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, l
+CODE_BLOCK -> · { STMT_LIST }, r
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, d
+STMT -> · INIT_STMT, a
+ITER_STMT -> while ( EXPR ) · STMT, u
+CODE_BLOCK -> · { STMT_LIST }, w
+ITER_STMT -> · while ( EXPR ) STMT, v
+STMT -> · INIT_STMT, t
+INIT_STMT -> · TYPE_SPEC ID ;, D
+STMT -> · IF_STMT, n
+STMT -> · RTN_STMT, d
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, a
+ASSIGN_STMT -> · ID = EXPR ;, i
+INIT_STMT -> · TYPE_SPEC ID ;, l
+STMT -> · ITER_STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, o
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, b
+INIT_STMT -> · TYPE_SPEC ID ;, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, I
+STMT -> · RTN_STMT, v
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, a
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, d
+STMT -> · RTN_STMT, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, i
+TYPE_SPEC -> · void, I
+STMT -> · ITER_STMT, h
+ITER_STMT -> while ( EXPR ) · STMT, D
+CODE_BLOCK -> · { STMT_LIST }, a
+RTN_STMT -> · return EXPR ; , f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, u
+STMT -> · ITER_STMT, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, r
+ITER_STMT -> while ( EXPR ) · STMT, v
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, t
+CODE_BLOCK -> · { STMT_LIST }, n
+STMT -> · INIT_STMT, I
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, D
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, }
+STMT -> · RTN_STMT, f
+STMT -> · INIT_STMT, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, i
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, I
+ITER_STMT -> while ( EXPR ) · STMT, b
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, I
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, n
+STMT -> · IF_STMT, b
+CODE_BLOCK -> · { STMT_LIST }, }
+IF_STMT -> · if ( EXPR ) STMT, D
+STMT -> · IF_STMT, }
+STMT -> · IF_STMT, u
+INIT_STMT -> · TYPE_SPEC ID ;, w
+CODE_BLOCK -> · { STMT_LIST }, f
+RTN_STMT -> · return EXPR ; , t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, n
+STMT -> · IF_STMT, a
+ASSIGN_STMT -> · ID = EXPR ;, f
+RTN_STMT -> · return EXPR ; , u
+CODE_BLOCK -> · { STMT_LIST }, o
+STMT -> · INIT_STMT, n
+TYPE_SPEC -> · float, I
+INIT_STMT -> · TYPE_SPEC ID ;, f
+ITER_STMT -> while ( EXPR ) · CODE_BLOCK, i
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, d
+STMT -> · ITER_STMT, w
+STMT -> · RTN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, I
+ITER_STMT -> while ( EXPR ) · STMT, o
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, h
+STMT -> · ITER_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, l
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, r
+INIT_STMT -> · TYPE_SPEC ID ;, a
+ITER_STMT -> · while ( EXPR ) STMT, i
+TYPE_SPEC -> · double, D
+IF_STMT -> · if ( EXPR ) STMT, I
+STMT -> · ASSIGN_STMT, }
+STMT -> · IF_STMT, w
+STMT -> · INIT_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, v
+TYPE_SPEC -> · int, D
+STMT -> · IF_STMT, f
+
+[node|77]: [begin]
+STMT -> · ASSIGN_STMT, r
+IF_STMT -> if ( EXPR ) · STMT, e
+RTN_STMT -> · return EXPR ; , }
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, r
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, D
+ASSIGN_STMT -> · ID = EXPR ;, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, w
+ITER_STMT -> · while ( EXPR ) STMT, o
+ASSIGN_STMT -> · ID = EXPR ;, b
+RTN_STMT -> · return EXPR ; , w
+CODE_BLOCK -> · { STMT_LIST }, v
+STMT -> · ITER_STMT, }
+STMT -> · ITER_STMT, n
+STMT -> · RTN_STMT, o
+RTN_STMT -> · return EXPR ; , r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, e
+STMT -> · ITER_STMT, r
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) STMT, o
+INIT_STMT -> · TYPE_SPEC ID ;, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, w
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, r
+STMT -> · ASSIGN_STMT, h
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, b
+ITER_STMT -> · while ( EXPR ) STMT, d
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, v
+IF_STMT -> · if ( EXPR ) STMT, e
+CODE_BLOCK -> · { STMT_LIST }, i
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, }
+STMT -> · ASSIGN_STMT, D
+RTN_STMT -> · return EXPR ; , d
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, n
+STMT -> · IF_STMT, r
+STMT -> · ITER_STMT, D
+STMT -> · IF_STMT, v
+ITER_STMT -> · while ( EXPR ) STMT, u
+RTN_STMT -> · return EXPR ; , a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, e
+TYPE_SPEC -> · float, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, f
+STMT -> · RTN_STMT, n
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, D
+STMT -> · ITER_STMT, l
+STMT -> · IF_STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, i
+RTN_STMT -> · return EXPR ; , h
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, n
+IF_STMT -> if ( EXPR ) · STMT, o
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, t
+IF_STMT -> if ( EXPR ) · STMT, v
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, u
+IF_STMT -> · if ( EXPR ) STMT, }
+STMT -> · ASSIGN_STMT, e
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, l
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, w
+STMT -> · ASSIGN_STMT, a
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, i
+STMT -> · IF_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, n
+IF_STMT -> · if ( EXPR ) STMT, r
+ASSIGN_STMT -> · ID = EXPR ;, n
+STMT -> · ASSIGN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, }
+STMT -> · ASSIGN_STMT, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, f
+CODE_BLOCK -> · { STMT_LIST }, t
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, f
+STMT -> · IF_STMT, t
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, o
+STMT -> · IF_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, o
+TYPE_SPEC -> · void, D
+CODE_BLOCK -> · { STMT_LIST }, h
+STMT -> · ASSIGN_STMT, o
+IF_STMT -> if ( EXPR ) · STMT, i
+IF_STMT -> if ( EXPR ) · STMT, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, o
+ASSIGN_STMT -> · ID = EXPR ;, D
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, u
+IF_STMT -> if ( EXPR ) · STMT, I
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, a
+STMT -> · ITER_STMT, t
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, i
+ASSIGN_STMT -> · ID = EXPR ;, l
+INIT_STMT -> · TYPE_SPEC ID ;, i
+CODE_BLOCK -> · { STMT_LIST }, I
+STMT -> · INIT_STMT, o
+ASSIGN_STMT -> · ID = EXPR ;, o
+ITER_STMT -> · while ( EXPR ) STMT, b
+INIT_STMT -> · TYPE_SPEC ID ;, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, h
+RTN_STMT -> · return EXPR ; , I
+INIT_STMT -> · TYPE_SPEC ID ;, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, l
+STMT -> · ITER_STMT, I
+STMT -> · INIT_STMT, v
+IF_STMT -> · if ( EXPR ) STMT, v
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, l
+IF_STMT -> if ( EXPR ) · STMT, f
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, t
+STMT -> · ITER_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, u
+TYPE_SPEC -> · double, I
+STMT -> · RTN_STMT, t
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, I
+STMT -> · ASSIGN_STMT, i
+CODE_BLOCK -> · { STMT_LIST }, D
+STMT -> · INIT_STMT, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, b
+STMT -> · IF_STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, v
+ASSIGN_STMT -> · ID = EXPR ;, e
+STMT -> · RTN_STMT, h
+STMT -> · RTN_STMT, i
+ITER_STMT -> · while ( EXPR ) STMT, n
+IF_STMT -> · if ( EXPR ) STMT, a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, o
+ASSIGN_STMT -> · ID = EXPR ;, v
+IF_STMT -> if ( EXPR ) · STMT, d
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, i
+RTN_STMT -> · return EXPR ; , i
+ASSIGN_STMT -> · ID = EXPR ;, r
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, I
+IF_STMT -> · if ( EXPR ) STMT, n
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, e
+ITER_STMT -> · while ( EXPR ) STMT, a
+STMT -> · INIT_STMT, b
+INIT_STMT -> · TYPE_SPEC ID ;, }
+STMT -> · ITER_STMT, v
+INIT_STMT -> · TYPE_SPEC ID ;, I
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, u
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, r
+INIT_STMT -> · TYPE_SPEC ID ;, r
+STMT -> · RTN_STMT, e
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, I
+STMT -> · INIT_STMT, D
+IF_STMT -> if ( EXPR ) · STMT, l
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, v
+ITER_STMT -> · while ( EXPR ) STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, r
+STMT -> · INIT_STMT, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, f
+STMT -> · IF_STMT, h
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, I
+INIT_STMT -> · TYPE_SPEC ID ;, d
+ITER_STMT -> · while ( EXPR ) STMT, l
+RTN_STMT -> · return EXPR ; , l
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, d
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, d
+ASSIGN_STMT -> · ID = EXPR ;, w
+STMT -> · INIT_STMT, w
+IF_STMT -> · if ( EXPR ) STMT, l
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, n
+STMT -> · INIT_STMT, r
+IF_STMT -> if ( EXPR ) · STMT, r
+STMT -> · ASSIGN_STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, w
+IF_STMT -> if ( EXPR ) · STMT, a
+CODE_BLOCK -> · { STMT_LIST }, e
+TYPE_SPEC -> · int, I
+IF_STMT -> · if ( EXPR ) STMT, i
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, t
+STMT -> · INIT_STMT, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, t
+STMT -> · ASSIGN_STMT, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, v
+IF_STMT -> if ( EXPR ) · STMT, }
+IF_STMT -> if ( EXPR ) · STMT, b
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, w
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, t
+STMT -> · ITER_STMT, u
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, h
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, i
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, e
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, b
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, v
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, D
+ASSIGN_STMT -> · ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, a
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, l
+STMT -> · ASSIGN_STMT, n
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, o
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, b
+ASSIGN_STMT -> · ID = EXPR ;, }
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, v
+ASSIGN_STMT -> · ID = EXPR ;, h
+ITER_STMT -> · while ( EXPR ) STMT, t
+CODE_BLOCK -> · { STMT_LIST }, d
+IF_STMT -> if ( EXPR ) · STMT, w
+ITER_STMT -> · while ( EXPR ) STMT, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, a
+STMT -> · ASSIGN_STMT, b
+IF_STMT -> · if ( EXPR ) STMT, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, }
+STMT -> · RTN_STMT, r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, e
+CODE_BLOCK -> · { STMT_LIST }, u
+STMT -> · RTN_STMT, a
+STMT -> · RTN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, h
+ITER_STMT -> · while ( EXPR ) STMT, f
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, l
+STMT -> · ASSIGN_STMT, l
+STMT -> · RTN_STMT, }
+STMT -> · RTN_STMT, b
+RTN_STMT -> · return EXPR ; , n
+INIT_STMT -> · TYPE_SPEC ID ;, u
+IF_STMT -> · if ( EXPR ) STMT, d
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, v
+INIT_STMT -> · TYPE_SPEC ID ;, b
+STMT -> · ASSIGN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, l
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, a
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, b
+STMT -> · INIT_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, b
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, r
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, d
+IF_STMT -> if ( EXPR ) · STMT, u
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, o
+ASSIGN_STMT -> · ID = EXPR ;, I
+ITER_STMT -> · while ( EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, w
+STMT -> · ITER_STMT, b
+RTN_STMT -> · return EXPR ; , D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, n
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, f
+ITER_STMT -> · while ( EXPR ) STMT, r
+STMT -> · RTN_STMT, w
+STMT -> · ITER_STMT, a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, i
+RTN_STMT -> · return EXPR ; , o
+ITER_STMT -> · while ( EXPR ) STMT, w
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, o
+RTN_STMT -> · return EXPR ; , v
+STMT -> · RTN_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, f
+IF_STMT -> if ( EXPR ) · STMT, h
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, u
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, h
+STMT -> · IF_STMT, o
+CODE_BLOCK -> · { STMT_LIST }, l
+STMT -> · IF_STMT, l
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, n
+ASSIGN_STMT -> · ID = EXPR ;, d
+STMT -> · ASSIGN_STMT, t
+RTN_STMT -> · return EXPR ; , b
+RTN_STMT -> · return EXPR ; , e
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, f
+CODE_BLOCK -> · { STMT_LIST }, b
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) STMT, b
+STMT -> · INIT_STMT, d
+STMT -> · ITER_STMT, o
+STMT -> · INIT_STMT, u
+STMT -> · IF_STMT, d
+STMT -> · ASSIGN_STMT, d
+ASSIGN_STMT -> · ID = EXPR ;, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, l
+CODE_BLOCK -> · { STMT_LIST }, r
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, d
+STMT -> · INIT_STMT, a
+CODE_BLOCK -> · { STMT_LIST }, w
+ITER_STMT -> · while ( EXPR ) STMT, v
+STMT -> · INIT_STMT, t
+INIT_STMT -> · TYPE_SPEC ID ;, D
+STMT -> · IF_STMT, n
+STMT -> · RTN_STMT, d
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, a
+INIT_STMT -> · TYPE_SPEC ID ;, l
+ASSIGN_STMT -> · ID = EXPR ;, i
+STMT -> · ITER_STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, o
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, o
+INIT_STMT -> · TYPE_SPEC ID ;, v
+IF_STMT -> if ( EXPR ) · STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, b
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, I
+STMT -> · RTN_STMT, v
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, a
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, d
+STMT -> · RTN_STMT, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, i
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, h
+TYPE_SPEC -> · void, I
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, I
+STMT -> · ITER_STMT, h
+CODE_BLOCK -> · { STMT_LIST }, a
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, f
+RTN_STMT -> · return EXPR ; , f
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, u
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, u
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, b
+STMT -> · ITER_STMT, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, t
+CODE_BLOCK -> · { STMT_LIST }, n
+STMT -> · INIT_STMT, I
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, D
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, }
+STMT -> · RTN_STMT, f
+STMT -> · INIT_STMT, l
+CODE_BLOCK -> · { STMT_LIST }, s
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, t
+IF_STMT -> if ( EXPR ) · STMT, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, i
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, I
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, n
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, r
+STMT -> · IF_STMT, b
+CODE_BLOCK -> · { STMT_LIST }, }
+IF_STMT -> · if ( EXPR ) STMT, D
+STMT -> · IF_STMT, }
+STMT -> · IF_STMT, u
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, w
+INIT_STMT -> · TYPE_SPEC ID ;, w
+CODE_BLOCK -> · { STMT_LIST }, f
+RTN_STMT -> · return EXPR ; , t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, n
+STMT -> · IF_STMT, a
+ASSIGN_STMT -> · ID = EXPR ;, f
+RTN_STMT -> · return EXPR ; , u
+CODE_BLOCK -> · { STMT_LIST }, o
+STMT -> · INIT_STMT, n
+TYPE_SPEC -> · float, I
+INIT_STMT -> · TYPE_SPEC ID ;, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, d
+STMT -> · ITER_STMT, w
+STMT -> · RTN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, h
+STMT -> · ITER_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, l
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, r
+IF_STMT -> if ( EXPR ) · CODE_BLOCK, d
+INIT_STMT -> · TYPE_SPEC ID ;, a
+ITER_STMT -> · while ( EXPR ) STMT, i
+TYPE_SPEC -> · double, D
+IF_STMT -> if ( EXPR ) · CODE_BLOCK else CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) STMT, I
+STMT -> · ASSIGN_STMT, }
+STMT -> · IF_STMT, w
+STMT -> · INIT_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, v
+TYPE_SPEC -> · int, D
+STMT -> · IF_STMT, f
+
+[node|78]: [begin]
+ASSIGN_STMT -> ID = EXPR ; ·, f
+ASSIGN_STMT -> ID = EXPR ; ·, n
+ASSIGN_STMT -> ID = EXPR ; ·, e
+ASSIGN_STMT -> ID = EXPR ; ·, w
+ASSIGN_STMT -> ID = EXPR ; ·, h
+ASSIGN_STMT -> ID = EXPR ; ·, v
+ASSIGN_STMT -> ID = EXPR ; ·, i
+ASSIGN_STMT -> ID = EXPR ; ·, d
+ASSIGN_STMT -> ID = EXPR ; ·, t
+ASSIGN_STMT -> ID = EXPR ; ·, D
+ASSIGN_STMT -> ID = EXPR ; ·, o
+ASSIGN_STMT -> ID = EXPR ; ·, b
+ASSIGN_STMT -> ID = EXPR ; ·, r
+ASSIGN_STMT -> ID = EXPR ; ·, a
+ASSIGN_STMT -> ID = EXPR ; ·, }
+ASSIGN_STMT -> ID = EXPR ; ·, u
+ASSIGN_STMT -> ID = EXPR ; ·, I
+ASSIGN_STMT -> ID = EXPR ; ·, l
+
+[node|79]: [begin]
+CALL_STMT -> ID ( PARG_LIST · ), -
+CALL_STMT -> ID ( PARG_LIST · ), ;
+CALL_STMT -> ID ( PARG_LIST · ), +
+CALL_STMT -> ID ( PARG_LIST · ), *
+CALL_STMT -> ID ( PARG_LIST · ), /
+
+[node|80]: [begin]
+PARG -> ID ·, ,
+PARG -> ID ·, )
+
+[node|81]: [begin]
+PARG_LIST -> PARG ·, )
+PARG_LIST -> PARG · , PARG_LIST, )
+
+[node|82]: [begin]
+TERM2 -> · / FACTOR TERM2, -
+TERM2 -> / FACTOR · TERM2, -
+TERM2 -> / FACTOR · TERM2, +
+TERM2 -> · / FACTOR TERM2, ;
+TERM2 -> · * FACTOR TERM2, ;
+TERM2 -> ·, -
+TERM2 -> ·, +
+TERM2 -> · * FACTOR TERM2, +
+TERM2 -> · * FACTOR TERM2, -
+TERM2 -> ·, ;
+TERM2 -> · / FACTOR TERM2, +
+TERM2 -> / FACTOR · TERM2, ;
+
+[node|83]: [begin]
+TERM2 -> · / FACTOR TERM2, -
+TERM2 -> · / FACTOR TERM2, ;
+TERM2 -> · * FACTOR TERM2, ;
+TERM2 -> ·, -
+TERM2 -> ·, +
+TERM2 -> * FACTOR · TERM2, ;
+TERM2 -> * FACTOR · TERM2, +
+TERM2 -> · * FACTOR TERM2, +
+TERM2 -> · * FACTOR TERM2, -
+TERM2 -> ·, ;
+TERM2 -> · / FACTOR TERM2, +
+TERM2 -> * FACTOR · TERM2, -
+
+[node|84]: [begin]
+EXPR2 -> · - TERM EXPR2, ;
+EXPR2 -> ·, ;
+EXPR2 -> · + TERM EXPR2, ;
+EXPR2 -> + TERM · EXPR2, ;
+
+[node|85]: [begin]
+EXPR2 -> · - TERM EXPR2, ;
+EXPR2 -> ·, ;
+EXPR2 -> · + TERM EXPR2, ;
+EXPR2 -> - TERM · EXPR2, ;
+
+[node|86]: [begin]
+FACTOR -> ( EXPR ) ·, ;
+FACTOR -> ( EXPR ) ·, +
+FACTOR -> ( EXPR ) ·, *
+FACTOR -> ( EXPR ) ·, -
+FACTOR -> ( EXPR ) ·, /
+
+[node|87]: [begin]
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, v
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, t
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, n
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, u
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, d
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, f
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, e
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, I
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, o
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, i
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, D
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, w
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, l
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, a
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, }
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, b
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, h
+INIT_STMT -> TYPE_SPEC ID = EXPR · ;, r
+
+[node|88]: [begin]
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, l
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, o
+CALL_STMT -> · ID ( PARG_LIST ), ;
+FACTOR -> · CONST, +
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, v
+FACTOR -> · CALL_STMT, /
+TERM -> · FACTOR TERM2 , -
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, v
+FACTOR -> · CALL_STMT, +
+TERM -> · FACTOR TERM2 , ;
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, }
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, }
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, h
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, I
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, u
+FACTOR -> · ( EXPR ), *
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, a
+FACTOR -> · ID, -
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, i
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, e
+FACTOR -> · ID, ;
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, b
+CALL_STMT -> · ID ( PARG_LIST ), +
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, u
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, b
+FACTOR -> · ID, +
+FACTOR -> · CONST, -
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, n
+FACTOR -> · ID, *
+FACTOR -> · ( EXPR ), -
+TERM -> · FACTOR TERM2 , +
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, r
+FACTOR -> · CALL_STMT, -
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, I
+FACTOR -> · ( EXPR ), ;
+CALL_STMT -> · ID ( PARG_LIST ), *
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, r
+FACTOR -> · ID, /
+FACTOR -> · ( EXPR ), +
+CALL_STMT -> · ID ( PARG_LIST ), -
+EXPR -> · TERM EXPR2, ;
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, d
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, w
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, D
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, f
+FACTOR -> · CONST, /
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, o
+FACTOR -> · CALL_STMT, *
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, t
+FACTOR -> · CONST, *
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, n
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, l
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, f
+FACTOR -> · ( EXPR ), /
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, h
+CALL_STMT -> · ID ( PARG_LIST ), /
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, d
+FACTOR -> · CONST, ;
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, a
+FACTOR -> · CALL_STMT, ;
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, i
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, e
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) STMT, w
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, D
+ITER_STMT -> for ( EXPR ; · EXPR ; EXPR ) CODE_BLOCK, t
+
+[node|89]: [begin]
+CALL_STMT -> ID ( PARG_LIST · ), -
+CALL_STMT -> ID ( PARG_LIST · ), +
+CALL_STMT -> ID ( PARG_LIST · ), *
+CALL_STMT -> ID ( PARG_LIST · ), )
+CALL_STMT -> ID ( PARG_LIST · ), /
+
+[node|90]: [begin]
+TERM2 -> ·, )
+TERM2 -> · / FACTOR TERM2, -
+TERM2 -> / FACTOR · TERM2, -
+TERM2 -> / FACTOR · TERM2, +
+TERM2 -> / FACTOR · TERM2, )
+TERM2 -> · / FACTOR TERM2, )
+TERM2 -> ·, -
+TERM2 -> ·, +
+TERM2 -> · * FACTOR TERM2, )
+TERM2 -> · * FACTOR TERM2, +
+TERM2 -> · * FACTOR TERM2, -
+TERM2 -> · / FACTOR TERM2, +
+
+[node|91]: [begin]
+TERM2 -> ·, )
+TERM2 -> · / FACTOR TERM2, -
+TERM2 -> · / FACTOR TERM2, )
+TERM2 -> ·, -
+TERM2 -> ·, +
+TERM2 -> · * FACTOR TERM2, )
+TERM2 -> * FACTOR · TERM2, +
+TERM2 -> * FACTOR · TERM2, )
+TERM2 -> · * FACTOR TERM2, +
+TERM2 -> · * FACTOR TERM2, -
+TERM2 -> · / FACTOR TERM2, +
+TERM2 -> * FACTOR · TERM2, -
+
+[node|92]: [begin]
+EXPR2 -> · + TERM EXPR2, )
+EXPR2 -> + TERM · EXPR2, )
+EXPR2 -> · - TERM EXPR2, )
+EXPR2 -> ·, )
+
+[node|93]: [begin]
+EXPR2 -> · + TERM EXPR2, )
+EXPR2 -> - TERM · EXPR2, )
+EXPR2 -> · - TERM EXPR2, )
+EXPR2 -> ·, )
+
+[node|94]: [begin]
+FACTOR -> ( EXPR ) ·, )
+FACTOR -> ( EXPR ) ·, +
+FACTOR -> ( EXPR ) ·, *
+FACTOR -> ( EXPR ) ·, -
+FACTOR -> ( EXPR ) ·, /
+
+[node|95]: [begin]
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, t
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, I
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, f
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, d
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, h
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, u
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, }
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, v
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, n
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, r
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, a
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, b
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, l
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, i
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, o
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, w
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, e
+ITER_STMT -> while ( EXPR ) CODE_BLOCK ·, D
+
+[node|96]: [begin]
+ITER_STMT -> while ( EXPR ) STMT ·, l
+ITER_STMT -> while ( EXPR ) STMT ·, n
+ITER_STMT -> while ( EXPR ) STMT ·, a
+ITER_STMT -> while ( EXPR ) STMT ·, i
+ITER_STMT -> while ( EXPR ) STMT ·, o
+ITER_STMT -> while ( EXPR ) STMT ·, w
+ITER_STMT -> while ( EXPR ) STMT ·, e
+ITER_STMT -> while ( EXPR ) STMT ·, D
+ITER_STMT -> while ( EXPR ) STMT ·, t
+ITER_STMT -> while ( EXPR ) STMT ·, I
+ITER_STMT -> while ( EXPR ) STMT ·, d
+ITER_STMT -> while ( EXPR ) STMT ·, f
+ITER_STMT -> while ( EXPR ) STMT ·, h
+ITER_STMT -> while ( EXPR ) STMT ·, u
+ITER_STMT -> while ( EXPR ) STMT ·, }
+ITER_STMT -> while ( EXPR ) STMT ·, v
+ITER_STMT -> while ( EXPR ) STMT ·, r
+ITER_STMT -> while ( EXPR ) STMT ·, b
+
+[node|97]: [begin]
+STMT -> · ASSIGN_STMT, r
+RTN_STMT -> · return EXPR ; , }
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, r
+CODE_BLOCK -> { · STMT_LIST }, d
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, D
+ASSIGN_STMT -> · ID = EXPR ;, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, w
+ASSIGN_STMT -> · ID = EXPR ;, b
+RTN_STMT -> · return EXPR ; , w
+ITER_STMT -> · while ( EXPR ) STMT, o
+STMT -> · ITER_STMT, }
+STMT -> · ITER_STMT, n
+STMT -> · RTN_STMT, o
+RTN_STMT -> · return EXPR ; , r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, a
+STMT -> · ITER_STMT, r
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) STMT, o
+INIT_STMT -> · TYPE_SPEC ID ;, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, w
+CODE_BLOCK -> { · STMT_LIST }, r
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, r
+STMT -> · ASSIGN_STMT, h
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, b
+ITER_STMT -> · while ( EXPR ) STMT, d
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, v
+IF_STMT -> · if ( EXPR ) STMT, e
+STMT -> · ASSIGN_STMT, D
+RTN_STMT -> · return EXPR ; , d
+CODE_BLOCK -> { · STMT_LIST }, }
+STMT -> · IF_STMT, r
+STMT -> · ITER_STMT, D
+STMT -> · IF_STMT, v
+ITER_STMT -> · while ( EXPR ) STMT, u
+RTN_STMT -> · return EXPR ; , a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, e
+TYPE_SPEC -> · float, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, f
+STMT -> · RTN_STMT, n
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, D
+STMT -> · ITER_STMT, l
+STMT -> · IF_STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, i
+RTN_STMT -> · return EXPR ; , h
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, n
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, u
+IF_STMT -> · if ( EXPR ) STMT, }
+STMT -> · ASSIGN_STMT, e
+CODE_BLOCK -> { · STMT_LIST }, o
+STMT -> · ASSIGN_STMT, a
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, i
+STMT -> · IF_STMT, i
+CODE_BLOCK -> { · STMT_LIST }, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, n
+ASSIGN_STMT -> · ID = EXPR ;, n
+IF_STMT -> · if ( EXPR ) STMT, r
+STMT -> · ASSIGN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, }
+STMT -> · ASSIGN_STMT, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, f
+STMT -> · IF_STMT, t
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, o
+STMT -> · IF_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, o
+TYPE_SPEC -> · void, D
+STMT -> · ASSIGN_STMT, o
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, o
+ASSIGN_STMT -> · ID = EXPR ;, D
+CODE_BLOCK -> { · STMT_LIST }, n
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, u
+STMT -> · ITER_STMT, t
+ASSIGN_STMT -> · ID = EXPR ;, l
+INIT_STMT -> · TYPE_SPEC ID ;, i
+STMT -> · INIT_STMT, o
+ITER_STMT -> · while ( EXPR ) STMT, b
+ASSIGN_STMT -> · ID = EXPR ;, o
+INIT_STMT -> · TYPE_SPEC ID ;, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, h
+RTN_STMT -> · return EXPR ; , I
+INIT_STMT -> · TYPE_SPEC ID ;, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, l
+STMT -> · ITER_STMT, I
+STMT -> · INIT_STMT, v
+IF_STMT -> · if ( EXPR ) STMT, v
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, l
+STMT -> · ITER_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, u
+TYPE_SPEC -> · double, I
+STMT -> · RTN_STMT, t
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, I
+STMT -> · ASSIGN_STMT, i
+STMT -> · INIT_STMT, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, b
+STMT -> · IF_STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, v
+ASSIGN_STMT -> · ID = EXPR ;, e
+STMT -> · RTN_STMT, h
+STMT -> · RTN_STMT, i
+ITER_STMT -> · while ( EXPR ) STMT, n
+IF_STMT -> · if ( EXPR ) STMT, a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, w
+CODE_BLOCK -> { · STMT_LIST }, b
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, o
+CODE_BLOCK -> { · STMT_LIST }, u
+ASSIGN_STMT -> · ID = EXPR ;, v
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, i
+RTN_STMT -> · return EXPR ; , i
+ASSIGN_STMT -> · ID = EXPR ;, r
+IF_STMT -> · if ( EXPR ) STMT, n
+STMT -> · INIT_STMT, b
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, e
+ITER_STMT -> · while ( EXPR ) STMT, a
+INIT_STMT -> · TYPE_SPEC ID ;, }
+STMT -> · ITER_STMT, v
+INIT_STMT -> · TYPE_SPEC ID ;, I
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, u
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, r
+INIT_STMT -> · TYPE_SPEC ID ;, r
+STMT -> · RTN_STMT, e
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, I
+CODE_BLOCK -> { · STMT_LIST }, e
+STMT -> · INIT_STMT, D
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, v
+ITER_STMT -> · while ( EXPR ) STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, r
+STMT -> · INIT_STMT, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, f
+STMT -> · IF_STMT, h
+INIT_STMT -> · TYPE_SPEC ID ;, d
+ITER_STMT -> · while ( EXPR ) STMT, l
+RTN_STMT -> · return EXPR ; , l
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, d
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, d
+ASSIGN_STMT -> · ID = EXPR ;, w
+STMT -> · INIT_STMT, w
+IF_STMT -> · if ( EXPR ) STMT, l
+STMT -> · INIT_STMT, r
+CODE_BLOCK -> { · STMT_LIST }, a
+STMT -> · ASSIGN_STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, w
+IF_STMT -> · if ( EXPR ) STMT, i
+TYPE_SPEC -> · int, I
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, t
+STMT -> · INIT_STMT, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, t
+STMT -> · ASSIGN_STMT, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, w
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, t
+STMT -> · ITER_STMT, u
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, h
+ASSIGN_STMT -> · ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, a
+STMT -> · ASSIGN_STMT, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, b
+CODE_BLOCK -> { · STMT_LIST }, w
+ASSIGN_STMT -> · ID = EXPR ;, }
+ASSIGN_STMT -> · ID = EXPR ;, h
+ITER_STMT -> · while ( EXPR ) STMT, t
+ITER_STMT -> · while ( EXPR ) STMT, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, a
+STMT -> · ASSIGN_STMT, b
+IF_STMT -> · if ( EXPR ) STMT, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, }
+CODE_BLOCK -> { · STMT_LIST }, I
+STMT -> · RTN_STMT, r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, e
+STMT -> · RTN_STMT, a
+STMT -> · RTN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, h
+ITER_STMT -> · while ( EXPR ) STMT, f
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, l
+STMT -> · ASSIGN_STMT, l
+STMT -> · RTN_STMT, }
+STMT -> · RTN_STMT, b
+RTN_STMT -> · return EXPR ; , n
+INIT_STMT -> · TYPE_SPEC ID ;, u
+IF_STMT -> · if ( EXPR ) STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, b
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, v
+STMT -> · ASSIGN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, l
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, b
+STMT -> · INIT_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, b
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, o
+ASSIGN_STMT -> · ID = EXPR ;, I
+ITER_STMT -> · while ( EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, w
+STMT -> · ITER_STMT, b
+RTN_STMT -> · return EXPR ; , D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, n
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, f
+ITER_STMT -> · while ( EXPR ) STMT, r
+STMT -> · RTN_STMT, w
+STMT -> · ITER_STMT, a
+CODE_BLOCK -> { · STMT_LIST }, v
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, i
+RTN_STMT -> · return EXPR ; , o
+ITER_STMT -> · while ( EXPR ) STMT, w
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, o
+RTN_STMT -> · return EXPR ; , v
+STMT -> · RTN_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, f
+CODE_BLOCK -> { · STMT_LIST }, t
+CODE_BLOCK -> { · STMT_LIST }, D
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, u
+CODE_BLOCK -> { · STMT_LIST }, h
+STMT -> · IF_STMT, o
+STMT -> · IF_STMT, l
+CODE_BLOCK -> { · STMT_LIST }, i
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, n
+STMT -> · ASSIGN_STMT, t
+ASSIGN_STMT -> · ID = EXPR ;, d
+RTN_STMT -> · return EXPR ; , b
+RTN_STMT -> · return EXPR ; , e
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, f
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) STMT, b
+STMT -> · INIT_STMT, d
+STMT -> · ITER_STMT, o
+STMT -> · INIT_STMT, u
+STMT -> · IF_STMT, d
+STMT -> · ASSIGN_STMT, d
+ASSIGN_STMT -> · ID = EXPR ;, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, l
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, d
+STMT -> · INIT_STMT, a
+ITER_STMT -> · while ( EXPR ) STMT, v
+STMT -> · INIT_STMT, t
+INIT_STMT -> · TYPE_SPEC ID ;, D
+STMT -> · IF_STMT, n
+STMT -> · RTN_STMT, d
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, a
+ASSIGN_STMT -> · ID = EXPR ;, i
+INIT_STMT -> · TYPE_SPEC ID ;, l
+STMT -> · ITER_STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, o
+STMT_LIST -> · STMT STMT_LIST, }
+INIT_STMT -> · TYPE_SPEC ID ;, v
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, b
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, I
+STMT -> · RTN_STMT, v
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, a
+STMT_LIST -> ·, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, d
+STMT -> · RTN_STMT, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, i
+TYPE_SPEC -> · void, I
+STMT -> · ITER_STMT, h
+RTN_STMT -> · return EXPR ; , f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, u
+STMT -> · ITER_STMT, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, t
+STMT -> · INIT_STMT, I
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, D
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, }
+STMT -> · RTN_STMT, f
+STMT -> · INIT_STMT, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, i
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, I
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, n
+STMT -> · IF_STMT, b
+IF_STMT -> · if ( EXPR ) STMT, D
+STMT -> · IF_STMT, }
+STMT -> · IF_STMT, u
+INIT_STMT -> · TYPE_SPEC ID ;, w
+RTN_STMT -> · return EXPR ; , t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, n
+STMT -> · IF_STMT, a
+ASSIGN_STMT -> · ID = EXPR ;, f
+RTN_STMT -> · return EXPR ; , u
+STMT -> · INIT_STMT, n
+TYPE_SPEC -> · float, I
+INIT_STMT -> · TYPE_SPEC ID ;, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, d
+STMT -> · ITER_STMT, w
+STMT -> · RTN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, h
+STMT -> · ITER_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, l
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, r
+INIT_STMT -> · TYPE_SPEC ID ;, a
+ITER_STMT -> · while ( EXPR ) STMT, i
+CODE_BLOCK -> { · STMT_LIST }, f
+TYPE_SPEC -> · double, D
+IF_STMT -> · if ( EXPR ) STMT, I
+STMT -> · ASSIGN_STMT, }
+STMT -> · IF_STMT, w
+STMT -> · INIT_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, v
+TYPE_SPEC -> · int, D
+STMT -> · IF_STMT, f
+
+[node|98]: [begin]
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, a
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, o
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, D
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, e
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, t
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, f
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, u
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, n
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, b
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, l
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, }
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, d
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, o
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, w
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, e
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, I
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, h
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, v
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, a
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, r
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, i
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, d
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, w
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, n
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, }
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, u
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, l
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, f
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, b
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, D
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, t
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, i
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, h
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, v
+IF_STMT -> if ( EXPR ) CODE_BLOCK ·, r
+IF_STMT -> if ( EXPR ) CODE_BLOCK · else CODE_BLOCK, I
+
+[node|99]: [begin]
+IF_STMT -> if ( EXPR ) STMT ·, r
+IF_STMT -> if ( EXPR ) STMT ·, l
+IF_STMT -> if ( EXPR ) STMT ·, o
+IF_STMT -> if ( EXPR ) STMT ·, e
+IF_STMT -> if ( EXPR ) STMT ·, D
+IF_STMT -> if ( EXPR ) STMT ·, a
+IF_STMT -> if ( EXPR ) STMT ·, i
+IF_STMT -> if ( EXPR ) STMT ·, d
+IF_STMT -> if ( EXPR ) STMT ·, w
+IF_STMT -> if ( EXPR ) STMT ·, t
+IF_STMT -> if ( EXPR ) STMT ·, I
+IF_STMT -> if ( EXPR ) STMT ·, n
+IF_STMT -> if ( EXPR ) STMT ·, u
+IF_STMT -> if ( EXPR ) STMT ·, f
+IF_STMT -> if ( EXPR ) STMT ·, b
+IF_STMT -> if ( EXPR ) STMT ·, h
+IF_STMT -> if ( EXPR ) STMT ·, }
+IF_STMT -> if ( EXPR ) STMT ·, v
+
+[node|100]: [begin]
+STMT -> · ASSIGN_STMT, r
+RTN_STMT -> · return EXPR ; , }
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, r
+CODE_BLOCK -> { · STMT_LIST }, d
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, D
+ASSIGN_STMT -> · ID = EXPR ;, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, w
+ASSIGN_STMT -> · ID = EXPR ;, b
+RTN_STMT -> · return EXPR ; , w
+ITER_STMT -> · while ( EXPR ) STMT, o
+STMT -> · ITER_STMT, }
+STMT -> · ITER_STMT, n
+STMT -> · RTN_STMT, o
+RTN_STMT -> · return EXPR ; , r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, a
+STMT -> · ITER_STMT, r
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) STMT, o
+INIT_STMT -> · TYPE_SPEC ID ;, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, w
+CODE_BLOCK -> { · STMT_LIST }, r
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, r
+STMT -> · ASSIGN_STMT, h
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, b
+ITER_STMT -> · while ( EXPR ) STMT, d
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, v
+IF_STMT -> · if ( EXPR ) STMT, e
+STMT -> · ASSIGN_STMT, D
+RTN_STMT -> · return EXPR ; , d
+CODE_BLOCK -> { · STMT_LIST }, }
+STMT -> · IF_STMT, r
+STMT -> · ITER_STMT, D
+STMT -> · IF_STMT, v
+ITER_STMT -> · while ( EXPR ) STMT, u
+RTN_STMT -> · return EXPR ; , a
+CODE_BLOCK -> { · STMT_LIST }, s
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, e
+TYPE_SPEC -> · float, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, f
+STMT -> · RTN_STMT, n
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, D
+STMT -> · ITER_STMT, l
+STMT -> · IF_STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, i
+RTN_STMT -> · return EXPR ; , h
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, n
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, u
+IF_STMT -> · if ( EXPR ) STMT, }
+STMT -> · ASSIGN_STMT, e
+CODE_BLOCK -> { · STMT_LIST }, o
+STMT -> · ASSIGN_STMT, a
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, i
+STMT -> · IF_STMT, i
+CODE_BLOCK -> { · STMT_LIST }, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, n
+ASSIGN_STMT -> · ID = EXPR ;, n
+IF_STMT -> · if ( EXPR ) STMT, r
+STMT -> · ASSIGN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, }
+STMT -> · ASSIGN_STMT, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, f
+STMT -> · IF_STMT, t
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, o
+STMT -> · IF_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, o
+TYPE_SPEC -> · void, D
+STMT -> · ASSIGN_STMT, o
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, o
+ASSIGN_STMT -> · ID = EXPR ;, D
+CODE_BLOCK -> { · STMT_LIST }, n
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, u
+STMT -> · ITER_STMT, t
+ASSIGN_STMT -> · ID = EXPR ;, l
+INIT_STMT -> · TYPE_SPEC ID ;, i
+STMT -> · INIT_STMT, o
+ITER_STMT -> · while ( EXPR ) STMT, b
+ASSIGN_STMT -> · ID = EXPR ;, o
+INIT_STMT -> · TYPE_SPEC ID ;, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, h
+RTN_STMT -> · return EXPR ; , I
+INIT_STMT -> · TYPE_SPEC ID ;, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, l
+STMT -> · ITER_STMT, I
+STMT -> · INIT_STMT, v
+IF_STMT -> · if ( EXPR ) STMT, v
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, l
+STMT -> · ITER_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, u
+TYPE_SPEC -> · double, I
+STMT -> · RTN_STMT, t
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, I
+STMT -> · ASSIGN_STMT, i
+STMT -> · INIT_STMT, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, b
+STMT -> · IF_STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, v
+ASSIGN_STMT -> · ID = EXPR ;, e
+STMT -> · RTN_STMT, h
+STMT -> · RTN_STMT, i
+ITER_STMT -> · while ( EXPR ) STMT, n
+IF_STMT -> · if ( EXPR ) STMT, a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, w
+CODE_BLOCK -> { · STMT_LIST }, b
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, o
+CODE_BLOCK -> { · STMT_LIST }, u
+ASSIGN_STMT -> · ID = EXPR ;, v
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, i
+RTN_STMT -> · return EXPR ; , i
+ASSIGN_STMT -> · ID = EXPR ;, r
+IF_STMT -> · if ( EXPR ) STMT, n
+STMT -> · INIT_STMT, b
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, e
+ITER_STMT -> · while ( EXPR ) STMT, a
+INIT_STMT -> · TYPE_SPEC ID ;, }
+STMT -> · ITER_STMT, v
+INIT_STMT -> · TYPE_SPEC ID ;, I
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, u
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, r
+INIT_STMT -> · TYPE_SPEC ID ;, r
+STMT -> · RTN_STMT, e
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, I
+CODE_BLOCK -> { · STMT_LIST }, e
+STMT -> · INIT_STMT, D
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, v
+ITER_STMT -> · while ( EXPR ) STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, r
+STMT -> · INIT_STMT, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, f
+STMT -> · IF_STMT, h
+INIT_STMT -> · TYPE_SPEC ID ;, d
+ITER_STMT -> · while ( EXPR ) STMT, l
+RTN_STMT -> · return EXPR ; , l
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, d
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, d
+ASSIGN_STMT -> · ID = EXPR ;, w
+STMT -> · INIT_STMT, w
+IF_STMT -> · if ( EXPR ) STMT, l
+STMT -> · INIT_STMT, r
+CODE_BLOCK -> { · STMT_LIST }, a
+STMT -> · ASSIGN_STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, w
+IF_STMT -> · if ( EXPR ) STMT, i
+TYPE_SPEC -> · int, I
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, t
+STMT -> · INIT_STMT, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, t
+STMT -> · ASSIGN_STMT, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, w
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, t
+STMT -> · ITER_STMT, u
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, h
+ASSIGN_STMT -> · ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, a
+STMT -> · ASSIGN_STMT, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, b
+CODE_BLOCK -> { · STMT_LIST }, w
+ASSIGN_STMT -> · ID = EXPR ;, }
+ASSIGN_STMT -> · ID = EXPR ;, h
+ITER_STMT -> · while ( EXPR ) STMT, t
+ITER_STMT -> · while ( EXPR ) STMT, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, a
+STMT -> · ASSIGN_STMT, b
+IF_STMT -> · if ( EXPR ) STMT, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, }
+CODE_BLOCK -> { · STMT_LIST }, I
+STMT -> · RTN_STMT, r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, e
+STMT -> · RTN_STMT, a
+STMT -> · RTN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, h
+ITER_STMT -> · while ( EXPR ) STMT, f
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, l
+STMT -> · ASSIGN_STMT, l
+STMT -> · RTN_STMT, }
+STMT -> · RTN_STMT, b
+RTN_STMT -> · return EXPR ; , n
+INIT_STMT -> · TYPE_SPEC ID ;, u
+IF_STMT -> · if ( EXPR ) STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, b
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, v
+STMT -> · ASSIGN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, l
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, b
+STMT -> · INIT_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, b
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, o
+ASSIGN_STMT -> · ID = EXPR ;, I
+ITER_STMT -> · while ( EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, w
+STMT -> · ITER_STMT, b
+RTN_STMT -> · return EXPR ; , D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, n
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, f
+ITER_STMT -> · while ( EXPR ) STMT, r
+STMT -> · RTN_STMT, w
+STMT -> · ITER_STMT, a
+CODE_BLOCK -> { · STMT_LIST }, v
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, i
+RTN_STMT -> · return EXPR ; , o
+ITER_STMT -> · while ( EXPR ) STMT, w
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, o
+RTN_STMT -> · return EXPR ; , v
+STMT -> · RTN_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, f
+CODE_BLOCK -> { · STMT_LIST }, t
+CODE_BLOCK -> { · STMT_LIST }, D
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, u
+CODE_BLOCK -> { · STMT_LIST }, h
+STMT -> · IF_STMT, o
+STMT -> · IF_STMT, l
+CODE_BLOCK -> { · STMT_LIST }, i
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, n
+STMT -> · ASSIGN_STMT, t
+ASSIGN_STMT -> · ID = EXPR ;, d
+RTN_STMT -> · return EXPR ; , b
+RTN_STMT -> · return EXPR ; , e
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, f
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) STMT, b
+STMT -> · INIT_STMT, d
+STMT -> · ITER_STMT, o
+STMT -> · INIT_STMT, u
+STMT -> · IF_STMT, d
+STMT -> · ASSIGN_STMT, d
+ASSIGN_STMT -> · ID = EXPR ;, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, l
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, d
+STMT -> · INIT_STMT, a
+ITER_STMT -> · while ( EXPR ) STMT, v
+STMT -> · INIT_STMT, t
+INIT_STMT -> · TYPE_SPEC ID ;, D
+STMT -> · IF_STMT, n
+STMT -> · RTN_STMT, d
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, a
+ASSIGN_STMT -> · ID = EXPR ;, i
+INIT_STMT -> · TYPE_SPEC ID ;, l
+STMT -> · ITER_STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, o
+STMT_LIST -> · STMT STMT_LIST, }
+INIT_STMT -> · TYPE_SPEC ID ;, v
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, b
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, I
+STMT -> · RTN_STMT, v
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, a
+STMT_LIST -> ·, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, d
+STMT -> · RTN_STMT, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, i
+TYPE_SPEC -> · void, I
+STMT -> · ITER_STMT, h
+RTN_STMT -> · return EXPR ; , f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, u
+STMT -> · ITER_STMT, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, t
+STMT -> · INIT_STMT, I
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, D
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, }
+STMT -> · RTN_STMT, f
+STMT -> · INIT_STMT, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, i
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, I
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, n
+STMT -> · IF_STMT, b
+IF_STMT -> · if ( EXPR ) STMT, D
+STMT -> · IF_STMT, }
+STMT -> · IF_STMT, u
+INIT_STMT -> · TYPE_SPEC ID ;, w
+RTN_STMT -> · return EXPR ; , t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, n
+STMT -> · IF_STMT, a
+ASSIGN_STMT -> · ID = EXPR ;, f
+RTN_STMT -> · return EXPR ; , u
+STMT -> · INIT_STMT, n
+TYPE_SPEC -> · float, I
+INIT_STMT -> · TYPE_SPEC ID ;, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, d
+STMT -> · ITER_STMT, w
+STMT -> · RTN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, h
+STMT -> · ITER_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, l
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, r
+INIT_STMT -> · TYPE_SPEC ID ;, a
+ITER_STMT -> · while ( EXPR ) STMT, i
+CODE_BLOCK -> { · STMT_LIST }, f
+TYPE_SPEC -> · double, D
+IF_STMT -> · if ( EXPR ) STMT, I
+STMT -> · ASSIGN_STMT, }
+STMT -> · IF_STMT, w
+STMT -> · INIT_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, v
+TYPE_SPEC -> · int, D
+STMT -> · IF_STMT, f
+
+[node|101]: [begin]
+CALL_STMT -> ID ( PARG_LIST ) ·, /
+CALL_STMT -> ID ( PARG_LIST ) ·, -
+CALL_STMT -> ID ( PARG_LIST ) ·, ;
+CALL_STMT -> ID ( PARG_LIST ) ·, +
+CALL_STMT -> ID ( PARG_LIST ) ·, *
+
+[node|102]: [begin]
+PARG_LIST -> PARG , · PARG_LIST, )
+PARG_LIST -> · PARG , PARG_LIST, )
+PARG_LIST -> ·, )
+PARG_LIST -> · PARG, )
+PARG -> · ID, )
+PARG -> · ID, ,
+
+[node|103]: [begin]
+TERM2 -> / FACTOR TERM2 ·, -
+TERM2 -> / FACTOR TERM2 ·, ;
+TERM2 -> / FACTOR TERM2 ·, +
+
+[node|104]: [begin]
+TERM2 -> * FACTOR TERM2 ·, -
+TERM2 -> * FACTOR TERM2 ·, ;
+TERM2 -> * FACTOR TERM2 ·, +
+
+[node|105]: [begin]
+EXPR2 -> + TERM EXPR2 ·, ;
+
+[node|106]: [begin]
+EXPR2 -> - TERM EXPR2 ·, ;
+
+[node|107]: [begin]
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, }
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, n
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, l
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, D
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, a
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, o
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, e
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, w
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, i
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, u
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, d
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, t
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, f
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, I
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, v
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, b
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, r
+INIT_STMT -> TYPE_SPEC ID = EXPR ; ·, h
+
+[node|108]: [begin]
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, I
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, f
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, h
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, w
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, o
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, b
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, }
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, r
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, f
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, I
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, i
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, n
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, d
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, t
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, l
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, a
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, D
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, r
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, e
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, v
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, u
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, w
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, e
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, o
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, h
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, l
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, u
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, v
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, a
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, d
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) STMT, t
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, i
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, D
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, }
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, b
+ITER_STMT -> for ( EXPR ; EXPR · ; EXPR ) CODE_BLOCK, n
+
+[node|109]: [begin]
+CALL_STMT -> ID ( PARG_LIST ) ·, /
+CALL_STMT -> ID ( PARG_LIST ) ·, -
+CALL_STMT -> ID ( PARG_LIST ) ·, +
+CALL_STMT -> ID ( PARG_LIST ) ·, )
+CALL_STMT -> ID ( PARG_LIST ) ·, *
+
+[node|110]: [begin]
+TERM2 -> / FACTOR TERM2 ·, -
+TERM2 -> / FACTOR TERM2 ·, )
+TERM2 -> / FACTOR TERM2 ·, +
+
+[node|111]: [begin]
+TERM2 -> * FACTOR TERM2 ·, -
+TERM2 -> * FACTOR TERM2 ·, )
+TERM2 -> * FACTOR TERM2 ·, +
+
+[node|112]: [begin]
+EXPR2 -> + TERM EXPR2 ·, )
+
+[node|113]: [begin]
+EXPR2 -> - TERM EXPR2 ·, )
+
+[node|114]: [begin]
+CODE_BLOCK -> { STMT_LIST · }, e
+CODE_BLOCK -> { STMT_LIST · }, I
+CODE_BLOCK -> { STMT_LIST · }, f
+CODE_BLOCK -> { STMT_LIST · }, u
+CODE_BLOCK -> { STMT_LIST · }, d
+CODE_BLOCK -> { STMT_LIST · }, n
+CODE_BLOCK -> { STMT_LIST · }, v
+CODE_BLOCK -> { STMT_LIST · }, r
+CODE_BLOCK -> { STMT_LIST · }, t
+CODE_BLOCK -> { STMT_LIST · }, h
+CODE_BLOCK -> { STMT_LIST · }, }
+CODE_BLOCK -> { STMT_LIST · }, b
+CODE_BLOCK -> { STMT_LIST · }, a
+CODE_BLOCK -> { STMT_LIST · }, l
+CODE_BLOCK -> { STMT_LIST · }, w
+CODE_BLOCK -> { STMT_LIST · }, D
+CODE_BLOCK -> { STMT_LIST · }, i
+CODE_BLOCK -> { STMT_LIST · }, o
+
+[node|115]: [begin]
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, n
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, d
+CODE_BLOCK -> · { STMT_LIST }, i
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, f
+CODE_BLOCK -> · { STMT_LIST }, t
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, D
+CODE_BLOCK -> · { STMT_LIST }, a
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, r
+CODE_BLOCK -> · { STMT_LIST }, e
+CODE_BLOCK -> · { STMT_LIST }, h
+CODE_BLOCK -> · { STMT_LIST }, v
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, I
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, o
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, w
+CODE_BLOCK -> · { STMT_LIST }, b
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, l
+CODE_BLOCK -> · { STMT_LIST }, }
+CODE_BLOCK -> · { STMT_LIST }, f
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, t
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, u
+CODE_BLOCK -> · { STMT_LIST }, n
+CODE_BLOCK -> · { STMT_LIST }, d
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, i
+CODE_BLOCK -> · { STMT_LIST }, D
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, a
+CODE_BLOCK -> · { STMT_LIST }, r
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, h
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, v
+CODE_BLOCK -> · { STMT_LIST }, I
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, }
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, e
+CODE_BLOCK -> · { STMT_LIST }, w
+CODE_BLOCK -> · { STMT_LIST }, o
+IF_STMT -> if ( EXPR ) CODE_BLOCK else · CODE_BLOCK, b
+CODE_BLOCK -> · { STMT_LIST }, l
+CODE_BLOCK -> · { STMT_LIST }, u
+
+[node|116]: [begin]
+CODE_BLOCK -> { STMT_LIST · }, e
+CODE_BLOCK -> { STMT_LIST · }, I
+CODE_BLOCK -> { STMT_LIST · }, f
+CODE_BLOCK -> { STMT_LIST · }, u
+CODE_BLOCK -> { STMT_LIST · }, d
+CODE_BLOCK -> { STMT_LIST · }, n
+CODE_BLOCK -> { STMT_LIST · }, v
+CODE_BLOCK -> { STMT_LIST · }, r
+CODE_BLOCK -> { STMT_LIST · }, t
+CODE_BLOCK -> { STMT_LIST · }, h
+CODE_BLOCK -> { STMT_LIST · }, }
+CODE_BLOCK -> { STMT_LIST · }, b
+CODE_BLOCK -> { STMT_LIST · }, a
+CODE_BLOCK -> { STMT_LIST · }, l
+CODE_BLOCK -> { STMT_LIST · }, w
+CODE_BLOCK -> { STMT_LIST · }, D
+CODE_BLOCK -> { STMT_LIST · }, i
+CODE_BLOCK -> { STMT_LIST · }, o
+CODE_BLOCK -> { STMT_LIST · }, s
+
+[node|117]: [begin]
+PARG_LIST -> PARG , PARG_LIST ·, )
+
+[node|118]: [begin]
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, i
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, v
+EXPR -> · TERM EXPR2, )
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, u
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, b
+FACTOR -> · CONST, +
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, t
+FACTOR -> · CALL_STMT, /
+TERM -> · FACTOR TERM2 , -
+FACTOR -> · CALL_STMT, +
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, o
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, e
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, d
+FACTOR -> · ( EXPR ), *
+FACTOR -> · ID, -
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, }
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, f
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, n
+CALL_STMT -> · ID ( PARG_LIST ), +
+FACTOR -> · CALL_STMT, )
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, a
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, v
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, r
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, u
+FACTOR -> · ID, +
+FACTOR -> · CONST, -
+FACTOR -> · ID, *
+FACTOR -> · ( EXPR ), -
+TERM -> · FACTOR TERM2 , +
+FACTOR -> · CALL_STMT, -
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, }
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, e
+CALL_STMT -> · ID ( PARG_LIST ), *
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, h
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, r
+FACTOR -> · ID, /
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, d
+FACTOR -> · ( EXPR ), +
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, w
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, D
+CALL_STMT -> · ID ( PARG_LIST ), )
+CALL_STMT -> · ID ( PARG_LIST ), -
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, l
+FACTOR -> · ( EXPR ), )
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, f
+FACTOR -> · CONST, /
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, n
+FACTOR -> · CALL_STMT, *
+TERM -> · FACTOR TERM2 , )
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, w
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, I
+FACTOR -> · CONST, )
+FACTOR -> · CONST, *
+FACTOR -> · ( EXPR ), /
+CALL_STMT -> · ID ( PARG_LIST ), /
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, h
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, i
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, I
+FACTOR -> · ID, )
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) CODE_BLOCK, b
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, D
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, t
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, l
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, o
+ITER_STMT -> for ( EXPR ; EXPR ; · EXPR ) STMT, a
+
+[node|119]: [begin]
+CODE_BLOCK -> { STMT_LIST } ·, l
+CODE_BLOCK -> { STMT_LIST } ·, D
+CODE_BLOCK -> { STMT_LIST } ·, b
+CODE_BLOCK -> { STMT_LIST } ·, r
+CODE_BLOCK -> { STMT_LIST } ·, a
+CODE_BLOCK -> { STMT_LIST } ·, o
+CODE_BLOCK -> { STMT_LIST } ·, }
+CODE_BLOCK -> { STMT_LIST } ·, u
+CODE_BLOCK -> { STMT_LIST } ·, f
+CODE_BLOCK -> { STMT_LIST } ·, d
+CODE_BLOCK -> { STMT_LIST } ·, t
+CODE_BLOCK -> { STMT_LIST } ·, e
+CODE_BLOCK -> { STMT_LIST } ·, w
+CODE_BLOCK -> { STMT_LIST } ·, n
+CODE_BLOCK -> { STMT_LIST } ·, i
+CODE_BLOCK -> { STMT_LIST } ·, v
+CODE_BLOCK -> { STMT_LIST } ·, h
+CODE_BLOCK -> { STMT_LIST } ·, I
+
+[node|120]: [begin]
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, w
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, d
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, n
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, t
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, i
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, h
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, v
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, e
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, f
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, I
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, u
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, l
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, r
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, a
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, }
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, D
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, b
+IF_STMT -> if ( EXPR ) CODE_BLOCK else CODE_BLOCK ·, o
+
+[node|121]: [begin]
+CODE_BLOCK -> { STMT_LIST } ·, l
+CODE_BLOCK -> { STMT_LIST } ·, D
+CODE_BLOCK -> { STMT_LIST } ·, b
+CODE_BLOCK -> { STMT_LIST } ·, r
+CODE_BLOCK -> { STMT_LIST } ·, a
+CODE_BLOCK -> { STMT_LIST } ·, o
+CODE_BLOCK -> { STMT_LIST } ·, }
+CODE_BLOCK -> { STMT_LIST } ·, s
+CODE_BLOCK -> { STMT_LIST } ·, u
+CODE_BLOCK -> { STMT_LIST } ·, f
+CODE_BLOCK -> { STMT_LIST } ·, d
+CODE_BLOCK -> { STMT_LIST } ·, t
+CODE_BLOCK -> { STMT_LIST } ·, e
+CODE_BLOCK -> { STMT_LIST } ·, w
+CODE_BLOCK -> { STMT_LIST } ·, n
+CODE_BLOCK -> { STMT_LIST } ·, i
+CODE_BLOCK -> { STMT_LIST } ·, v
+CODE_BLOCK -> { STMT_LIST } ·, h
+CODE_BLOCK -> { STMT_LIST } ·, I
+
+[node|122]: [begin]
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, }
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, I
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, a
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, w
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, i
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, b
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, e
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, }
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, n
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, d
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, f
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, o
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, I
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, i
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, D
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, w
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, a
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, t
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, r
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, v
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, D
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, e
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, o
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, f
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, l
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, n
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, l
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, t
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, r
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, u
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, b
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, u
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, v
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, h
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) CODE_BLOCK, h
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR · ) STMT, d
+
+[node|123]: [begin]
+STMT -> · ASSIGN_STMT, r
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, I
+RTN_STMT -> · return EXPR ; , }
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, r
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, D
+ASSIGN_STMT -> · ID = EXPR ;, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, w
+ASSIGN_STMT -> · ID = EXPR ;, b
+RTN_STMT -> · return EXPR ; , w
+ITER_STMT -> · while ( EXPR ) STMT, o
+CODE_BLOCK -> · { STMT_LIST }, v
+STMT -> · ITER_STMT, }
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, r
+STMT -> · ITER_STMT, n
+STMT -> · RTN_STMT, o
+RTN_STMT -> · return EXPR ; , r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, a
+STMT -> · ITER_STMT, r
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) STMT, o
+INIT_STMT -> · TYPE_SPEC ID ;, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, w
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, w
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, r
+STMT -> · ASSIGN_STMT, h
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, b
+ITER_STMT -> · while ( EXPR ) STMT, d
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, v
+CODE_BLOCK -> · { STMT_LIST }, i
+IF_STMT -> · if ( EXPR ) STMT, e
+STMT -> · ASSIGN_STMT, D
+RTN_STMT -> · return EXPR ; , d
+STMT -> · IF_STMT, r
+STMT -> · ITER_STMT, D
+STMT -> · IF_STMT, v
+ITER_STMT -> · while ( EXPR ) STMT, u
+RTN_STMT -> · return EXPR ; , a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, h
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, e
+TYPE_SPEC -> · float, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, f
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, D
+STMT -> · RTN_STMT, n
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, D
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, t
+STMT -> · ITER_STMT, l
+STMT -> · IF_STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, h
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, a
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, i
+RTN_STMT -> · return EXPR ; , h
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, n
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, u
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, t
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, b
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, u
+IF_STMT -> · if ( EXPR ) STMT, }
+STMT -> · ASSIGN_STMT, e
+STMT -> · ASSIGN_STMT, a
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, i
+STMT -> · IF_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, n
+ASSIGN_STMT -> · ID = EXPR ;, n
+IF_STMT -> · if ( EXPR ) STMT, r
+STMT -> · ASSIGN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, }
+STMT -> · ASSIGN_STMT, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, D
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, f
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, o
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, e
+CODE_BLOCK -> · { STMT_LIST }, t
+STMT -> · IF_STMT, t
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, o
+STMT -> · IF_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, D
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, o
+TYPE_SPEC -> · void, D
+CODE_BLOCK -> · { STMT_LIST }, h
+STMT -> · ASSIGN_STMT, o
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, o
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, v
+ASSIGN_STMT -> · ID = EXPR ;, D
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, u
+STMT -> · ITER_STMT, t
+ASSIGN_STMT -> · ID = EXPR ;, l
+INIT_STMT -> · TYPE_SPEC ID ;, i
+CODE_BLOCK -> · { STMT_LIST }, I
+STMT -> · INIT_STMT, o
+ITER_STMT -> · while ( EXPR ) STMT, b
+ASSIGN_STMT -> · ID = EXPR ;, o
+INIT_STMT -> · TYPE_SPEC ID ;, h
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, h
+RTN_STMT -> · return EXPR ; , I
+INIT_STMT -> · TYPE_SPEC ID ;, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, l
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, n
+STMT -> · ITER_STMT, I
+STMT -> · INIT_STMT, v
+IF_STMT -> · if ( EXPR ) STMT, v
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, l
+STMT -> · ITER_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, u
+TYPE_SPEC -> · double, I
+STMT -> · RTN_STMT, t
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, I
+STMT -> · ASSIGN_STMT, i
+CODE_BLOCK -> · { STMT_LIST }, D
+STMT -> · INIT_STMT, e
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, b
+STMT -> · IF_STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, v
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, b
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, u
+ASSIGN_STMT -> · ID = EXPR ;, e
+STMT -> · RTN_STMT, h
+STMT -> · RTN_STMT, i
+ITER_STMT -> · while ( EXPR ) STMT, n
+IF_STMT -> · if ( EXPR ) STMT, a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, o
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, I
+ASSIGN_STMT -> · ID = EXPR ;, v
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, i
+RTN_STMT -> · return EXPR ; , i
+IF_STMT -> · if ( EXPR ) STMT, n
+ASSIGN_STMT -> · ID = EXPR ;, r
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, e
+ITER_STMT -> · while ( EXPR ) STMT, a
+STMT -> · INIT_STMT, b
+INIT_STMT -> · TYPE_SPEC ID ;, }
+STMT -> · ITER_STMT, v
+INIT_STMT -> · TYPE_SPEC ID ;, I
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, u
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, r
+INIT_STMT -> · TYPE_SPEC ID ;, r
+STMT -> · RTN_STMT, e
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, I
+STMT -> · INIT_STMT, D
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, v
+ITER_STMT -> · while ( EXPR ) STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, r
+STMT -> · INIT_STMT, h
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, f
+STMT -> · IF_STMT, h
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, }
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, e
+INIT_STMT -> · TYPE_SPEC ID ;, d
+ITER_STMT -> · while ( EXPR ) STMT, l
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, a
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, r
+RTN_STMT -> · return EXPR ; , l
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, d
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, d
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, v
+ASSIGN_STMT -> · ID = EXPR ;, w
+STMT -> · INIT_STMT, w
+IF_STMT -> · if ( EXPR ) STMT, l
+STMT -> · INIT_STMT, r
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, t
+STMT -> · ASSIGN_STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, w
+CODE_BLOCK -> · { STMT_LIST }, e
+TYPE_SPEC -> · int, I
+IF_STMT -> · if ( EXPR ) STMT, i
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, t
+STMT -> · INIT_STMT, }
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, t
+STMT -> · ASSIGN_STMT, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, w
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, w
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, t
+STMT -> · ITER_STMT, u
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, w
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, h
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, f
+ASSIGN_STMT -> · ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, a
+STMT -> · ASSIGN_STMT, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, b
+ASSIGN_STMT -> · ID = EXPR ;, }
+ASSIGN_STMT -> · ID = EXPR ;, h
+ITER_STMT -> · while ( EXPR ) STMT, t
+CODE_BLOCK -> · { STMT_LIST }, d
+ITER_STMT -> · while ( EXPR ) STMT, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, a
+STMT -> · ASSIGN_STMT, b
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, n
+IF_STMT -> · if ( EXPR ) STMT, t
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, }
+STMT -> · RTN_STMT, r
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, e
+CODE_BLOCK -> · { STMT_LIST }, u
+STMT -> · RTN_STMT, a
+STMT -> · RTN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, h
+ITER_STMT -> · while ( EXPR ) STMT, f
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, l
+STMT -> · ASSIGN_STMT, l
+STMT -> · RTN_STMT, }
+STMT -> · RTN_STMT, b
+RTN_STMT -> · return EXPR ; , n
+INIT_STMT -> · TYPE_SPEC ID ;, u
+IF_STMT -> · if ( EXPR ) STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, b
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, v
+STMT -> · ASSIGN_STMT, I
+IF_STMT -> · if ( EXPR ) STMT, f
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, l
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, b
+STMT -> · INIT_STMT, i
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, b
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, l
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, o
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, o
+ASSIGN_STMT -> · ID = EXPR ;, I
+ITER_STMT -> · while ( EXPR ) STMT, }
+IF_STMT -> · if ( EXPR ) STMT, w
+STMT -> · ITER_STMT, b
+RTN_STMT -> · return EXPR ; , D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, n
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, f
+ITER_STMT -> · while ( EXPR ) STMT, r
+STMT -> · RTN_STMT, w
+STMT -> · ITER_STMT, a
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, i
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, h
+RTN_STMT -> · return EXPR ; , o
+ITER_STMT -> · while ( EXPR ) STMT, w
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, o
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, i
+RTN_STMT -> · return EXPR ; , v
+STMT -> · RTN_STMT, D
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, f
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, u
+STMT -> · IF_STMT, o
+CODE_BLOCK -> · { STMT_LIST }, l
+STMT -> · IF_STMT, l
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, n
+STMT -> · ASSIGN_STMT, t
+ASSIGN_STMT -> · ID = EXPR ;, d
+RTN_STMT -> · return EXPR ; , b
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, D
+RTN_STMT -> · return EXPR ; , e
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, f
+CODE_BLOCK -> · { STMT_LIST }, b
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, a
+IF_STMT -> · if ( EXPR ) STMT, b
+STMT -> · INIT_STMT, d
+STMT -> · ITER_STMT, o
+STMT -> · INIT_STMT, u
+STMT -> · IF_STMT, d
+ASSIGN_STMT -> · ID = EXPR ;, t
+STMT -> · ASSIGN_STMT, d
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, l
+CODE_BLOCK -> · { STMT_LIST }, r
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, d
+STMT -> · INIT_STMT, a
+CODE_BLOCK -> · { STMT_LIST }, w
+ITER_STMT -> · while ( EXPR ) STMT, v
+STMT -> · INIT_STMT, t
+INIT_STMT -> · TYPE_SPEC ID ;, D
+STMT -> · IF_STMT, n
+STMT -> · RTN_STMT, d
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, a
+INIT_STMT -> · TYPE_SPEC ID ;, l
+ASSIGN_STMT -> · ID = EXPR ;, i
+STMT -> · ITER_STMT, d
+INIT_STMT -> · TYPE_SPEC ID ;, o
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, d
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, b
+INIT_STMT -> · TYPE_SPEC ID ;, v
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, I
+STMT -> · RTN_STMT, v
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, a
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, d
+STMT -> · RTN_STMT, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, i
+TYPE_SPEC -> · void, I
+STMT -> · ITER_STMT, h
+CODE_BLOCK -> · { STMT_LIST }, a
+RTN_STMT -> · return EXPR ; , f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, u
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, r
+STMT -> · ITER_STMT, e
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, t
+CODE_BLOCK -> · { STMT_LIST }, n
+STMT -> · INIT_STMT, I
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, }
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, D
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, }
+STMT -> · RTN_STMT, f
+STMT -> · INIT_STMT, l
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, e
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, i
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · CODE_BLOCK, i
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, I
+ITER_STMT -> · while ( EXPR ) CODE_BLOCK, n
+STMT -> · IF_STMT, b
+CODE_BLOCK -> · { STMT_LIST }, }
+IF_STMT -> · if ( EXPR ) STMT, D
+STMT -> · IF_STMT, }
+STMT -> · IF_STMT, u
+INIT_STMT -> · TYPE_SPEC ID ;, w
+CODE_BLOCK -> · { STMT_LIST }, f
+RTN_STMT -> · return EXPR ; , t
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, n
+STMT -> · IF_STMT, a
+ASSIGN_STMT -> · ID = EXPR ;, f
+RTN_STMT -> · return EXPR ; , u
+CODE_BLOCK -> · { STMT_LIST }, o
+STMT -> · INIT_STMT, n
+TYPE_SPEC -> · float, I
+INIT_STMT -> · TYPE_SPEC ID ;, f
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, l
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK, d
+STMT -> · ITER_STMT, w
+STMT -> · RTN_STMT, u
+INIT_STMT -> · TYPE_SPEC ID = EXPR ;, n
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, e
+ITER_STMT -> · while ( EXPR ) STMT, I
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, h
+STMT -> · ITER_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK else CODE_BLOCK, l
+ITER_STMT -> · for ( EXPR ; EXPR ; EXPR ) STMT, r
+INIT_STMT -> · TYPE_SPEC ID ;, a
+ITER_STMT -> · while ( EXPR ) STMT, i
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) · STMT, d
+TYPE_SPEC -> · double, D
+IF_STMT -> · if ( EXPR ) STMT, I
+STMT -> · ASSIGN_STMT, }
+STMT -> · IF_STMT, w
+STMT -> · INIT_STMT, f
+IF_STMT -> · if ( EXPR ) CODE_BLOCK, v
+TYPE_SPEC -> · int, D
+STMT -> · IF_STMT, f
+
+[node|124]: [begin]
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, t
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, e
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, w
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, v
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, n
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, u
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, h
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, i
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, I
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, f
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, l
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, D
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, a
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, b
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, r
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, o
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, }
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK ·, d
+
+[node|125]: [begin]
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, n
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, t
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, u
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, v
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, d
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, f
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, I
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, e
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, o
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, i
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, D
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, w
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, b
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, l
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, a
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, }
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, h
+ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT ·, r
+
+[edge|0]:
+0 -> 1 : float
+
+[edge|1]:
+0 -> 2 : FUNC_DEF
+
+[edge|2]:
+0 -> 3 : int
+
+[edge|3]:
+0 -> 4 : void
+
+[edge|4]:
+0 -> 5 : FUNC_LIST
+
+[edge|5]:
+0 -> 6 : double
+
+[edge|6]:
+0 -> 7 : TYPE_SPEC
+
+[edge|7]:
+2 -> 1 : float
+
+[edge|8]:
+2 -> 2 : FUNC_DEF
+
+[edge|9]:
+2 -> 3 : int
+
+[edge|10]:
+2 -> 4 : void
+
+[edge|11]:
+2 -> 8 : FUNC_LIST
+
+[edge|12]:
+2 -> 6 : double
+
+[edge|13]:
+2 -> 7 : TYPE_SPEC
+
+[edge|14]:
+7 -> 9 : ID
+
+[edge|15]:
+9 -> 10 : (
+
+[edge|16]:
+10 -> 1 : float
+
+[edge|17]:
+10 -> 3 : int
+
+[edge|18]:
+10 -> 4 : void
+
+[edge|19]:
+10 -> 6 : double
+
+[edge|20]:
+10 -> 11 : TYPE_SPEC
+
+[edge|21]:
+10 -> 12 : ARG_LIST
+
+[edge|22]:
+10 -> 13 : ARGUMENT
+
+[edge|23]:
+11 -> 14 : ID
+
+[edge|24]:
+12 -> 15 : )
+
+[edge|25]:
+13 -> 16 : ,
+
+[edge|26]:
+15 -> 17 : CODE_BLOCK
+
+[edge|27]:
+15 -> 18 : {
+
+[edge|28]:
+16 -> 1 : float
+
+[edge|29]:
+16 -> 3 : int
+
+[edge|30]:
+16 -> 4 : void
+
+[edge|31]:
+16 -> 6 : double
+
+[edge|32]:
+16 -> 11 : TYPE_SPEC
+
+[edge|33]:
+16 -> 19 : ARG_LIST
+
+[edge|34]:
+16 -> 13 : ARGUMENT
+
+[edge|35]:
+18 -> 1 : float
+
+[edge|36]:
+18 -> 20 : while
+
+[edge|37]:
+18 -> 21 : if
+
+[edge|38]:
+18 -> 22 : ID
+
+[edge|39]:
+18 -> 23 : return
+
+[edge|40]:
+18 -> 3 : int
+
+[edge|41]:
+18 -> 24 : RTN_STMT
+
+[edge|42]:
+18 -> 4 : void
+
+[edge|43]:
+18 -> 6 : double
+
+[edge|44]:
+18 -> 25 : STMT_LIST
+
+[edge|45]:
+18 -> 26 : ITER_STMT
+
+[edge|46]:
+18 -> 27 : TYPE_SPEC
+
+[edge|47]:
+18 -> 28 : STMT
+
+[edge|48]:
+18 -> 29 : ASSIGN_STMT
+
+[edge|49]:
+18 -> 30 : for
+
+[edge|50]:
+18 -> 31 : IF_STMT
+
+[edge|51]:
+18 -> 32 : INIT_STMT
+
+[edge|52]:
+20 -> 33 : (
+
+[edge|53]:
+21 -> 34 : (
+
+[edge|54]:
+22 -> 35 : =
+
+[edge|55]:
+23 -> 36 : ID
+
+[edge|56]:
+23 -> 37 : CALL_STMT
+
+[edge|57]:
+23 -> 38 : FACTOR
+
+[edge|58]:
+23 -> 39 : TERM
+
+[edge|59]:
+23 -> 40 : CONST
+
+[edge|60]:
+23 -> 41 : (
+
+[edge|61]:
+23 -> 42 : EXPR
+
+[edge|62]:
+25 -> 43 : }
+
+[edge|63]:
+27 -> 44 : ID
+
+[edge|64]:
+28 -> 1 : float
+
+[edge|65]:
+28 -> 20 : while
+
+[edge|66]:
+28 -> 21 : if
+
+[edge|67]:
+28 -> 22 : ID
+
+[edge|68]:
+28 -> 23 : return
+
+[edge|69]:
+28 -> 3 : int
+
+[edge|70]:
+28 -> 24 : RTN_STMT
+
+[edge|71]:
+28 -> 4 : void
+
+[edge|72]:
+28 -> 6 : double
+
+[edge|73]:
+28 -> 45 : STMT_LIST
+
+[edge|74]:
+28 -> 26 : ITER_STMT
+
+[edge|75]:
+28 -> 27 : TYPE_SPEC
+
+[edge|76]:
+28 -> 28 : STMT
+
+[edge|77]:
+28 -> 29 : ASSIGN_STMT
+
+[edge|78]:
+28 -> 30 : for
+
+[edge|79]:
+28 -> 31 : IF_STMT
+
+[edge|80]:
+28 -> 32 : INIT_STMT
+
+[edge|81]:
+30 -> 46 : (
+
+[edge|82]:
+33 -> 47 : ID
+
+[edge|83]:
+33 -> 48 : CALL_STMT
+
+[edge|84]:
+33 -> 49 : FACTOR
+
+[edge|85]:
+33 -> 50 : TERM
+
+[edge|86]:
+33 -> 51 : CONST
+
+[edge|87]:
+33 -> 52 : (
+
+[edge|88]:
+33 -> 53 : EXPR
+
+[edge|89]:
+34 -> 47 : ID
+
+[edge|90]:
+34 -> 48 : CALL_STMT
+
+[edge|91]:
+34 -> 49 : FACTOR
+
+[edge|92]:
+34 -> 50 : TERM
+
+[edge|93]:
+34 -> 51 : CONST
+
+[edge|94]:
+34 -> 52 : (
+
+[edge|95]:
+34 -> 54 : EXPR
+
+[edge|96]:
+35 -> 36 : ID
+
+[edge|97]:
+35 -> 37 : CALL_STMT
+
+[edge|98]:
+35 -> 38 : FACTOR
+
+[edge|99]:
+35 -> 39 : TERM
+
+[edge|100]:
+35 -> 40 : CONST
+
+[edge|101]:
+35 -> 41 : (
+
+[edge|102]:
+35 -> 55 : EXPR
+
+[edge|103]:
+36 -> 56 : (
+
+[edge|104]:
+38 -> 57 : /
+
+[edge|105]:
+38 -> 58 : TERM2
+
+[edge|106]:
+38 -> 59 : *
+
+[edge|107]:
+39 -> 60 : +
+
+[edge|108]:
+39 -> 61 : EXPR2
+
+[edge|109]:
+39 -> 62 : -
+
+[edge|110]:
+41 -> 47 : ID
+
+[edge|111]:
+41 -> 48 : CALL_STMT
+
+[edge|112]:
+41 -> 49 : FACTOR
+
+[edge|113]:
+41 -> 50 : TERM
+
+[edge|114]:
+41 -> 51 : CONST
+
+[edge|115]:
+41 -> 52 : (
+
+[edge|116]:
+41 -> 63 : EXPR
+
+[edge|117]:
+42 -> 64 : ;
+
+[edge|118]:
+44 -> 65 : =
+
+[edge|119]:
+44 -> 66 : ;
+
+[edge|120]:
+46 -> 36 : ID
+
+[edge|121]:
+46 -> 37 : CALL_STMT
+
+[edge|122]:
+46 -> 38 : FACTOR
+
+[edge|123]:
+46 -> 39 : TERM
+
+[edge|124]:
+46 -> 40 : CONST
+
+[edge|125]:
+46 -> 41 : (
+
+[edge|126]:
+46 -> 67 : EXPR
+
+[edge|127]:
+47 -> 68 : (
+
+[edge|128]:
+49 -> 69 : /
+
+[edge|129]:
+49 -> 70 : TERM2
+
+[edge|130]:
+49 -> 71 : *
+
+[edge|131]:
+50 -> 72 : +
+
+[edge|132]:
+50 -> 73 : EXPR2
+
+[edge|133]:
+50 -> 74 : -
+
+[edge|134]:
+52 -> 47 : ID
+
+[edge|135]:
+52 -> 48 : CALL_STMT
+
+[edge|136]:
+52 -> 49 : FACTOR
+
+[edge|137]:
+52 -> 50 : TERM
+
+[edge|138]:
+52 -> 51 : CONST
+
+[edge|139]:
+52 -> 52 : (
+
+[edge|140]:
+52 -> 75 : EXPR
+
+[edge|141]:
+53 -> 76 : )
+
+[edge|142]:
+54 -> 77 : )
+
+[edge|143]:
+55 -> 78 : ;
+
+[edge|144]:
+56 -> 79 : PARG_LIST
+
+[edge|145]:
+56 -> 80 : ID
+
+[edge|146]:
+56 -> 81 : PARG
+
+[edge|147]:
+57 -> 36 : ID
+
+[edge|148]:
+57 -> 37 : CALL_STMT
+
+[edge|149]:
+57 -> 82 : FACTOR
+
+[edge|150]:
+57 -> 40 : CONST
+
+[edge|151]:
+57 -> 41 : (
+
+[edge|152]:
+59 -> 36 : ID
+
+[edge|153]:
+59 -> 37 : CALL_STMT
+
+[edge|154]:
+59 -> 83 : FACTOR
+
+[edge|155]:
+59 -> 40 : CONST
+
+[edge|156]:
+59 -> 41 : (
+
+[edge|157]:
+60 -> 36 : ID
+
+[edge|158]:
+60 -> 37 : CALL_STMT
+
+[edge|159]:
+60 -> 38 : FACTOR
+
+[edge|160]:
+60 -> 84 : TERM
+
+[edge|161]:
+60 -> 40 : CONST
+
+[edge|162]:
+60 -> 41 : (
+
+[edge|163]:
+62 -> 36 : ID
+
+[edge|164]:
+62 -> 37 : CALL_STMT
+
+[edge|165]:
+62 -> 38 : FACTOR
+
+[edge|166]:
+62 -> 85 : TERM
+
+[edge|167]:
+62 -> 40 : CONST
+
+[edge|168]:
+62 -> 41 : (
+
+[edge|169]:
+63 -> 86 : )
+
+[edge|170]:
+65 -> 36 : ID
+
+[edge|171]:
+65 -> 37 : CALL_STMT
+
+[edge|172]:
+65 -> 38 : FACTOR
+
+[edge|173]:
+65 -> 39 : TERM
+
+[edge|174]:
+65 -> 40 : CONST
+
+[edge|175]:
+65 -> 41 : (
+
+[edge|176]:
+65 -> 87 : EXPR
+
+[edge|177]:
+67 -> 88 : ;
+
+[edge|178]:
+68 -> 89 : PARG_LIST
+
+[edge|179]:
+68 -> 80 : ID
+
+[edge|180]:
+68 -> 81 : PARG
+
+[edge|181]:
+69 -> 47 : ID
+
+[edge|182]:
+69 -> 48 : CALL_STMT
+
+[edge|183]:
+69 -> 90 : FACTOR
+
+[edge|184]:
+69 -> 51 : CONST
+
+[edge|185]:
+69 -> 52 : (
+
+[edge|186]:
+71 -> 47 : ID
+
+[edge|187]:
+71 -> 48 : CALL_STMT
+
+[edge|188]:
+71 -> 91 : FACTOR
+
+[edge|189]:
+71 -> 51 : CONST
+
+[edge|190]:
+71 -> 52 : (
+
+[edge|191]:
+72 -> 47 : ID
+
+[edge|192]:
+72 -> 48 : CALL_STMT
+
+[edge|193]:
+72 -> 49 : FACTOR
+
+[edge|194]:
+72 -> 92 : TERM
+
+[edge|195]:
+72 -> 51 : CONST
+
+[edge|196]:
+72 -> 52 : (
+
+[edge|197]:
+74 -> 47 : ID
+
+[edge|198]:
+74 -> 48 : CALL_STMT
+
+[edge|199]:
+74 -> 49 : FACTOR
+
+[edge|200]:
+74 -> 93 : TERM
+
+[edge|201]:
+74 -> 51 : CONST
+
+[edge|202]:
+74 -> 52 : (
+
+[edge|203]:
+75 -> 94 : )
+
+[edge|204]:
+76 -> 1 : float
+
+[edge|205]:
+76 -> 20 : while
+
+[edge|206]:
+76 -> 95 : CODE_BLOCK
+
+[edge|207]:
+76 -> 21 : if
+
+[edge|208]:
+76 -> 22 : ID
+
+[edge|209]:
+76 -> 23 : return
+
+[edge|210]:
+76 -> 3 : int
+
+[edge|211]:
+76 -> 24 : RTN_STMT
+
+[edge|212]:
+76 -> 4 : void
+
+[edge|213]:
+76 -> 6 : double
+
+[edge|214]:
+76 -> 26 : ITER_STMT
+
+[edge|215]:
+76 -> 27 : TYPE_SPEC
+
+[edge|216]:
+76 -> 96 : STMT
+
+[edge|217]:
+76 -> 29 : ASSIGN_STMT
+
+[edge|218]:
+76 -> 30 : for
+
+[edge|219]:
+76 -> 31 : IF_STMT
+
+[edge|220]:
+76 -> 97 : {
+
+[edge|221]:
+76 -> 32 : INIT_STMT
+
+[edge|222]:
+77 -> 1 : float
+
+[edge|223]:
+77 -> 20 : while
+
+[edge|224]:
+77 -> 98 : CODE_BLOCK
+
+[edge|225]:
+77 -> 21 : if
+
+[edge|226]:
+77 -> 22 : ID
+
+[edge|227]:
+77 -> 23 : return
+
+[edge|228]:
+77 -> 3 : int
+
+[edge|229]:
+77 -> 24 : RTN_STMT
+
+[edge|230]:
+77 -> 4 : void
+
+[edge|231]:
+77 -> 6 : double
+
+[edge|232]:
+77 -> 26 : ITER_STMT
+
+[edge|233]:
+77 -> 27 : TYPE_SPEC
+
+[edge|234]:
+77 -> 99 : STMT
+
+[edge|235]:
+77 -> 29 : ASSIGN_STMT
+
+[edge|236]:
+77 -> 30 : for
+
+[edge|237]:
+77 -> 31 : IF_STMT
+
+[edge|238]:
+77 -> 100 : {
+
+[edge|239]:
+77 -> 32 : INIT_STMT
+
+[edge|240]:
+79 -> 101 : )
+
+[edge|241]:
+81 -> 102 : ,
+
+[edge|242]:
+82 -> 57 : /
+
+[edge|243]:
+82 -> 103 : TERM2
+
+[edge|244]:
+82 -> 59 : *
+
+[edge|245]:
+83 -> 57 : /
+
+[edge|246]:
+83 -> 104 : TERM2
+
+[edge|247]:
+83 -> 59 : *
+
+[edge|248]:
+84 -> 60 : +
+
+[edge|249]:
+84 -> 105 : EXPR2
+
+[edge|250]:
+84 -> 62 : -
+
+[edge|251]:
+85 -> 60 : +
+
+[edge|252]:
+85 -> 106 : EXPR2
+
+[edge|253]:
+85 -> 62 : -
+
+[edge|254]:
+87 -> 107 : ;
+
+[edge|255]:
+88 -> 36 : ID
+
+[edge|256]:
+88 -> 37 : CALL_STMT
+
+[edge|257]:
+88 -> 38 : FACTOR
+
+[edge|258]:
+88 -> 39 : TERM
+
+[edge|259]:
+88 -> 40 : CONST
+
+[edge|260]:
+88 -> 41 : (
+
+[edge|261]:
+88 -> 108 : EXPR
+
+[edge|262]:
+89 -> 109 : )
+
+[edge|263]:
+90 -> 69 : /
+
+[edge|264]:
+90 -> 110 : TERM2
+
+[edge|265]:
+90 -> 71 : *
+
+[edge|266]:
+91 -> 69 : /
+
+[edge|267]:
+91 -> 111 : TERM2
+
+[edge|268]:
+91 -> 71 : *
+
+[edge|269]:
+92 -> 72 : +
+
+[edge|270]:
+92 -> 112 : EXPR2
+
+[edge|271]:
+92 -> 74 : -
+
+[edge|272]:
+93 -> 72 : +
+
+[edge|273]:
+93 -> 113 : EXPR2
+
+[edge|274]:
+93 -> 74 : -
+
+[edge|275]:
+97 -> 1 : float
+
+[edge|276]:
+97 -> 20 : while
+
+[edge|277]:
+97 -> 21 : if
+
+[edge|278]:
+97 -> 22 : ID
+
+[edge|279]:
+97 -> 23 : return
+
+[edge|280]:
+97 -> 3 : int
+
+[edge|281]:
+97 -> 24 : RTN_STMT
+
+[edge|282]:
+97 -> 4 : void
+
+[edge|283]:
+97 -> 6 : double
+
+[edge|284]:
+97 -> 114 : STMT_LIST
+
+[edge|285]:
+97 -> 26 : ITER_STMT
+
+[edge|286]:
+97 -> 27 : TYPE_SPEC
+
+[edge|287]:
+97 -> 28 : STMT
+
+[edge|288]:
+97 -> 29 : ASSIGN_STMT
+
+[edge|289]:
+97 -> 30 : for
+
+[edge|290]:
+97 -> 31 : IF_STMT
+
+[edge|291]:
+97 -> 32 : INIT_STMT
+
+[edge|292]:
+98 -> 115 : else
+
+[edge|293]:
+100 -> 1 : float
+
+[edge|294]:
+100 -> 20 : while
+
+[edge|295]:
+100 -> 21 : if
+
+[edge|296]:
+100 -> 22 : ID
+
+[edge|297]:
+100 -> 23 : return
+
+[edge|298]:
+100 -> 3 : int
+
+[edge|299]:
+100 -> 24 : RTN_STMT
+
+[edge|300]:
+100 -> 4 : void
+
+[edge|301]:
+100 -> 6 : double
+
+[edge|302]:
+100 -> 116 : STMT_LIST
+
+[edge|303]:
+100 -> 26 : ITER_STMT
+
+[edge|304]:
+100 -> 27 : TYPE_SPEC
+
+[edge|305]:
+100 -> 28 : STMT
+
+[edge|306]:
+100 -> 29 : ASSIGN_STMT
+
+[edge|307]:
+100 -> 30 : for
+
+[edge|308]:
+100 -> 31 : IF_STMT
+
+[edge|309]:
+100 -> 32 : INIT_STMT
+
+[edge|310]:
+102 -> 117 : PARG_LIST
+
+[edge|311]:
+102 -> 80 : ID
+
+[edge|312]:
+102 -> 81 : PARG
+
+[edge|313]:
+108 -> 118 : ;
+
+[edge|314]:
+114 -> 119 : }
+
+[edge|315]:
+115 -> 120 : CODE_BLOCK
+
+[edge|316]:
+115 -> 97 : {
+
+[edge|317]:
+116 -> 121 : }
+
+[edge|318]:
+118 -> 47 : ID
+
+[edge|319]:
+118 -> 48 : CALL_STMT
+
+[edge|320]:
+118 -> 49 : FACTOR
+
+[edge|321]:
+118 -> 50 : TERM
+
+[edge|322]:
+118 -> 51 : CONST
+
+[edge|323]:
+118 -> 52 : (
+
+[edge|324]:
+118 -> 122 : EXPR
+
+[edge|325]:
+122 -> 123 : )
+
+[edge|326]:
+123 -> 1 : float
+
+[edge|327]:
+123 -> 20 : while
+
+[edge|328]:
+123 -> 124 : CODE_BLOCK
+
+[edge|329]:
+123 -> 21 : if
+
+[edge|330]:
+123 -> 22 : ID
+
+[edge|331]:
+123 -> 23 : return
+
+[edge|332]:
+123 -> 3 : int
+
+[edge|333]:
+123 -> 24 : RTN_STMT
+
+[edge|334]:
+123 -> 4 : void
+
+[edge|335]:
+123 -> 6 : double
+
+[edge|336]:
+123 -> 26 : ITER_STMT
+
+[edge|337]:
+123 -> 27 : TYPE_SPEC
+
+[edge|338]:
+123 -> 125 : STMT
+
+[edge|339]:
+123 -> 29 : ASSIGN_STMT
+
+[edge|340]:
+123 -> 30 : for
+
+[edge|341]:
+123 -> 31 : IF_STMT
+
+[edge|342]:
+123 -> 97 : {
+
+[edge|343]:
+123 -> 32 : INIT_STMT
+

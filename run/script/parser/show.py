@@ -21,7 +21,7 @@ import os
 
 def draw(filename):
     fw = open(f"{filename}.gv", 'w')
-    fw.write("digraph LR {\nrankdir=LR;\nsize=\"8.5\"\n\n")
+    fw.write("digraph LR {\nrankdir=LR;\nsize=\"150,150\"\n\n")
     with open(filename, 'r') as f:
         buffer = []
         # state 0 - not the begining, state 1 - stop and wait for another

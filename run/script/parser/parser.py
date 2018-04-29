@@ -1,13 +1,17 @@
-#!/usr/bin/python3
+#!/home/lantian/anaconda3/bin/python
 # Author: GMFTBY
 # Time  : 2018.4.29
 
 '''
 Use LR(1) Algorithm to create the parser of the C language.
+As we know, the standard C language is the LR(1) language.
 '''
 
 import pprint
 from show import draw
+import sys
+import xml.etree.ElementTree as ET
+import pickle
 
 class LR:
     def __init__(self, filename, Begin_symbol):
@@ -32,6 +36,7 @@ class LR:
         # get all character
         self.V_t, self.V_n = self.get_character()
 
+        '''
         # get the LR group, GO is a dict saving the transmit information
         # group is the Project group
         self.group, self.GO = self.get_group()
@@ -39,16 +44,18 @@ class LR:
         # init the action and the goto table
         self.action, self.goto = self.init_table()
 
-        # draw the picture
-        self.draw()
+        # draw the picture, just for debug
+        # self.draw()
+        '''
+        self.read_table()
         print("Init the LR(1) analyser table successfully!")
 
     def draw(self):
         # use the show.py to draw the picture
-        with open('./pic', 'w') as f:
+        with open('./picture/pic', 'w') as f:
             # write node
             for index, group in enumerate(self.group):
-                f.write(f'[node|{index}]: [begin]\n')
+                f.write(f"[node|{index}]: [begin]\n")
                 for project in group:
                     f.write(f'{project[0]}, {project[1]}\n')
                 f.write('\n')
@@ -57,7 +64,7 @@ class LR:
                 key, value = item
                 f.write(f'[edge|{index}]:\n')
                 f.write(f'{key[0]} -> {value} : {key[1]}\n\n')
-        draw('./pic')
+        draw('./picture/pic')
 
     def get_character(self):
         V_n = set()
@@ -216,9 +223,35 @@ class LR:
             print("Meet the character unexpected:", char)
             exit(1)
 
-    def mainloop(self):
+    def mainloop(self, infile, outfile):
         # the main control function for the LR analyse
-        pass
+        tree = ET.parse(infile)
+        root = tree.getroot()
+        # symbol is the list of the tuple (index, value, type, valid)
+        symbols = [(token.find("number").text, token.find("value").text,\
+                token.find("type").text, token.find("valid").text) \
+                for token in root.iter("token")]
+
+        state_stack  = [0]
+        symbol_stack = ['#']
+
+        # the index for the symbols to shift
+        index = 0
+        state = True
+        while state:
+            # error
+            if symbols[index][3] == "False":
+                print("Scaner find the error!")
+                exit(1)
+
+            # the main control using the table of the action or the goto table
+            try:
+                pass
+            except:
+                # the error
+                print("parser find the error:")
+                print(symbol_stack, symbols[index:])
+                exit(1)
 
     def write_file(self):
         # write the analyse result into the XML file
@@ -234,8 +267,20 @@ class LR:
         if char in self.V_n: return True
         else: return False
 
+    def write_table(self):
+        # write the init file into the file
+        # write the self.action, self, goto
+        with open("table.pkl", 'wb') as f:
+            pickle.dump([self.action, self.goto], f)
+
+    def read_table(self):
+        # read the data table from the file
+        with open("table.pkl", 'rb') as f:
+            self.action, self.goto = pickle.load(f)
+
 if __name__ == "__main__":
-    app = LR('./rules', "S'")
+    _, rule, infile, outfile = sys.argv
+    app = LR(rule, "CMPL_UNIT")
+    # app.write_table()
     # start the main control to run for the analysing
-    app.mainloop()
-    app.write_file()
+    # app.mainloop(infile, outfile)
