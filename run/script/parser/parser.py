@@ -41,16 +41,14 @@ class LR:
 
         # get the LR group, GO is a dict saving the transmit information
         # group is the Project group
-        '''
         self.group, self.GO = self.get_group()
 
         # init the action and the goto table
         self.action, self.goto = self.init_table()
-        '''
 
         # draw the picture, just for debug
         # self.draw()
-        self.read_table()
+        # self.read_table()
         print("Init the LR(1) analyser table successfully!")
 
     def draw(self):

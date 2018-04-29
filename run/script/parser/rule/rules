@@ -44,7 +44,9 @@ STMT -> IF_STMT
   
 // 循环语句，实现 for, while 
 ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) CODE_BLOCK
+ITER_STMT -> for ( STMT STMT STMT ) CODE_BLOCK
 ITER_STMT -> for ( EXPR ; EXPR ; EXPR ) STMT
+ITER_STMT -> for ( STMT STMT STMT ) STMT
 ITER_STMT -> while ( EXPR ) CODE_BLOCK
 ITER_STMT -> while ( EXPR ) STMT
   
