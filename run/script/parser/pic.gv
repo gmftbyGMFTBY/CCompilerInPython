@@ -2,29 +2,73 @@ digraph LR {
 rankdir=LR;
 size="8.5"
 
-node [shape = box, label="S -> · A B C, #
-A -> · a, c
+node [shape = box, label="E -> · A, ]
+A -> ·, )
+S -> · ( X, #
+A -> ·, ]
+S' -> · S, #
+F -> · A, )
+S -> · F ), #
+S -> · E ], #
 ", fontsize = 10] 0;
-node [shape = box, label="B -> ·, c
-S -> A · B C, #
+node [shape = box, label="S' -> S ·, #
 ", fontsize = 10] 1;
-node [shape = box, label="A -> a ·, c
+node [shape = box, label="S -> E · ], #
 ", fontsize = 10] 2;
-node [shape = box, label="C -> · c, #
-S -> A B · C, #
+node [shape = box, label="S -> F · ), #
 ", fontsize = 10] 3;
-node [shape = box, label="S -> A B C ·, #
+node [shape = box, label="E -> A ·, ]
+F -> A ·, )
 ", fontsize = 10] 4;
-node [shape = box, label="C -> c ·, #
+node [shape = box, label="A -> ·, )
+X -> · E ), #
+E -> · A, )
+A -> ·, ]
+F -> · A, ]
+S -> ( · X, #
+X -> · F ], #
 ", fontsize = 10] 5;
-0 -> 1  [label = " A
+node [shape = box, label="S -> E ] ·, #
+", fontsize = 10] 6;
+node [shape = box, label="S -> F ) ·, #
+", fontsize = 10] 7;
+node [shape = box, label="S -> ( X ·, #
+", fontsize = 10] 8;
+node [shape = box, label="X -> E · ), #
+", fontsize = 10] 9;
+node [shape = box, label="X -> F · ], #
+", fontsize = 10] 10;
+node [shape = box, label="F -> A ·, ]
+E -> A ·, )
+", fontsize = 10] 11;
+node [shape = box, label="X -> E ) ·, #
+", fontsize = 10] 12;
+node [shape = box, label="X -> F ] ·, #
+", fontsize = 10] 13;
+0 -> 1  [label = " S
 "];
-0 -> 2  [label = " a
+0 -> 2  [label = " E
 "];
-1 -> 3  [label = " B
+0 -> 3  [label = " F
 "];
-3 -> 4  [label = " C
+0 -> 4  [label = " A
 "];
-3 -> 5  [label = " c
+0 -> 5  [label = " (
+"];
+2 -> 6  [label = " ]
+"];
+3 -> 7  [label = " )
+"];
+5 -> 8  [label = " X
+"];
+5 -> 9  [label = " E
+"];
+5 -> 10  [label = " F
+"];
+5 -> 11  [label = " A
+"];
+9 -> 12  [label = " )
+"];
+10 -> 13  [label = " ]
 "];
 }

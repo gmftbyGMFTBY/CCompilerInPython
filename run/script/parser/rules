@@ -4,14 +4,4 @@
 // Time 2018.4.28
 // Do not allow the in the rule
 
-// S' -> S
-// S -> L = R
-// S -> R
-// L -> * R
-// L -> i
-// R -> L
 
-S -> A B C
-A -> a
-B -> @
-C -> c

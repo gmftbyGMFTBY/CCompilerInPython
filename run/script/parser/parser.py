@@ -235,7 +235,7 @@ class LR:
         else: return False
 
 if __name__ == "__main__":
-    app = LR('./rules', "S")
+    app = LR('./rules', "S'")
     # start the main control to run for the analysing
     app.mainloop()
     app.write_file()

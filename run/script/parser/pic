@@ -1,36 +1,96 @@
 [node|0]: [begin]
-S -> · A B C, #
-A -> · a, c
+E -> · A, ]
+A -> ·, )
+S -> · ( X, #
+A -> ·, ]
+S' -> · S, #
+F -> · A, )
+S -> · F ), #
+S -> · E ], #
 
 [node|1]: [begin]
-B -> ·, c
-S -> A · B C, #
+S' -> S ·, #
 
 [node|2]: [begin]
-A -> a ·, c
+S -> E · ], #
 
 [node|3]: [begin]
-C -> · c, #
-S -> A B · C, #
+S -> F · ), #
 
 [node|4]: [begin]
-S -> A B C ·, #
+E -> A ·, ]
+F -> A ·, )
 
 [node|5]: [begin]
-C -> c ·, #
+A -> ·, )
+X -> · E ), #
+E -> · A, )
+A -> ·, ]
+F -> · A, ]
+S -> ( · X, #
+X -> · F ], #
+
+[node|6]: [begin]
+S -> E ] ·, #
+
+[node|7]: [begin]
+S -> F ) ·, #
+
+[node|8]: [begin]
+S -> ( X ·, #
+
+[node|9]: [begin]
+X -> E · ), #
+
+[node|10]: [begin]
+X -> F · ], #
+
+[node|11]: [begin]
+F -> A ·, ]
+E -> A ·, )
+
+[node|12]: [begin]
+X -> E ) ·, #
+
+[node|13]: [begin]
+X -> F ] ·, #
 
 [edge|0]:
-0 -> 1 : A
+0 -> 1 : S
 
 [edge|1]:
-0 -> 2 : a
+0 -> 2 : E
 
 [edge|2]:
-1 -> 3 : B
+0 -> 3 : F
 
 [edge|3]:
-3 -> 4 : C
+0 -> 4 : A
 
 [edge|4]:
-3 -> 5 : c
+0 -> 5 : (
+
+[edge|5]:
+2 -> 6 : ]
+
+[edge|6]:
+3 -> 7 : )
+
+[edge|7]:
+5 -> 8 : X
+
+[edge|8]:
+5 -> 9 : E
+
+[edge|9]:
+5 -> 10 : F
+
+[edge|10]:
+5 -> 11 : A
+
+[edge|11]:
+9 -> 12 : )
+
+[edge|12]:
+10 -> 13 : ]
 
