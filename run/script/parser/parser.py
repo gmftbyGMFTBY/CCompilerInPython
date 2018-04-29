@@ -38,12 +38,6 @@ class LR:
         # init the action and the goto table
         self.action, self.goto = self.init_table()
 
-        # test print
-        for index, group in enumerate(self.group):
-            print(index, end = ' ')
-            pprint.pprint(group)
-        pprint.pprint(self.action)
-        pprint.pprint(self.goto)
         print("Init the LR(1) analyser table successfully!")
 
     def get_character(self):
@@ -129,11 +123,13 @@ class LR:
                         if res not in C:
                             if not GO.get((index, char)):
                                 GO[(index, char)] = len(C)
-                            C.append(res)
+                                C.append(res)
                         else:
-                            if res == group: GO[(index, char)] = index
-                            elif not GO.get((index, char)):
+                            if res == group:
                                 GO[(index, char)] = index
+                            else:
+                                if not GO.get((index, char)):
+                                    GO[(index, char)] = C.index(res)
             if len(C) == size: break
         return C, GO
 
@@ -148,9 +144,9 @@ class LR:
                 left, right = project[0].split('->')
                 creators = right.split()
                 point_index = creators.index('·')
-                if index + 1 < len(creators):
+                if point_index + 1 < len(creators):
                     # shift
-                    X = creators[index + 1]
+                    X = creators[point_index + 1]
                     if self.IsV_t(X):
                         if self.GO.get((index, X)):
                             action[(index, X)] = 'S' + str(self.GO.get((index, X)))
