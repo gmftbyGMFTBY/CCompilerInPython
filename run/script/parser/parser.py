@@ -5,6 +5,9 @@
 '''
 Use LR(1) Algorithm to create the parser of the C language.
 As we know, the standard C language is the LR(1) language.
+
+The only constrant of the rule is that the the first rule must be the last element
+of the whole rules.
 '''
 
 import pprint
@@ -231,6 +234,7 @@ class LR:
         symbols = [(token.find("number").text, token.find("value").text,\
                 token.find("type").text, token.find("valid").text) \
                 for token in root.iter("token")]
+        symbols.append((-1, '#', -1, -1))
 
         state_stack  = [0]
         symbol_stack = ['#']
@@ -246,12 +250,45 @@ class LR:
 
             # the main control using the table of the action or the goto table
             try:
-                pass
-            except:
+                res = self.action[(state_stack[-1], self.transform(symbols[index]))]
+                if res.startswith('S'):
+                    # shift action
+                    state_stack.append(res[1:])
+                    symbol_stack.append(self.transform(symbols[index]))
+                    index += 1
+                elif res.startswith('r'):
+                    # redu# the index of the reduce action equalatioin
+                    number = int(res[1:])
+                    left, right = self.rules[number].split('->')
+                    count = len(right.split())
+                    # 0 case
+                    if count == 1 and right.split()[0] == '@':
+                        count = 0
+
+                    # pop count times and push the reduce element
+                    for i in range(count):
+                        state_stack.pop()
+                        symbol_stack.pop()
+                    symbol_stack.append(left.strip())
+                    state_stack.append(int(self.goto[(state_stack[-1], symbol_stack[-1])]))
+
+                    # chaeck the acc
+                    if number == 0: return True
+                else:
+                    print("Unexpected things happened:")
+                    print(symbol_stack, symbols[index:])
+                    return False
+            except Exception as e:
                 # the error
+                print(e)
                 print("parser find the error:")
-                print(symbol_stack, symbols[index:])
-                exit(1)
+                print('state stack:', state_stack)
+                print('symbols stack:', symbol_stack)
+                print('left symbols:', symbols[index:])
+                return False
+
+            # test print
+            print(symbol_stack)
 
     def write_file(self):
         # write the analyse result into the XML file
@@ -278,9 +315,27 @@ class LR:
         with open("table.pkl", 'rb') as f:
             self.action, self.goto = pickle.load(f)
 
+    def transform(self, char):
+        # transform table, char is the four-element tuple of fromthe token
+        # (index, value, type, valid)
+        if char[0] == -1 and char[1] == '#': return '#'
+        elif char[2] == "identifier": return 'ID'
+        elif char[2] == "constant": return 'CONST'
+        elif char[2] == "operator":
+            if char[1] == '=' or char[1] == '+' or char[1] == '-' or \
+                    char[1] == '*' or char[1] == '/' or char[1] == '('\
+                    or char[1] == ')': return char[1]
+        elif char[2] == "separate": return char[1]
+        elif char[2] == "keyword": return char[1]
+        else:
+            print("find the unexpected token:", char)
+            exit(0)
+
 if __name__ == "__main__":
     _, rule, infile, outfile = sys.argv
     app = LR(rule, "CMPL_UNIT")
     # app.write_table()
     # start the main control to run for the analysing
-    # app.mainloop(infile, outfile)
+    # pprint.pprint(app.action)
+    # pprint.pprint(app.goto)
+    app.mainloop(infile, outfile)
