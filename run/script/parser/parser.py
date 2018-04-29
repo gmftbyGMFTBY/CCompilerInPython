@@ -7,6 +7,7 @@ Use LR(1) Algorithm to create the parser of the C language.
 '''
 
 import pprint
+from show import draw
 
 class LR:
     def __init__(self, filename, Begin_symbol):
@@ -38,13 +39,37 @@ class LR:
         # init the action and the goto table
         self.action, self.goto = self.init_table()
 
+        # draw the picture
+        self.draw()
         print("Init the LR(1) analyser table successfully!")
 
+    def draw(self):
+        # use the show.py to draw the picture
+        with open('./pic', 'w') as f:
+            # write node
+            for index, group in enumerate(self.group):
+                f.write(f'[node|{index}]: [begin]\n')
+                for project in group:
+                    f.write(f'{project[0]}, {project[1]}\n')
+                f.write('\n')
+            # write edge
+            for index, item in enumerate(self.GO.items()):
+                key, value = item
+                f.write(f'[edge|{index}]:\n')
+                f.write(f'{key[0]} -> {value} : {key[1]}\n\n')
+        draw('./pic')
+
     def get_character(self):
-        V_t = set(['*', '=', 'i'])
-        V_n = set(['S', "S'", 'L', 'R'])
-        # ...
-        return V_t, V_n
+        V_n = set()
+        V   = set()
+        for rule in self.rules:
+            left, right = rule.split('->')
+            V_n.add(left.strip())
+
+            V.add(left.strip())
+            for char in right.split():
+                V.add(char)
+        return V - V_n, V_n
     
     def get_closure(self, begin):
         # get the closure of the LR(1) Project

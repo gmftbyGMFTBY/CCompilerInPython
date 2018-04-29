@@ -1,0 +1,93 @@
+digraph LR {
+rankdir=LR;
+size="8.5"
+
+node [shape = box, label="S -> · R, #
+S -> · L = R, #
+L -> · * R, =
+L -> · i, =
+L -> · * R, #
+L -> · i, #
+S' -> · S, #
+R -> · L, #
+", fontsize = 10] 0;
+node [shape = box, label="L -> i ·, =
+L -> i ·, #
+", fontsize = 10] 1;
+node [shape = box, label="S' -> S ·, #
+", fontsize = 10] 2;
+node [shape = box, label="S -> R ·, #
+", fontsize = 10] 3;
+node [shape = box, label="R -> L ·, #
+S -> L · = R, #
+", fontsize = 10] 4;
+node [shape = box, label="L -> · i, =
+R -> · L, =
+L -> · * R, #
+L -> · i, #
+L -> * · R, #
+L -> · * R, =
+R -> · L, #
+L -> * · R, =
+", fontsize = 10] 5;
+node [shape = box, label="R -> · L, #
+L -> · * R, #
+S -> L = · R, #
+L -> · i, #
+", fontsize = 10] 6;
+node [shape = box, label="L -> * R ·, #
+L -> * R ·, =
+", fontsize = 10] 7;
+node [shape = box, label="R -> L ·, =
+R -> L ·, #
+", fontsize = 10] 8;
+node [shape = box, label="L -> i ·, #
+", fontsize = 10] 9;
+node [shape = box, label="S -> L = R ·, #
+", fontsize = 10] 10;
+node [shape = box, label="R -> L ·, #
+", fontsize = 10] 11;
+node [shape = box, label="R -> · L, #
+L -> · * R, #
+L -> · i, #
+L -> * · R, #
+", fontsize = 10] 12;
+node [shape = box, label="L -> * R ·, #
+", fontsize = 10] 13;
+0 -> 1  [label = " i
+"];
+0 -> 2  [label = " S
+"];
+0 -> 3  [label = " R
+"];
+0 -> 4  [label = " L
+"];
+0 -> 5  [label = " *
+"];
+4 -> 6  [label = " =
+"];
+5 -> 1  [label = " i
+"];
+5 -> 7  [label = " R
+"];
+5 -> 8  [label = " L
+"];
+5 -> 5  [label = " *
+"];
+6 -> 9  [label = " i
+"];
+6 -> 10  [label = " R
+"];
+6 -> 11  [label = " L
+"];
+6 -> 12  [label = " *
+"];
+12 -> 9  [label = " i
+"];
+12 -> 13  [label = " R
+"];
+12 -> 11  [label = " L
+"];
+12 -> 12  [label = " *
+"];
+}

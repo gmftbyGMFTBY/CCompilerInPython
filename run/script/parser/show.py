@@ -30,7 +30,6 @@ def draw(filename):
                     # 1 begin , 2 over, 3 normal
         index = 0
         data = f.readlines()
-        data.append(' ')
         for line in data:
             if len(line.strip()) != 0:
                 # this line is not empty
