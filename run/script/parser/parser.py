@@ -39,17 +39,17 @@ class LR:
         # get all character
         self.V_t, self.V_n = self.get_character()
 
-        '''
         # get the LR group, GO is a dict saving the transmit information
         # group is the Project group
+        '''
         self.group, self.GO = self.get_group()
 
         # init the action and the goto table
         self.action, self.goto = self.init_table()
+        '''
 
         # draw the picture, just for debug
         # self.draw()
-        '''
         self.read_table()
         print("Init the LR(1) analyser table successfully!")
 
@@ -199,20 +199,23 @@ class LR:
                 else:
                     # reduce
                     # delete the ' ·'
-                    string = project[0][:-2]
+                    string = project[0].strip()[:-2]
+                    if len(string.split()) == 2:
+                        string += ' @'
                     for jindex, rule in enumerate(self.rules):
-                        if rule == string:
+                        if rule.strip() == string:
                             action[(index, project[1])] = 'r' + str(jindex)
         return action, goto
 
     def get_first(self, char):
         # get the first set of the special V_n
-        if self.IsV_t(char) or char == '@': return set(char)
+        if self.IsV_t(char) or char == '@': 
+            return set([char])
         elif self.IsV_n(char):
             # un terminal character, iter all the rules
             FIRST = set()
             for rule in self.rules:
-                if rule.split()[0].strip() == char:
+                if rule.split('->')[0].strip() == char:
                     _, right = rule.split('->')
                     res = set(['@'])
                     index = 0
@@ -253,7 +256,7 @@ class LR:
                 res = self.action[(state_stack[-1], self.transform(symbols[index]))]
                 if res.startswith('S'):
                     # shift action
-                    state_stack.append(res[1:])
+                    state_stack.append(int(res[1:]))
                     symbol_stack.append(self.transform(symbols[index]))
                     index += 1
                 elif res.startswith('r'):
@@ -279,6 +282,9 @@ class LR:
                     print(symbol_stack, symbols[index:])
                     return False
             except Exception as e:
+                # check for end (acc)
+                if symbol_stack[1] == "CMPL_UNIT": return True
+
                 # the error
                 print(e)
                 print("parser find the error:")
@@ -332,7 +338,10 @@ class LR:
             exit(0)
 
 if __name__ == "__main__":
-    _, rule, infile, outfile = sys.argv
+    # _, rule, infile, outfile = sys.argv
+    rule = './rule/rules'
+    infile = 'test.token.xml'
+    outfile = 'test.parser.xml'
     app = LR(rule, "CMPL_UNIT")
     # app.write_table()
     # start the main control to run for the analysing
