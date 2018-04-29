@@ -342,4 +342,5 @@ if __name__ == "__main__":
     # start the main control to run for the analysing
     # pprint.pprint(app.action)
     # pprint.pprint(app.goto)
-    app.mainloop(infile, outfile)
+    if app.mainloop(infile, outfile):
+        print("Parser the file successfully!")
