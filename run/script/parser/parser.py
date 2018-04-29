@@ -85,7 +85,7 @@ class LR:
                     
                 if index + 1 < length: B = creators[index + 1]
                 else: B = None
-                if index + 2 < length: beta = creators[index + 2]
+                if index + 2 < length: beta = creators[index + 2:]
                 else: beta = None
 
                 if not B:
@@ -93,18 +93,22 @@ class LR:
                     continue
                 else:
                     if beta: 
-                        res = self.get_first(beta)
-                        if 'e' in res:
-                            searcher = set(res) | set([project[1]])
+                        searcher = set()
+                        for ttt in beta:
+                            res = self.get_first(ttt)
+                            searcher |= res
+                            if '@' not in res: break
                         else:
-                            searcher = set(res)
+                            searcher |= set([project[1]])
+
+                        searcher -= set(['@'])
                     else:
                         searcher = set([project[1]])
                         
                     for rule in self.rules:
                         if rule.split('->')[0].strip() == B:
                             _, right = rule.split('->')
-                            if len(right.split()) == 1 and right.split()[0] == 'e': right = '·'
+                            if len(right.split()) == 1 and right.split()[0] == '@': right = '·'
                             else: right = '·' + right
                             for search in searcher:
                                 bag.add((B + ' -> ' + right, search))
@@ -193,21 +197,20 @@ class LR:
 
     def get_first(self, char):
         # get the first set of the special V_n
-        if self.IsV_t(char) or char == 'e': return set(char)
+        if self.IsV_t(char) or char == '@': return set(char)
         elif self.IsV_n(char):
             # un terminal character, iter all the rules
             FIRST = set()
             for rule in self.rules:
                 if rule.split()[0].strip() == char:
                     _, right = rule.split('->')
-                    res = {'e'}
+                    res = set(['@'])
                     index = 0
-                    while 'e' in res:
+                    while '@' in res:
                         if index == len(right.split()): break
-                        FIRST |= res
                         res = self.get_first(right.split()[index])
+                        FIRST |= res
                         index += 1
-                    FIRST |= res
             return FIRST
         else:
             print("Meet the character unexpected:", char)
@@ -232,7 +235,7 @@ class LR:
         else: return False
 
 if __name__ == "__main__":
-    app = LR('./rules', "S'")
+    app = LR('./rules', "S")
     # start the main control to run for the analysing
     app.mainloop()
     app.write_file()
