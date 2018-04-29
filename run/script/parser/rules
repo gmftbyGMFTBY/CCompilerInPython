@@ -1,3 +1,13 @@
 // this is the rule of the C language, which is just the subcase of It, and I want to use these rules to create the parser for using
+// or this is the test file 
 // create by GMFTBY
 // Time 2018.4.28
+// Do not allow the in the rule
+
+S' -> S
+S -> L = R
+S -> R
+L -> * R
+L -> i
+L -> e
+R -> L
