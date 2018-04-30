@@ -6,6 +6,9 @@ int test_func(int a, char b)
     int c = 1;
     int d=2;
     test_func(c, d);
+    while (d < 3) {
+        if (c == 1) return 0;
+    }
 }
 
 int main(){
@@ -23,6 +26,7 @@ int main(){
         else {
             a = a * p - p / (a + p);
         }
+        int res = test_func(a, p);
     }
 	return a;
 }

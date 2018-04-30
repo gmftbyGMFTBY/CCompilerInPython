@@ -49,7 +49,7 @@ class LR:
         self.action, self.goto = self.init_table()
 
         # draw the picture, just for debug
-        # self.draw()
+        self.draw()
         # self.read_table()
         print("Init the LR(1) analyser table successfully!")
 
