@@ -8,6 +8,10 @@ int test_func(int a, char b)
     test_func(c, d);
     while (d < 3) {
         if (c == 1) return 0;
+        else {
+            a = a + 1;
+            printf("%d\n", a);
+        }
     }
 }
 

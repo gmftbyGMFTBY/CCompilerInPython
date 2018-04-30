@@ -15,6 +15,7 @@ from show import draw
 import sys
 import xml.etree.ElementTree as ET
 import pickle
+from lxml import etree
 
 class LR:
     def __init__(self, filename, Begin_symbol):
@@ -43,14 +44,16 @@ class LR:
 
         # get the LR group, GO is a dict saving the transmit information
         # group is the Project group
+        '''
         self.group, self.GO = self.get_group()
 
         # init the action and the goto table
         self.action, self.goto = self.init_table()
+        '''
 
         # draw the picture, just for debug
-        self.draw()
-        # self.read_table()
+        # self.draw()
+        self.read_table()
         print("Init the LR(1) analyser table successfully!")
 
     def draw(self):
@@ -239,8 +242,22 @@ class LR:
 
     def mainloop(self, infile, outfile):
         # the main control function for the LR analyse
+        # also write the XML and HTML file to show the processing
+        tableroot = ET.Element('table')
+        tableroot.set('border', "1")
+        thead = ET.Element('thead')
+        theadrow = ET.Element('tr')
+        for line in ['Step', 'State Stack', 'Symbol Stack In', 'Symbol Stack Out', 'Action']:
+            th = ET.Element('th')
+            th.text = line
+            theadrow.append(th)
+        thead.append(theadrow)
+        tableroot.append(thead)
+        tablebody = ET.Element('tbody')
+
         tree = ET.parse(infile)
         root = tree.getroot()
+
         # symbol is the list of the tuple (index, value, type, valid)
         symbols = [(token.find("number").text, token.find("value").text,\
                 token.find("type").text, token.find("valid").text) \
@@ -249,10 +266,15 @@ class LR:
 
         state_stack  = [0]
         symbol_stack = ['#']
+        doc_stack = []
+        help_doc_stack = []
 
         # the index for the symbols to shift
         index = 0
         state = True
+        step = 1
+        save_action = None
+
         while state:
             # error
             if symbols[index][3] == "False":
@@ -266,9 +288,11 @@ class LR:
                     # shift action
                     state_stack.append(int(res[1:]))
                     symbol_stack.append(self.transform(symbols[index]))
+                    doc_stack.append(self.transform(symbols[index]))
+                    help_doc_stack.append(index)
                     index += 1
                 elif res.startswith('r'):
-                    # redu# the index of the reduce action equalatioin
+                    # reduce the index of the reduce action equalatioin
                     number = int(res[1:])
                     left, right = self.rules[number].split('->')
                     count = len(right.split())
@@ -277,21 +301,59 @@ class LR:
                         count = 0
 
                     # pop count times and push the reduce element
+                    subroot = ET.Element(left.strip())
+                    catch = []
                     for i in range(count):
                         state_stack.pop()
                         symbol_stack.pop()
+
+                        doc = doc_stack.pop()
+                        ss  = help_doc_stack.pop()
+                        if doc in self.V_t:
+                            # up the V_t into the Element into the XML file
+                            up = ET.Element(symbols[ss][2])
+                            up.text = symbols[ss][1]
+                            catch.append(up)
+                        elif isinstance(doc, ET.Element): catch.append(doc)
+                        else: raise Exception("XML Error: Meet unexpeceted Element")
+
+                    while catch: subroot.append(catch.pop())
+
+                    doc_stack.append(subroot)
+                    help_doc_stack.append(-1)
                     symbol_stack.append(left.strip())
                     state_stack.append(int(self.goto[(state_stack[-1], symbol_stack[-1])]))
 
-                    # chaeck the acc
+                    # check the acc
                     if number == 0: return True
                 else:
                     print("Unexpected things happened:")
                     print(symbol_stack, symbols[index:])
                     return False
+
+                save_action = res
+
             except Exception as e:
                 # check for end (acc)
-                if symbol_stack[1] == self.begin_symbol: return True
+                if symbol_stack[1] == self.begin_symbol:
+                    # write the XML file
+                    root = doc_stack[-1]
+                    root.set('name', outfile)
+                    res = ET.tostring(root)
+                    res = etree.tostring(etree.fromstring(res), pretty_print=True).decode()
+
+                    # write the HTML file
+                    tableroot.append(tablebody)
+                    resh = ET.tostring(tableroot)
+                    resh = etree.tostring(etree.fromstring(resh), pretty_print=True).decode()
+                    with open(outfile, 'w') as f:
+                        f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+                        f.write(res)
+
+                    with open('test.parserprocessing.html', 'w') as f:
+                        f.write(resh)
+
+                    return True
 
                 # the error
                 print(e)
@@ -301,12 +363,14 @@ class LR:
                 print('left symbols:', symbols[index:])
                 return False
 
-            # test print
-            print(symbol_stack)
-
-    def write_file(self):
-        # write the analyse result into the XML file
-        pass
+            # test print or add to table (HTML)
+            tr = ET.Element('tr')
+            for line in [step, state_stack, symbol_stack, [x[1] for x in symbols[index:]], save_action]:
+                td = ET.Element('td')
+                td.text = str(line).replace("'", "")
+                tr.append(td)
+            tablebody.append(tr)
+            step += 1
 
     def write_table(self):
         # write the init file into the file
@@ -336,6 +400,7 @@ if __name__ == "__main__":
     # change the depth of the recursive
     _, rule, infile, outfile = sys.argv
     app = LR(rule, "PROGRAM")
+    # app.write_table()
     # start the main control to run for the analysing
     if app.mainloop(infile, outfile):
         print("Parser the file successfully!")

@@ -83,6 +83,9 @@ PARG_LIST -> PARG
 PARG_LIST -> PARG , PARG_LIST
 PARG_LIST -> @
 PARG -> ID
+PARG -> CONST
+PARG -> ( EXPR )
+PARG -> CALL_STMT
 
 // 返回值语句
 RTN_STMT -> return EXPR
