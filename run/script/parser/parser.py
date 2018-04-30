@@ -6,7 +6,7 @@
 Use LR(1) Algorithm to create the parser of the C language.
 As we know, the standard C language is the LR(1) language.
 
-The only constrant of the rule is that the the first rule must be the last element
+The only constrant of the rule is that the first rule must be the last element
 of the whole rules.
 '''
 
@@ -18,6 +18,8 @@ import pickle
 
 class LR:
     def __init__(self, filename, Begin_symbol):
+        self.begin_symbol = Begin_symbol
+
         # read the file of the rules
         with open(filename, 'r') as f:
             # filte the comment of the file `rules`
@@ -149,11 +151,17 @@ class LR:
     def get_group(self):
         # get the project group and the GO function to create the picture and the tables
         # C the group of the project
+        helptable = {}
         C = [self.get_closure(self.BLRP)]
+
+        # 0 - do not use, 1 - use already
+        helptable[frozenset(C[0])] = 0
         GO = dict()
         while True:
             size = len(C)
+            print("Project Group Size:", len(C), end = '\r')
             for index, group in enumerate(C.copy()):
+                if helptable.get(frozenset(group)) == 1: continue
                 for char in self.V_t | self.V_n:
                     res = self.goto(group, char)
                     if res:
@@ -161,12 +169,14 @@ class LR:
                             if not GO.get((index, char)):
                                 GO[(index, char)] = len(C)
                                 C.append(res)
+                                helptable[frozenset(res)] = 0
                         else:
                             if res == group:
                                 GO[(index, char)] = index
                             else:
                                 if not GO.get((index, char)):
                                     GO[(index, char)] = C.index(res)
+                helptable[frozenset(group)] = 1
             if len(C) == size: break
         return C, GO
 
@@ -184,10 +194,10 @@ class LR:
                 if point_index + 1 < len(creators):
                     # shift
                     X = creators[point_index + 1]
-                    if self.IsV_t(X):
+                    if X in self.V_t:
                         if self.GO.get((index, X)):
                             action[(index, X)] = 'S' + str(self.GO.get((index, X)))
-                    elif self.IsV_n(X):
+                    elif X in self.V_n:
                         # goto table
                         if self.GO.get((index, X)):
                             goto[(index, X)] = str(self.GO.get((index, X)))
@@ -207,9 +217,9 @@ class LR:
 
     def get_first(self, char):
         # get the first set of the special V_n
-        if self.IsV_t(char) or char == '@': 
+        if char in self.V_t or char == '@': 
             return set([char])
-        elif self.IsV_n(char):
+        elif char in self.V_n:
             # un terminal character, iter all the rules
             FIRST = set()
             for rule in self.rules:
@@ -281,7 +291,7 @@ class LR:
                     return False
             except Exception as e:
                 # check for end (acc)
-                if symbol_stack[1] == "CMPL_UNIT": return True
+                if symbol_stack[1] == self.begin_symbol: return True
 
                 # the error
                 print(e)
@@ -297,16 +307,6 @@ class LR:
     def write_file(self):
         # write the analyse result into the XML file
         pass
-
-    def IsV_t(self, char):
-        # check the terminal character
-        if char in self.V_t: return True
-        else: return False
-
-    def IsV_n(self, char):
-        # check the un terminal character
-        if char in self.V_n: return True
-        else: return False
 
     def write_table(self):
         # write the init file into the file
@@ -325,10 +325,7 @@ class LR:
         if char[0] == -1 and char[1] == '#': return '#'
         elif char[2] == "identifier": return 'ID'
         elif char[2] == "constant": return 'CONST'
-        elif char[2] == "operator":
-            if char[1] == '=' or char[1] == '+' or char[1] == '-' or \
-                    char[1] == '*' or char[1] == '/' or char[1] == '('\
-                    or char[1] == ')': return char[1]
+        elif char[2] == "operator": return char[1]
         elif char[2] == "separate": return char[1]
         elif char[2] == "keyword": return char[1]
         else:
@@ -336,11 +333,9 @@ class LR:
             exit(0)
 
 if __name__ == "__main__":
+    # change the depth of the recursive
     _, rule, infile, outfile = sys.argv
-    app = LR(rule, "CMPL_UNIT")
-    # app.write_table()
+    app = LR(rule, "PROGRAM")
     # start the main control to run for the analysing
-    # pprint.pprint(app.action)
-    # pprint.pprint(app.goto)
     if app.mainloop(infile, outfile):
         print("Parser the file successfully!")
