@@ -18,7 +18,9 @@ import pickle
 from lxml import etree
 
 class LR:
-    def __init__(self, filename):
+    def __init__(self, filename, Begin_symbol):
+        self.begin_symbol = Begin_symbol
+
         # read the file of the rules
         with open(filename, 'r') as f:
             # filte the comment of the file `rules`
@@ -26,16 +28,12 @@ class LR:
                     filter(lambda line: False if line[:2] == "//" \
                     or not line.strip() else True, f.readlines())))
 
-            # begin_symbol, must be the left of the first rule
-            left, _ = self.rules[0].split('->')
-            self.begin_symbol = left.strip()
-            
             # self.rules_bag = self.get_rules_bag()
             for rule in self.rules:
-                if rule.split('->')[0].strip() == self.begin_symbol:
+                if rule.split('->')[0].strip() == Begin_symbol:
                     _, right = rule.split('->')
                     right = '·' + right
-                    self.BLRP = (self.begin_symbol + ' -> ' + right, '#')
+                    self.BLRP = (Begin_symbol + ' -> ' + right, '#')
                     break
             else:
                 print("Can not find", Begin_symbol)
@@ -46,14 +44,16 @@ class LR:
 
         # get the LR group, GO is a dict saving the transmit information
         # group is the Project group
+        '''
         self.group, self.GO = self.get_group()
 
         # init the action and the goto table
         self.action, self.goto = self.init_table()
+        '''
 
         # draw the picture, just for debug
-        self.draw()
-        # self.read_table()
+        # self.draw()
+        self.read_table()
         print("Init the LR(1) analyser table successfully!")
 
     def draw(self):
@@ -380,7 +380,7 @@ class LR:
 
     def read_table(self):
         # read the data table from the file
-        with open("table.pkl", 'rb') as f:
+        with open("./script/parser/table.pkl", 'rb') as f:
             self.action, self.goto = pickle.load(f)
 
     def transform(self, char):
@@ -398,8 +398,9 @@ class LR:
 
 if __name__ == "__main__":
     # change the depth of the recursive
-    _, rule ,infile, outfile = sys.argv
-    app = LR(rule)
+    _, infile, outfile = sys.argv
+    rule = './script/parser/rule/rules'
+    app = LR(rule, "PROGRAM")
     # app.write_table()
     # start the main control to run for the analysing
     if app.mainloop(infile, outfile):

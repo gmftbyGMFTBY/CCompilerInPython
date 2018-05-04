@@ -1,4 +1,8 @@
-S -> A B C
-A -> a
-B -> @
-C -> c
+S' -> S
+S -> a A d
+S -> b B d
+S -> a B e
+S -> b A e
+A -> g
+B -> g
+

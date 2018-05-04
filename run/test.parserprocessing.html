@@ -1,0 +1,461 @@
+<table border="1">
+  <thead>
+    <tr>
+      <th>Step</th>
+      <th>State Stack</th>
+      <th>Symbol Stack In</th>
+      <th>Symbol Stack Out</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>[0, 10]</td>
+      <td>[#, int]</td>
+      <td>[main, (, ), {, int, a, =, 0, ;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S10</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>[0, 8]</td>
+      <td>[#, TYPE_SPEC]</td>
+      <td>[main, (, ), {, int, a, =, 0, ;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r6</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>[0, 8, 12]</td>
+      <td>[#, TYPE_SPEC, ID]</td>
+      <td>[(, ), {, int, a, =, 0, ;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S12</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>[0, 8, 12, 14]</td>
+      <td>[#, TYPE_SPEC, ID, (]</td>
+      <td>[), {, int, a, =, 0, ;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S14</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>[0, 8, 12, 14, 16]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST]</td>
+      <td>[), {, int, a, =, 0, ;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r13</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>[0, 8, 12, 14, 16, 26]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, )]</td>
+      <td>[{, int, a, =, 0, ;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S26</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>[0, 8, 12, 14, 16, 26, 43]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {]</td>
+      <td>[int, a, =, 0, ;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S43</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 10]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, int]</td>
+      <td>[a, =, 0, ;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S10</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 76]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, TYPE_SPEC]</td>
+      <td>[a, =, 0, ;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r6</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 76, 103]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, TYPE_SPEC, ID]</td>
+      <td>[=, 0, ;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S103</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 76, 103, 15]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, TYPE_SPEC, ID, =]</td>
+      <td>[0, ;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S15</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 76, 103, 15, 22]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, TYPE_SPEC, ID, =, CONST]</td>
+      <td>[;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S22</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 76, 103, 15, 20]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, TYPE_SPEC, ID, =, FACTOR]</td>
+      <td>[;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r67</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 76, 103, 15, 20, 32]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, TYPE_SPEC, ID, =, FACTOR, TERM2]</td>
+      <td>[;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r65</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 76, 103, 15, 21]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, TYPE_SPEC, ID, =, TERM]</td>
+      <td>[;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r62</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 76, 103, 15, 21, 34]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, TYPE_SPEC, ID, =, TERM, EXPR2]</td>
+      <td>[;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r61</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 76, 103, 15, 25]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, TYPE_SPEC, ID, =, EXPR]</td>
+      <td>[;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r58</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT]</td>
+      <td>[;, a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r57</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;]</td>
+      <td>[a, =, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S104</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID]</td>
+      <td>[=, 4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S66</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =]</td>
+      <td>[4, *, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S93</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 22]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, CONST]</td>
+      <td>[*, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S22</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 20]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, FACTOR]</td>
+      <td>[*, 5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r67</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 20, 30]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, FACTOR, *]</td>
+      <td>[5, +, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S30</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 20, 30, 22]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, FACTOR, *, CONST]</td>
+      <td>[+, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S22</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 20, 30, 52]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, FACTOR, *, FACTOR]</td>
+      <td>[+, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r67</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 20, 30, 52, 82]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, FACTOR, *, FACTOR, TERM2]</td>
+      <td>[+, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r65</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 20, 32]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, FACTOR, TERM2]</td>
+      <td>[+, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r63</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM]</td>
+      <td>[+, 6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>r62</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21, 33]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM, +]</td>
+      <td>[6, -, 7, ;, return, a, ;, }, #]</td>
+      <td>S33</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21, 33, 22]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM, +, CONST]</td>
+      <td>[-, 7, ;, return, a, ;, }, #]</td>
+      <td>S22</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21, 33, 20]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM, +, FACTOR]</td>
+      <td>[-, 7, ;, return, a, ;, }, #]</td>
+      <td>r67</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21, 33, 20, 32]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM, +, FACTOR, TERM2]</td>
+      <td>[-, 7, ;, return, a, ;, }, #]</td>
+      <td>r65</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21, 33, 54]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM, +, TERM]</td>
+      <td>[-, 7, ;, return, a, ;, }, #]</td>
+      <td>r62</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21, 33, 54, 35]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM, +, TERM, -]</td>
+      <td>[7, ;, return, a, ;, }, #]</td>
+      <td>S35</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21, 33, 54, 35, 22]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM, +, TERM, -, CONST]</td>
+      <td>[;, return, a, ;, }, #]</td>
+      <td>S22</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21, 33, 54, 35, 20]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM, +, TERM, -, FACTOR]</td>
+      <td>[;, return, a, ;, }, #]</td>
+      <td>r67</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21, 33, 54, 35, 20, 32]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM, +, TERM, -, FACTOR, TERM2]</td>
+      <td>[;, return, a, ;, }, #]</td>
+      <td>r65</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21, 33, 54, 35, 55]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM, +, TERM, -, TERM]</td>
+      <td>[;, return, a, ;, }, #]</td>
+      <td>r62</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21, 33, 54, 35, 55, 85]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM, +, TERM, -, TERM, EXPR2]</td>
+      <td>[;, return, a, ;, }, #]</td>
+      <td>r61</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21, 33, 54, 84]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM, +, TERM, EXPR2]</td>
+      <td>[;, return, a, ;, }, #]</td>
+      <td>r60</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 21, 34]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, TERM, EXPR2]</td>
+      <td>[;, return, a, ;, }, #]</td>
+      <td>r59</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 66, 93, 130]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ID, =, EXPR]</td>
+      <td>[;, return, a, ;, }, #]</td>
+      <td>r58</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 74]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ASSIGN_STMT]</td>
+      <td>[;, return, a, ;, }, #]</td>
+      <td>r55</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 74, 101]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ASSIGN_STMT, ;]</td>
+      <td>[return, a, ;, }, #]</td>
+      <td>S101</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 74, 101, 73]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ASSIGN_STMT, ;, return]</td>
+      <td>[a, ;, }, #]</td>
+      <td>S73</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 74, 101, 73, 19]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ASSIGN_STMT, ;, return, ID]</td>
+      <td>[;, }, #]</td>
+      <td>S19</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 74, 101, 73, 20]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ASSIGN_STMT, ;, return, FACTOR]</td>
+      <td>[;, }, #]</td>
+      <td>r66</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 74, 101, 73, 20, 32]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ASSIGN_STMT, ;, return, FACTOR, TERM2]</td>
+      <td>[;, }, #]</td>
+      <td>r65</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 74, 101, 73, 21]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ASSIGN_STMT, ;, return, TERM]</td>
+      <td>[;, }, #]</td>
+      <td>r62</td>
+    </tr>
+    <tr>
+      <td>51</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 74, 101, 73, 21, 34]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ASSIGN_STMT, ;, return, TERM, EXPR2]</td>
+      <td>[;, }, #]</td>
+      <td>r61</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 74, 101, 73, 100]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ASSIGN_STMT, ;, return, EXPR]</td>
+      <td>[;, }, #]</td>
+      <td>r58</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 74, 101, 69]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ASSIGN_STMT, ;, RTN_STMT]</td>
+      <td>[;, }, #]</td>
+      <td>r54</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 74, 101, 69, 96]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ASSIGN_STMT, ;, RTN_STMT, ;]</td>
+      <td>[}, #]</td>
+      <td>S96</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 74, 101, 69, 96, 150]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ASSIGN_STMT, ;, RTN_STMT, ;, STMT_LIST]</td>
+      <td>[}, #]</td>
+      <td>r22</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 74, 101, 152]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, ASSIGN_STMT, ;, STMT_LIST]</td>
+      <td>[}, #]</td>
+      <td>r16</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 77, 104, 154]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, INIT_STMT, ;, STMT_LIST]</td>
+      <td>[}, #]</td>
+      <td>r17</td>
+    </tr>
+    <tr>
+      <td>58</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 71]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, STMT_LIST]</td>
+      <td>[}, #]</td>
+      <td>r18</td>
+    </tr>
+    <tr>
+      <td>59</td>
+      <td>[0, 8, 12, 14, 16, 26, 43, 71, 98]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), {, STMT_LIST, }]</td>
+      <td>[#]</td>
+      <td>S98</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td>[0, 8, 12, 14, 16, 26, 44]</td>
+      <td>[#, TYPE_SPEC, ID, (, ARG_LIST, ), CODE_BLOCK]</td>
+      <td>[#]</td>
+      <td>r15</td>
+    </tr>
+    <tr>
+      <td>61</td>
+      <td>[0, 7]</td>
+      <td>[#, FUNC_DEF]</td>
+      <td>[#]</td>
+      <td>r4</td>
+    </tr>
+    <tr>
+      <td>62</td>
+      <td>[0, 7, 11]</td>
+      <td>[#, FUNC_DEF, FUNC_LIST]</td>
+      <td>[#]</td>
+      <td>r3</td>
+    </tr>
+    <tr>
+      <td>63</td>
+      <td>[0, 5]</td>
+      <td>[#, FUNC_LIST]</td>
+      <td>[#]</td>
+      <td>r2</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td>[0, 1]</td>
+      <td>[#, CMPL_UNIT]</td>
+      <td>[#]</td>
+      <td>r1</td>
+    </tr>
+  </tbody>
+</table>
