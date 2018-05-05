@@ -10,17 +10,12 @@ The only constrant of the rule is that the first rule must be the last element
 of the whole rules.
 '''
 
-import pprint
-from show import draw
-import sys
+import pydot, pprint, sys, pickle
 import xml.etree.ElementTree as ET
-import pickle
 from lxml import etree
 
 class LR:
-    def __init__(self, filename, Begin_symbol):
-        self.begin_symbol = Begin_symbol
-
+    def __init__(self, filename):
         # read the file of the rules
         with open(filename, 'r') as f:
             # filte the comment of the file `rules`
@@ -28,12 +23,16 @@ class LR:
                     filter(lambda line: False if line[:2] == "//" \
                     or not line.strip() else True, f.readlines())))
 
+            # begin_symbol, must be the left of the first rule
+            left, _ = self.rules[0].split('->')
+            self.begin_symbol = left.strip()
+            
             # self.rules_bag = self.get_rules_bag()
             for rule in self.rules:
-                if rule.split('->')[0].strip() == Begin_symbol:
+                if rule.split('->')[0].strip() == self.begin_symbol:
                     _, right = rule.split('->')
                     right = '·' + right
-                    self.BLRP = (Begin_symbol + ' -> ' + right, '#')
+                    self.BLRP = (self.begin_symbol + ' -> ' + right, '#')
                     break
             else:
                 print("Can not find", Begin_symbol)
@@ -57,20 +56,20 @@ class LR:
         print("Init the LR(1) analyser table successfully!")
 
     def draw(self):
-        # use the show.py to draw the picture
-        with open('./picture/pic', 'w') as f:
-            # write node
-            for index, group in enumerate(self.group):
-                f.write(f"[node|{index}]: [begin]\n")
-                for project in group:
-                    f.write(f'{project[0]}, {project[1]}\n')
-                f.write('\n')
-            # write edge
-            for index, item in enumerate(self.GO.items()):
-                key, value = item
-                f.write(f'[edge|{index}]:\n')
-                f.write(f'{key[0]} -> {value} : {key[1]}\n\n')
-        draw('./picture/pic')
+        g = pydot.Dot(graph_type="digraph", rankdir="LR")
+        nodes = []    # save the nodes
+
+        for index, group in enumerate(self.group):
+            string = r'\n'.join([f'{project[0]}, {project[1]}' for project in group])
+            node = pydot.Node(str(index), shape="box")
+            g.add_node(node)
+            nodes.append(node)
+
+        for index, item in enumerate(self.GO.items()):
+            key, value = item
+            g.add_edge( pydot.Edge(nodes[key[0]], nodes[value], label=key[1]) )
+
+        g.write_png('./picture/res.png')
 
     def get_character(self):
         V_n = set()
@@ -380,7 +379,7 @@ class LR:
 
     def read_table(self):
         # read the data table from the file
-        with open("./script/parser/table.pkl", 'rb') as f:
+        with open("table.pkl", 'rb') as f:
             self.action, self.goto = pickle.load(f)
 
     def transform(self, char):
@@ -400,7 +399,7 @@ if __name__ == "__main__":
     # change the depth of the recursive
     _, infile, outfile = sys.argv
     rule = './script/parser/rule/rules'
-    app = LR(rule, "PROGRAM")
+    app = LR(rule)
     # app.write_table()
     # start the main control to run for the analysing
     if app.mainloop(infile, outfile):
