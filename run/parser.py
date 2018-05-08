@@ -10,7 +10,7 @@ The only constrant of the rule is that the first rule must be the last element
 of the whole rules.
 '''
 
-import pydot, pprint, sys, pickle
+import pprint, sys, pickle
 import xml.etree.ElementTree as ET
 from lxml import etree
 
@@ -43,25 +43,24 @@ class LR:
 
         # get the LR group, GO is a dict saving the transmit information
         # group is the Project group
-        '''
         self.group, self.GO = self.get_group()
 
         # init the action and the goto table
         self.action, self.goto = self.init_table()
-        '''
 
         # draw the picture, just for debug
         # self.draw()
-        self.read_table()
+        # self.read_table()
         print("Init the LR(1) analyser table successfully!")
 
     def draw(self):
+        import pydot
         g = pydot.Dot(graph_type="digraph", rankdir="LR")
         nodes = []    # save the nodes
 
         for index, group in enumerate(self.group):
             string = r'\n'.join([f'{project[0]}, {project[1]}' for project in group])
-            node = pydot.Node(str(index), shape="box")
+            node = pydot.Node(str(index), shape="box", label=string)
             g.add_node(node)
             nodes.append(node)
 

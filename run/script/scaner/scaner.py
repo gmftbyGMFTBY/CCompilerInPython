@@ -571,17 +571,16 @@ def write_file(path, collections):
         f.write(res)
 
 if __name__ == "__main__":
-    '''
     main_table = init_table()
     # sys/argv[1]
     # test the test_file which I made
     print("Number" + '\t' + "Key" + '\t\t\t' + "Value")
     print("-" * 50)
-    collection = run('./mix/misaka.c', main_table, keyword)
+    collection = run('./test.c', main_table, keyword)
     write_file('./test.token.xml', collection)
 
     '''
     # using
     main_table = init_table()
     collection = run(sys.argv[1], main_table, keyword)
-    write_file(sys.argv[2], collection)
+    '''

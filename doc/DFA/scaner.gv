@@ -4,7 +4,6 @@ digraph finit_state_machine {
     
     // the number and the string node 1 ~ 100
     node [shape = circle, label = "0\n2", fontsize = 10]; 0;
-    /*
     node [shape = circle, label = "1", fontsize = 10]; 1;
     node [shape = circle, label = "2", fontsize = 10]; 2;
     node [shape = circle, label = "3", fontsize = 10]; 3;
@@ -24,7 +23,6 @@ digraph finit_state_machine {
     node [shape = circle, label = "15", fontsize = 10]; 15;
     node [shape = circle, label = "16", fontsize = 10]; 16;
     node [shape = doublecircle, label = "const_s", fontsize = 10]; 17
-    */
     
     /*
     // the separate character  200 ~ 300
@@ -56,7 +54,6 @@ digraph finit_state_machine {
     node [shape = circle, label = "414", fontsize = 10]; 414;       // %, %=
     node [shape = doublecircle, label = "415", fontsize = 10]; 415;       // %
     node [shape = doublecircle, label = "416", fontsize = 10]; 416;       // %=
-    */ 
     
     node [shape = circle, label = "417", fontsize = 10]; 417;       // =, ==
     node [shape = doublecircle, label = "418", fontsize = 10]; 418;       // =
@@ -94,6 +91,7 @@ digraph finit_state_machine {
     node [shape = circle, label = "442", fontsize = 10]; 442;       // ^, ^=
     node [shape = doublecircle, label = "443", fontsize = 10]; 443;       // ^
     node [shape = doublecircle, label = "444", fontsize = 10]; 444;       // ^=
+    */ 
 
     // node [shape = doublecircle, label = "445", fontsize = 10]; 445;       // ->
 
@@ -117,7 +115,6 @@ digraph finit_state_machine {
     0       ->      414     [label="%"];
     414     ->      415     [label="other"];
     414     ->      416     [label="="];
-    */
     0       ->      417     [label="="];
     417     ->      418     [label="other"];
     417     ->      419     [label="="];
@@ -146,6 +143,7 @@ digraph finit_state_machine {
     0       ->      442     [label="^"];
     442     ->      443     [label="other"];
     442     ->      444     [label="="];
+    */
 
     /*
     // name node 600 ~ 700
@@ -158,7 +156,6 @@ digraph finit_state_machine {
     600     ->      601      [label="other"];
     */
 
-    /*
     // the number and the string edge
     0       ->      1       [label="not 0"];
     0       ->      8       [label="0"];
@@ -204,5 +201,4 @@ digraph finit_state_machine {
 
     // the separate character edge
     0       ->      200    [label=",;white_space:.()[]{}"];
-    */
 }
