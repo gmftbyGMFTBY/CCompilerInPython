@@ -86,7 +86,6 @@ PARG_LIST -> @
 PARG -> ID
 PARG -> CONST
 PARG -> ( EXPR )
-PARG -> EXPR
 PARG -> CALL_STMT
 
 // 返回值语句

@@ -1,5 +1,6 @@
 S' -> S
-S -> S a b
-S -> b A
-A -> S
-A -> a
+S -> A * B
+S -> B
+A -> * B
+A -> *
+B -> A
