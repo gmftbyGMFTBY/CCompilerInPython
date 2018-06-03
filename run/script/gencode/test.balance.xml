@@ -3,12 +3,8 @@
     <FUNC_LIST>
       <FUNC_DEF>
         <TYPE_SPEC>
-          <keyword>int</keyword>
-        </TYPE_SPEC>
-        <identifier>main</identifier>
-        <operator>(</operator>
-        <ARG_LIST>
-          </ARG_LIST><operator>)</operator><CODE_BLOCK>
+          <keyword>int</keyword></TYPE_SPEC><identifier>main</identifier><operator>(</operator><ARG_LIST>
+</ARG_LIST><operator>)</operator><CODE_BLOCK>
           <separate>{</separate><STMT_LIST>
             <INIT_STMT>
               <TYPE_SPEC>
@@ -42,18 +38,8 @@
                       <TERM>
                         <FACTOR>
                           <CALL_STMT>
-                            <identifier>add</identifier><operator>(</operator><PARG_LIST>
-                              <PARG>
-                                <identifier>a</identifier></PARG><separate>,</separate><PARG>
-                                  <EXPR>
-                                    <TERM>
-                                      <FACTOR>
-                                        <constant>2</constant></FACTOR><TERM2>
-</TERM2></TERM><EXPR2>
-                                      <operator>+</operator><TERM>
-                                        <FACTOR>
-                                          <constant>3</constant></FACTOR><TERM2>
-</TERM2></TERM></EXPR2></EXPR></PARG></PARG_LIST><operator>)</operator></CALL_STMT></FACTOR><TERM2>
+                            <identifier>fool</identifier><operator>(</operator><PARG_LIST>
+</PARG_LIST><operator>)</operator></CALL_STMT></FACTOR><TERM2>
 </TERM2></TERM><EXPR2>
 </EXPR2></EXPR></ASSIGN_STMT><separate>;</separate><RTN_STMT>
                       <keyword>return</keyword><EXPR>
@@ -63,7 +49,7 @@
 </TERM2></TERM><EXPR2>
 </EXPR2></EXPR></RTN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK></FUNC_DEF><FUNC_DEF>
           <TYPE_SPEC>
-            <keyword>int</keyword></TYPE_SPEC><identifier>add</identifier><operator>(</operator><ARG_LIST>
+            <keyword>int</keyword></TYPE_SPEC><identifier>fool</identifier><operator>(</operator><ARG_LIST>
             <ARGUMENT>
               <TYPE_SPEC>
                 <keyword>int</keyword></TYPE_SPEC><identifier>a</identifier></ARGUMENT><separate>,</separate><ARGUMENT>
@@ -74,10 +60,7 @@
                 <keyword>return</keyword><EXPR>
                   <TERM>
                     <FACTOR>
-                      <identifier>a</identifier></FACTOR><TERM2>
+                      <constant>1</constant></FACTOR><TERM2>
 </TERM2></TERM><EXPR2>
-                    <operator>+</operator><TERM>
-                      <FACTOR>
-                        <identifier>b</identifier></FACTOR><TERM2>
-</TERM2></TERM></EXPR2></EXPR></RTN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK></FUNC_DEF></FUNC_LIST></CMPL_UNIT>
+</EXPR2></EXPR></RTN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK></FUNC_DEF></FUNC_LIST></CMPL_UNIT>
 </PROGRAM>

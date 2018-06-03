@@ -49,7 +49,10 @@ def func_def_return(xmlobj):
         else:
             print("something wrong in func define return mode function,", child.tag)
             exit(1)
-    stmt.append(['F', '_', '_', collections['identifier']])
+    result = ['F']
+    result.extend([i[1] for i in collections['arg_list']])
+    result.append(collections['identifier'])
+    stmt.append(result)
     stmt.extend(collections['CODE_BLOCK'])
     return stmt
 
@@ -360,17 +363,22 @@ def balance_tree(filein, fileout):
 # expand the 4-tuple into the X86 asm
 # -----------------------------------------
 def expand_4_tuple(code):
+    # AX, BX, CX, DX, 4 register
+    AX, BX, CX, DX = None, None, None, None
+    
     # write data segment
     print("DATA     SEGMENT")
     # write memory sector, scan all the 4-tuple and write the memory
     for stmt in code:
-        if stmt[0] == 'D': print("a    DB  ?")
+        if stmt[0] == 'D': 
+            print(f"{stmt[3]}    DB  ?")
+            memoryzone[stmt[3]] = 1
     # write the pause sector, 10
     for i in range(10):
         print(f"pausezone{i}    DB      ?")
     # write the parazone, 10
     for i in range(10):
-        print(f"parazone{i}     DB      ?")
+        print(f"parazone{i}     DW      ?")
     print("DATA     ENDS\n")
     
     # write code segment
@@ -380,25 +388,97 @@ def expand_4_tuple(code):
     for stmt in code:
         if stmt[0] == 'F':
             if state == 0: 
-                print(f'{stmt[3].upper()}    PROC    FAR\n\tASSUME  CS:CODE,DS:DATA,ES:NOTHING\n\tPUSH    DS\n\tXOR     AX,AX\n\tPUSH    AX\n\tMOV     AX,DATA\n\tMOV     DS,AX')
+                print(f'{stmt[-1].upper()}    PROC    FAR\n\tASSUME  CS:CODE,DS:DATA,ES:NOTHING\n\tPUSH    DS\n\tXOR     AX,AX\n\tPUSH    AX\n\tMOV     AX,DATA\n\tMOV     DS,AX\n')
                 state = 1
             else: 
+                # parament getting
                 print(f'{head}    ENDP\n')
-                print(f'{stmt[3].upper()}     PROC')
-            head = stmt[3].upper()
+                print(f'{stmt[-1].upper()}     PROC')
+                # print(f'\tPUSH     BP')
+                # print(f'\tMOV      BP,SP')
+                # print(f'')
+                # print(f'\tPOP      BP')
+            head = stmt[-1].upper()
         elif stmt[0] == 'D': continue
-        elif stmt[0] in '=+-*/%':
+        elif stmt[0] == '=': 
+            source, dest = stmt[1], stmt[3]
+            if memoryzone.get(source) or source.startswith('parazone') or source.startswith('pausezone'): cs = True
+            else: cs = False
+            if memoryzone.get(dest) or dest.startswith('parazone') or dest.startswith('pausezone'): cd = True
+            else: cd = False
+         
+            if not cs and cd:
+                # mov number into the memory
+                print(f"\tMOV      {dest},{source}")
+            elif (cs and (not cd)) or ((not cs) and (not cd)): 
+                print("something wrong with the mov command,", stmt)
+                exit(1)
+            else:
+                # both the argument of the mov command is the RAM unit, check the register
+                print(f'\tMOV      AL,{source}')
+                print(f'\tMOV      {dest},AL')
+        elif stmt[0] == '+':
             # write the real code of the program
-            pass
+            source, dest = stmt[1], stmt[3]
+            if memoryzone.get(source) or source.startswith('parazone') or source.startswith('pausezone'): cs = True
+            else: cs = False
+            if memoryzone.get(dest) or dest.startswith('parazone') or dest.startswith('pausezone'): cd = True
+            else: cd = False
+                
+            if not cs and cd:
+                # mov number into the memory
+                print(f"\tADD      {dest},{source}")
+            elif (cs and (not cd)) or ((not cs) and (not cd)): 
+                print("something wrong with the mov command,", stmt)
+                exit(1)
+            else:
+                # both the argument of the mov command is the RAM unit, check the register
+                print(f'\tMOV      AL,{dest}')
+                print(f'\tADD      AL,{source}')
+                print(f'\tMOV      {dest},AX')
+        elif stmt[0] == '-':
+            # write the real code of the program
+            source, dest = stmt[1], stmt[3]
+            if memoryzone.get(source) or source.startswith('parazone') or source.startswith('pausezone'): cs = True
+            else: cs = False
+            if memoryzone.get(dest) or dest.startswith('parazone') or dest.startswith('pausezone'): cd = True
+            else: cd = False
+                
+            if not cs and cd:
+                # mov number into the memory
+                print(f"\tADD      {dest},{source}")
+            elif (cs and (not cd)) or ((not cs) and (not cd)): 
+                print("something wrong with the mov command,", stmt)
+                exit(1)
+            else:
+                # both the argument of the mov command is the RAM unit, check the register
+                print(f'\tMOV      AL,{dest}')
+                print(f'\tSUB      AL,{source}')
+                print(f'\tMOV      {dest},AX')
+        elif stmt[0] == '*':
+            source1, source2, dest = stmt[1], stmt[2], stmt[3]
+            print(f'\tMOV      AL,{source1}')
+            print(f'\tMOV      BL,{source2}')
+            print(f'\tMUL      BL')
+            print(f'\tMOV      {dest}, AX')
+        elif stmt[0] == '/': pass
         elif stmt[0] == 'C':
-            # call function stmt[3]
-            pass
+            # call function stmt[3], add the label after this code
+            count = int(parazone[0])
+            foriter = list(range(1, count + 1))
+            foriter.reverse()
+            '''
+            for i in foriter:
+                print(f'\tPUSH     parazone{i}')
+            '''
+            print(f'\tCALL     {stmt[3].upper()}')
     print(f'{head}     ENDP\n')
 
 if __name__ == "__main__":
-    # balance_tree("./test.parser.xml", "./test.balance.xml")
-    # showtree("./test.balance.xml", "./test.balance.png")
+    balance_tree("./test.parser.xml", "./test.balance.xml")
+    showtree("./test.balance.xml", "./test.balance.png")
     
     # 4-tuple
-    code = program_return(etree.parse("./test.xml").getroot())
+    code = program_return(etree.parse("./test.balance.xml").getroot())
+    # pprint.pprint(code)
     expand_4_tuple(code)
