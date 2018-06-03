@@ -1,7 +1,7 @@
 int main() {
     int a;
     a = 1;
-    a = a * 2 + 3 * (8 - 6);
+    a = a * 2 + 3;
     a = add(a, 2 + 3);
     return a;
 }

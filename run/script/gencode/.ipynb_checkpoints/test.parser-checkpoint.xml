@@ -58,32 +58,7 @@
                         <FACTOR>
                           <constant>3</constant>
                         </FACTOR>
-                        <TERM2>
-                          <operator>*</operator>
-                          <FACTOR>
-                            <operator>(</operator>
-                            <EXPR>
-                              <TERM>
-                                <FACTOR>
-                                  <constant>8</constant>
-                                </FACTOR>
-                                <TERM2/>
-                              </TERM>
-                              <EXPR2>
-                                <operator>-</operator>
-                                <TERM>
-                                  <FACTOR>
-                                    <constant>6</constant>
-                                  </FACTOR>
-                                  <TERM2/>
-                                </TERM>
-                                <EXPR2/>
-                              </EXPR2>
-                            </EXPR>
-                            <operator>)</operator>
-                          </FACTOR>
-                          <TERM2/>
-                        </TERM2>
+                        <TERM2/>
                       </TERM>
                       <EXPR2/>
                     </EXPR2>
@@ -102,7 +77,15 @@
                             <operator>(</operator>
                             <PARG_LIST>
                               <PARG>
-                                <identifier>a</identifier>
+                                <EXPR>
+                                  <TERM>
+                                    <FACTOR>
+                                      <identifier>a</identifier>
+                                    </FACTOR>
+                                    <TERM2/>
+                                  </TERM>
+                                  <EXPR2/>
+                                </EXPR>
                               </PARG>
                               <separate>,</separate>
                               <PARG_LIST>

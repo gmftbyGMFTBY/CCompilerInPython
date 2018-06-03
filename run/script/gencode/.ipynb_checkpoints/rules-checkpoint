@@ -1,0 +1,117 @@
+// this is the rule of the C language, which is just the subcase of It, and I want to use these rules to create the parser for using, or this is the test file 
+// create by GMFTBY
+// Time 2018.4.28
+// Do not allow the `|` in the rule
+// The first rule must be the `PROGRAM -> ...`
+
+// 满足拓广文法的要求
+PROGRAM -> CMPL_UNIT
+
+// 程序体,全局变量声明和函数列表声明
+CMPL_UNIT -> FUNC_LIST
+
+// 函数列表,包括main函数
+FUNC_LIST -> FUNC_DEF FUNC_LIST
+FUNC_LIST -> @
+  
+// 函数定义声明
+FUNC_DEF -> TYPE_SPEC ID ( ARG_LIST ) CODE_BLOCK
+FUNC_DEF -> INIT_STMT ;
+
+// 类型符号
+TYPE_SPEC -> int
+TYPE_SPEC -> void
+TYPE_SPEC -> float
+TYPE_SPEC -> double
+TYPE_SPEC -> char
+
+// 参数列表
+ARG_LIST -> ARGUMENT
+ARG_LIST -> ARGUMENT , ARG_LIST
+ARG_LIST -> @
+
+// 参数，类型和标识符
+ARGUMENT -> TYPE_SPEC ID
+
+// 代码段
+CODE_BLOCK -> { STMT_LIST }
+
+// 语句列表
+STMT_LIST -> RTN_STMT ; STMT_LIST
+STMT_LIST -> ASSIGN_STMT ; STMT_LIST
+STMT_LIST -> INIT_STMT ; STMT_LIST
+STMT_LIST -> ITER_STMT STMT_LIST
+STMT_LIST -> IF_STMT STMT_LIST
+STMT_LIST -> EXPR ; STMT_LIST
+STMT_LIST -> JUST_STMT ; STMT_LIST
+STMT_LIST -> @
+
+// 语句: 返回值语句，赋值语句，初始化语句，比较语句，分支语句，循环语句，表达式
+//       函数调用语句(从属于表达式语句)
+STMT -> RTN_STMT
+STMT -> ASSIGN_STMT
+STMT -> INIT_STMT
+STMT -> ITER_STMT
+STMT -> IF_STMT
+STMT -> JUST_STMT
+STMT -> EXPR
+  
+// 循环语句，实现 for, while 
+ITER_STMT -> for ( STMT ; STMT ; STMT ) CODE_BLOCK
+ITER_STMT -> for ( STMT ; STMT ; STMT ) STMT
+ITER_STMT -> while ( STMT ) CODE_BLOCK
+ITER_STMT -> while ( STMT ) STMT
+
+// 比较语句
+JUST_STMT -> EXPR < EXPR
+JUST_STMT -> EXPR > EXPR
+JUST_STMT -> EXPR >= EXPR
+JUST_STMT -> EXPR <= EXPR
+JUST_STMT -> EXPR == EXPR
+JUST_STMT -> EXPR != EXPR
+
+// 分支语句, if, if-else
+IF_STMT -> if ( STMT ) CODE_BLOCK
+IF_STMT -> if ( STMT ) STMT ;
+IF_STMT -> if ( STMT ) CODE_BLOCK else CODE_BLOCK
+IF_STMT -> if ( STMT ) CODE_BLOCK else IF_STMT
+IF_STMT -> if ( STMT ) STMT ; else CODE_BLOCK
+IF_STMT -> if ( STMT ) STMT ; else IF_STMT
+  
+// 函数调用语句
+CALL_STMT -> ID ( PARG_LIST )
+PARG_LIST -> PARG
+PARG_LIST -> PARG , PARG_LIST
+PARG_LIST -> @
+PARG -> ID
+PARG -> CONST
+PARG -> ( EXPR )
+PARG -> EXPR
+PARG -> CALL_STMT
+
+// 返回值语句
+RTN_STMT -> return EXPR
+
+// 赋值语句
+ASSIGN_STMT -> ID = EXPR
+  
+// 初始化语句
+INIT_STMT -> TYPE_SPEC ID
+INIT_STMT -> TYPE_SPEC ID = EXPR
+
+// 表达式
+EXPR -> TERM EXPR2
+EXPR2 -> + TERM EXPR2
+EXPR2 -> - TERM EXPR2
+EXPR2 -> @
+TERM -> FACTOR TERM2 
+TERM2 -> * FACTOR TERM2
+TERM2 -> / FACTOR TERM2
+TERM2 -> @
+
+// 标识符，　常量，　子表达式, 标识符可以包含有关键字
+// 五大组成部分: 标识符，常量，关键字，分隔符，运算符
+FACTOR -> ID
+FACTOR -> CONST
+FACTOR -> ( EXPR )
+FACTOR -> CALL_STMT
