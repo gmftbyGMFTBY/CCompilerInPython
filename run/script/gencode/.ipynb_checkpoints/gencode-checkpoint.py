@@ -14,8 +14,8 @@ from collections import deque
 import pydot, pprint
 
 memoryzone = dict()
-parazone   = list(range(100))
-pausezone  = list(range(100))
+parazone   = list(range(10))
+pausezone  = list(range(10))
 
 # finally, xmlobj must be the root of the xml tree
 def program_return(xmlobj):
@@ -361,9 +361,39 @@ def balance_tree(filein, fileout):
 # -----------------------------------------
 def expand_4_tuple(code):
     # write data segment
-    print("DATA    SEGMENT")
+    print("DATA     SEGMENT")
+    # write memory sector, scan all the 4-tuple and write the memory
+    for stmt in code:
+        if stmt[0] == 'D': print("a    DB  ?")
+    # write the pause sector, 10
+    for i in range(10):
+        print(f"pausezone{i}    DB      ?")
+    # write the parazone, 10
+    for i in range(10):
+        print(f"parazone{i}     DB      ?")
+    print("DATA     ENDS\n")
     
-    print("DATA    ENDS")
+    # write code segment
+    print("CODE     SEGMENT")
+    state = 0
+    head = None
+    for stmt in code:
+        if stmt[0] == 'F':
+            if state == 0: 
+                print(f'{stmt[3].upper()}    PROC    FAR\n\tASSUME  CS:CODE,DS:DATA,ES:NOTHING\n\tPUSH    DS\n\tXOR     AX,AX\n\tPUSH    AX\n\tMOV     AX,DATA\n\tMOV     DS,AX')
+                state = 1
+            else: 
+                print(f'{head}    ENDP\n')
+                print(f'{stmt[3].upper()}     PROC')
+            head = stmt[3].upper()
+        elif stmt[0] == 'D': continue
+        elif stmt[0] in '=+-*/%':
+            # write the real code of the program
+            pass
+        elif stmt[0] == 'C':
+            # call function stmt[3]
+            pass
+    print(f'{head}     ENDP\n')
 
 if __name__ == "__main__":
     # balance_tree("./test.parser.xml", "./test.balance.xml")
