@@ -75,10 +75,7 @@
                                         <FACTOR>
                                           <constant>2</constant></FACTOR><TERM2>
 </TERM2></TERM><EXPR2>
-                                        <operator>+</operator><TERM>
-                                          <FACTOR>
-                                            <constant>3</constant></FACTOR><TERM2>
-</TERM2></TERM></EXPR2></EXPR></PARG></PARG_LIST><operator>)</operator></CALL_STMT></FACTOR><TERM2>
+</EXPR2></EXPR></PARG></PARG_LIST><operator>)</operator></CALL_STMT></FACTOR><TERM2>
 </TERM2></TERM><EXPR2>
 </EXPR2></EXPR></ASSIGN_STMT><separate>;</separate><INIT_STMT>
                         <TYPE_SPEC>
@@ -96,16 +93,65 @@
 </TERM2></TERM><EXPR2>
 </EXPR2></EXPR></STMT><operator>)</operator><CODE_BLOCK>
                             <separate>{</separate><STMT_LIST>
-                              <ASSIGN_STMT>
-                                <identifier>a</identifier><operator>=</operator><EXPR>
-                                  <TERM>
-                                    <FACTOR>
-                                      <identifier>a</identifier></FACTOR><TERM2>
+                              <IF_STMT>
+                                <keyword>if</keyword><operator>(</operator><STMT>
+                                  <JUST_STMT>
+                                    <EXPR>
+                                      <TERM>
+                                        <FACTOR>
+                                          <identifier>b</identifier></FACTOR><TERM2>
 </TERM2></TERM><EXPR2>
-                                    <operator>+</operator><TERM>
-                                      <FACTOR>
-                                        <constant>1</constant></FACTOR><TERM2>
+</EXPR2></EXPR><operator>==</operator><EXPR>
+                                      <TERM>
+                                        <FACTOR>
+                                          <constant>1</constant></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+</EXPR2></EXPR></JUST_STMT></STMT><operator>)</operator><CODE_BLOCK>
+                                  <separate>{</separate><STMT_LIST>
+                                    <ASSIGN_STMT>
+                                      <identifier>a</identifier><operator>=</operator><EXPR>
+                                        <TERM>
+                                          <FACTOR>
+                                            <identifier>a</identifier></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+                                          <operator>+</operator><TERM>
+                                            <FACTOR>
+                                              <constant>2</constant></FACTOR><TERM2>
+</TERM2></TERM></EXPR2></EXPR></ASSIGN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK><keyword>else</keyword><CODE_BLOCK>
+                                  <separate>{</separate><STMT_LIST>
+                                    <ASSIGN_STMT>
+                                      <identifier>a</identifier><operator>=</operator><EXPR>
+                                        <TERM>
+                                          <FACTOR>
+                                            <identifier>a</identifier></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+                                          <operator>-</operator><TERM>
+                                            <FACTOR>
+                                              <constant>2</constant></FACTOR><TERM2>
 </TERM2></TERM></EXPR2></EXPR></ASSIGN_STMT><separate>;</separate><ASSIGN_STMT>
+                                        <identifier>a</identifier><operator>=</operator><EXPR>
+                                          <TERM>
+                                            <FACTOR>
+                                              <identifier>a</identifier></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+                                            <operator>+</operator><TERM>
+                                              <FACTOR>
+                                                <CALL_STMT>
+                                                  <identifier>fool</identifier><operator>(</operator><PARG_LIST>
+                                                    <PARG>
+                                                      <EXPR>
+                                                        <TERM>
+                                                          <FACTOR>
+                                                            <constant>1</constant></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+</EXPR2></EXPR></PARG><separate>,</separate><PARG>
+                                                        <EXPR>
+                                                          <TERM>
+                                                            <FACTOR>
+                                                            <constant>1</constant></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+</EXPR2></EXPR></PARG></PARG_LIST><operator>)</operator></CALL_STMT></FACTOR><TERM2>
+</TERM2></TERM></EXPR2></EXPR></ASSIGN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK></IF_STMT><ASSIGN_STMT>
                                   <identifier>b</identifier><operator>=</operator><EXPR>
                                     <TERM>
                                       <FACTOR>
@@ -125,18 +171,66 @@
             <keyword>int</keyword></TYPE_SPEC><identifier>fool</identifier><operator>(</operator><ARG_LIST>
             <ARGUMENT>
               <TYPE_SPEC>
-                <keyword>int</keyword></TYPE_SPEC><identifier>a</identifier></ARGUMENT><separate>,</separate><ARGUMENT>
+                <keyword>int</keyword></TYPE_SPEC><identifier>c</identifier></ARGUMENT><separate>,</separate><ARGUMENT>
                 <TYPE_SPEC>
-                  <keyword>int</keyword></TYPE_SPEC><identifier>b</identifier></ARGUMENT></ARG_LIST><operator>)</operator><CODE_BLOCK>
+                  <keyword>int</keyword></TYPE_SPEC><identifier>d</identifier></ARGUMENT></ARG_LIST><operator>)</operator><CODE_BLOCK>
             <separate>{</separate><STMT_LIST>
-              <RTN_STMT>
-                <keyword>return</keyword><EXPR>
-                  <TERM>
-                    <FACTOR>
-                      <identifier>a</identifier></FACTOR><TERM2>
+              <INIT_STMT>
+                <TYPE_SPEC>
+                  <keyword>int</keyword></TYPE_SPEC><identifier>w</identifier></INIT_STMT><separate>;</separate><INIT_STMT>
+                  <TYPE_SPEC>
+                    <keyword>int</keyword></TYPE_SPEC><identifier>count</identifier></INIT_STMT><separate>;</separate><ASSIGN_STMT>
+                    <identifier>count</identifier><operator>=</operator><EXPR>
+                      <TERM>
+                        <FACTOR>
+                          <constant>0</constant></FACTOR><TERM2>
 </TERM2></TERM><EXPR2>
-                    <operator>+</operator><TERM>
-                      <FACTOR>
-                        <identifier>b</identifier></FACTOR><TERM2>
-</TERM2></TERM></EXPR2></EXPR></RTN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK></FUNC_DEF></FUNC_LIST></CMPL_UNIT>
+</EXPR2></EXPR></ASSIGN_STMT><separate>;</separate><ITER_STMT>
+                      <keyword>for</keyword><operator>(</operator><STMT>
+                        <ASSIGN_STMT>
+                          <identifier>w</identifier><operator>=</operator><EXPR>
+                            <TERM>
+                              <FACTOR>
+                                <constant>0</constant></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+</EXPR2></EXPR></ASSIGN_STMT></STMT><separate>;</separate><STMT>
+                        <JUST_STMT>
+                          <EXPR>
+                            <TERM>
+                              <FACTOR>
+                                <identifier>w</identifier></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+</EXPR2></EXPR><operator>&lt;=</operator><EXPR>
+                            <TERM>
+                              <FACTOR>
+                                <identifier>c</identifier></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+</EXPR2></EXPR></JUST_STMT></STMT><separate>;</separate><STMT>
+                        <ASSIGN_STMT>
+                          <identifier>w</identifier><operator>=</operator><EXPR>
+                            <TERM>
+                              <FACTOR>
+                                <identifier>w</identifier></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+                              <operator>+</operator><TERM>
+                                <FACTOR>
+                                  <constant>1</constant></FACTOR><TERM2>
+</TERM2></TERM></EXPR2></EXPR></ASSIGN_STMT></STMT><operator>)</operator><CODE_BLOCK>
+                        <separate>{</separate><STMT_LIST>
+                          <ASSIGN_STMT>
+                            <identifier>count</identifier><operator>=</operator><EXPR>
+                              <TERM>
+                                <FACTOR>
+                                  <identifier>count</identifier></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+                                <operator>+</operator><TERM>
+                                  <FACTOR>
+                                    <identifier>d</identifier></FACTOR><TERM2>
+</TERM2></TERM></EXPR2></EXPR></ASSIGN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK></ITER_STMT><RTN_STMT>
+                        <keyword>return</keyword><EXPR>
+                          <TERM>
+                            <FACTOR>
+                              <identifier>count</identifier></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+</EXPR2></EXPR></RTN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK></FUNC_DEF></FUNC_LIST></CMPL_UNIT>
 </PROGRAM>

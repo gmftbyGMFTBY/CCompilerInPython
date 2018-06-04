@@ -82,20 +82,83 @@ def stmt_list_return(xmlobj):
         elif child.tag == "ASSIGN_STMT": stmt.extend(assign_stmt_return(child))
         elif child.tag == "RTN_STMT": stmt.extend(rtn_stmt_return(child))
         elif child.tag == "IF_STMT": stmt.extend(if_stmt_return(child))
-        elif child.tag == "ITER_STMT": stmt.extend(iter_stmt_return(child))
+        elif child.tag == "ITER_STMT": 
+            if child.getchildren()[0].text == "while":
+                stmt.extend(while_iter_stmt_return(child))
+            else: stmt.extend(for_iter_stmt_return(child))
         else:
             print("something wrong in stmt list return mode function,", child.tag)
             exit(1)
     return stmt
 
-# iter stmt return mode function
-def iter_stmt_return(xmlobj):
+# for iter stmt return mode function
+def for_iter_stmt_return(xmlobj):
+    global if_stmt_counter
+    state, collections, stmt = 1, dict(), []
+    for child in xmlobj.getchildren():
+        if child.tag == "operator" or child.tag == "keyword" or child.tag == "separate": pass
+        elif child.tag == "STMT": 
+            collections[f'STMT{state}'] = stmt_return(child)
+            state += 1
+        elif child.tag == "CODE_BLOCK": 
+            collections[f'CODE_BLOCK'] = code_block_return(child)
+        else:
+            print("something wrong in for iter stmt return mode function,", child.tag)
+            exit(1)
+            
+    stmt.extend(collections['STMT1'][1])    # must be init stmt
+    stmt.append(['L', '_', '_', f'LL1{if_stmt_counter}'])
+    stmt.extend(collections['STMT2'][1])
+    if stmt[-1][0] == '>':
+        # just stmt mode
+        stmt[-1] = ['CMP', stmt[-1][1], stmt[-1][2], '_']
+        stmt.append(['JA', '_', '_', f'LL2{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'LL3{if_stmt_counter}'])
+    elif stmt[-1][0] == '<':
+        stmt[-1] = ['CMP', stmt[-1][1], stmt[-1][2], '_']
+        stmt.append(['JB', '_', '_', f'LL2{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'LL3{if_stmt_counter}'])
+    elif stmt[-1][0] == '>=':
+        stmt[-1] = ['CMP', stmt[-1][1], stmt[-1][2], '_']
+        stmt.append(['JNB', '_', '_', f'LL2{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'LL3{if_stmt_counter}'])
+    elif stmt[-1][0] == '<=':
+        stmt[-1] = ['CMP', stmt[-1][1], stmt[-1][2], '_']
+        stmt.append(['JNA', '_', '_', f'LL2{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'LL3{if_stmt_counter}'])
+    elif stmt[-1][0] == '==':
+        stmt[-1] = ['CMP', stmt[-1][1], stmt[-1][2], '_']
+        stmt.append(['JZ', '_', '_', f'LL2{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'LL3{if_stmt_counter}'])
+    elif stmt[-1][0] == '!=':
+        stmt[-1] = ['CMP', stmt[-1][1], stmt[-1][2], '_']
+        stmt.append(['JNZ', '_', '_', f'LL2{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'LL3{if_stmt_counter}'])
+    else:
+        # expr stmt
+        stmt.append(['CMP', '0', collections['just'][0], '_'])
+        stmt.append(['JNZ', '_', '_', f'LL2{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'LL3{if_stmt_counter}'])
+    
+    stmt.append(['L', '_', '_', f'LL4{if_stmt_counter}'])
+    stmt.extend(collections['STMT3'][1])
+    stmt.append(['JMP', '_', '_', f'LL1{if_stmt_counter}'])
+    stmt.append(['L', '_', '_', f'LL2{if_stmt_counter}'])
+    stmt.extend(collections['CODE_BLOCK'])
+    stmt.append(['JMP', '_', '_', f'LL4{if_stmt_counter}'])
+    stmt.append(['L', '_', '_', f'LL3{if_stmt_counter}'])
+    if_stmt_counter += 1
+    return stmt
+
+# while iter stmt return mode function
+def while_iter_stmt_return(xmlobj):
     # write the while ( stmt ) code_block just for the test, for and other 
     # can be expand easily from this function
     global if_stmt_counter
     stmt, collections = [], dict()
     for child in xmlobj.getchildren():
-        if child.tag == "keyword" or child.tag == "operator": pass
+        if child.tag == "keyword" or child.tag == "operator":
+            collections[child.tag] = child.text
         elif child.tag == "STMT": collections['just'] = stmt_return(child)
         elif child.tag == "CODE_BLOCK": 
             collections['CODE_BLOCK'] = code_block_return(child)
@@ -659,5 +722,5 @@ if __name__ == "__main__":
     
     # 4-tuple
     code = program_return(etree.parse("./test.balance.xml").getroot())
-    pprint.pprint(code)
+    # pprint.pprint(code)
     expand_4_tuple(code)

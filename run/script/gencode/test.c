@@ -8,15 +8,27 @@ int main() {
     else {
         a = 2;
     }
-    a = fool(a, 2 + 3);
+    a = fool(a, 2);
     int b = 2;
     while ( b ) {
-        a = a + 1;
+        if (b == 1) {
+            a = a + 2;
+        }
+        else {
+            a = a - 2;
+            a = a + fool(1, 1);
+        }
         b = b - 1;
     }
     return a;
 }
 
-int fool(int a, int b) {
-    return a + b;
+int fool(int c, int d) {
+    int w;
+    int count;
+    count = 0;
+    for (w = 0; w <= c; w = w + 1) {
+        count = count + d;
+    }
+    return count;
 }

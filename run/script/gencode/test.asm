@@ -1,6 +1,10 @@
 DATA     SEGMENT
+c    DB  ?
+d    DB  ?
+count    DB  ?
 b    DB  ?
 a    DB  ?
+w    DB  ?
 pausezone0    DB      ?
 pausezone1    DB      ?
 pausezone2    DB      ?
@@ -80,7 +84,6 @@ MAIN    PROC    FAR
 	MOV      AL,pausezone0
 	MOV      parazone1,AL
 	MOV      pausezone0,2
-	ADD      pausezone0,3
 	MOV      AL,pausezone0
 	MOV      parazone2,AL
 	CALL     FOOL
@@ -93,50 +96,118 @@ MAIN    PROC    FAR
 	MOV      pausezone0,2
 	MOV      AL,pausezone0
 	MOV      b,AL
-	EBEGIN1:
+	EBEGIN2:
 	MOV      AL,b
 	MOV      pausezone0,AL
 	MOV    AL,0
 	CMP    AL,pausezone0
-	JNZ    ETRUE1
+	JNZ    ETRUE2
+	JMP    EFALSE2
+	ETRUE2:
+	MOV      AL,b
+	MOV      pausezone0,AL
+	MOV      AL,pausezone0
+	MOV      parazone1,AL
+	MOV      pausezone0,1
+	MOV      AL,pausezone0
+	MOV      parazone2,AL
+	MOV    AL,parazone1
+	CMP    AL,parazone2
+	JZ    ETRUE1
 	JMP    EFALSE1
 	ETRUE1:
 	MOV      AL,a
 	MOV      pausezone0,AL
-	ADD      pausezone0,1
+	ADD      pausezone0,2
 	MOV      AL,pausezone0
 	MOV      a,AL
+	JMP    ENEXT1
+	EFALSE1:
+	MOV      AL,a
+	MOV      pausezone0,AL
+	SUB      pausezone0,2
+	MOV      AL,pausezone0
+	MOV      a,AL
+	MOV      parazone0,2
+	MOV      pausezone0,1
+	MOV      AL,pausezone0
+	MOV      parazone1,AL
+	MOV      pausezone0,1
+	MOV      AL,pausezone0
+	MOV      parazone2,AL
+	CALL     FOOL
+	MOV      AL,parazone1
+	MOV      pausezone1,AL
+	MOV      AL,a
+	MOV      pausezone2,AL
+	MOV      AL,pausezone2
+	ADD      AL,pausezone1
+	MOV      pausezone2,AL
+	MOV      AL,pausezone2
+	MOV      a,AL
+	ENEXT1:
 	MOV      AL,b
 	MOV      pausezone0,AL
 	SUB      pausezone0,1
 	MOV      AL,pausezone0
 	MOV      b,AL
-	JMP    EBEGIN1
-	EFALSE1:
+	JMP    EBEGIN2
+	EFALSE2:
 	MOV      AL,a
 	MOV      pausezone0,AL
 	MOV      parazone0,1
 	MOV      AL,pausezone0
 	MOV      parazone1,AL
-
-    ; print test
-    MOV      AH,2
-    ADD      AL,30H
-    MOV      DL,AL
-    INT      21H
-
+    
+    mov ah,2
+    add al,30h
+    mov dl,al
+    int 21h
 	RET
 MAIN    ENDP
 
 FOOL     PROC
 	MOV      AL,parazone1
-	MOV      a,AL
+	MOV      c,AL
 	MOV      AL,parazone2
-	MOV      b,AL
-	MOV      AL,a
+	MOV      d,AL
+	MOV      pausezone0,0
+	MOV      AL,pausezone0
+	MOV      count,AL
+	MOV      pausezone0,0
+	MOV      AL,pausezone0
+	MOV      w,AL
+	LL13:
+	MOV      AL,w
 	MOV      pausezone0,AL
 	MOV      AL,pausezone0
-	ADD      AL,b
+	MOV      parazone1,AL
+	MOV      AL,c
+	MOV      pausezone0,AL
+	MOV      AL,pausezone0
+	MOV      parazone2,AL
+	MOV    AL,parazone1
+	CMP    AL,parazone2
+	JNA    LL23
+	JMP    LL33
+	LL43:
+	MOV      AL,w
+	MOV      pausezone0,AL
+	ADD      pausezone0,1
+	MOV      AL,pausezone0
+	MOV      w,AL
+	JMP    LL13
+	LL23:
+	MOV      AL,count
+	MOV      pausezone0,AL
+	MOV      AL,pausezone0
+	ADD      AL,d
+	MOV      pausezone0,AL
+	MOV      AL,pausezone0
+	MOV      count,AL
+	JMP    LL43
+	LL33:
+	MOV      AL,count
 	MOV      pausezone0,AL
 	MOV      parazone0,1
 	MOV      AL,pausezone0
