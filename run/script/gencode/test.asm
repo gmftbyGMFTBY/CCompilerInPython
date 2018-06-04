@@ -118,6 +118,13 @@ MAIN    PROC    FAR
 	MOV      parazone0,1
 	MOV      AL,pausezone0
 	MOV      parazone1,AL
+
+    ; print test
+    MOV      AH,2
+    ADD      AL,30H
+    MOV      DL,AL
+    INT      21H
+
 	RET
 MAIN    ENDP
 
