@@ -100,7 +100,34 @@
                           <CALL_STMT>
                             <identifier>fool</identifier>
                             <operator>(</operator>
-                            <PARG_LIST/>
+                            <PARG_LIST>
+                              <PARG>
+                                <identifier>a</identifier>
+                              </PARG>
+                              <separate>,</separate>
+                              <PARG_LIST>
+                                <PARG>
+                                  <EXPR>
+                                    <TERM>
+                                      <FACTOR>
+                                        <constant>2</constant>
+                                      </FACTOR>
+                                      <TERM2/>
+                                    </TERM>
+                                    <EXPR2>
+                                      <operator>+</operator>
+                                      <TERM>
+                                        <FACTOR>
+                                          <constant>3</constant>
+                                        </FACTOR>
+                                        <TERM2/>
+                                      </TERM>
+                                      <EXPR2/>
+                                    </EXPR2>
+                                  </EXPR>
+                                </PARG>
+                              </PARG_LIST>
+                            </PARG_LIST>
                             <operator>)</operator>
                           </CALL_STMT>
                         </FACTOR>
@@ -166,11 +193,20 @@
                 <EXPR>
                   <TERM>
                     <FACTOR>
-                      <constant>1</constant>
+                      <identifier>a</identifier>
                     </FACTOR>
                     <TERM2/>
                   </TERM>
-                  <EXPR2/>
+                  <EXPR2>
+                    <operator>+</operator>
+                    <TERM>
+                      <FACTOR>
+                        <identifier>b</identifier>
+                      </FACTOR>
+                      <TERM2/>
+                    </TERM>
+                    <EXPR2/>
+                  </EXPR2>
                 </EXPR>
               </RTN_STMT>
               <separate>;</separate>

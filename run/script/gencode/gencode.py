@@ -38,6 +38,7 @@ def func_list_return(xmlobj):
 # func define return mode function
 def func_def_return(xmlobj):
     # whether expand the parament getting stmt ?
+    global memoryzone
     children = xmlobj.getchildren()
     stmt, collections = [], dict()
     for child in children:
@@ -50,9 +51,18 @@ def func_def_return(xmlobj):
             print("something wrong in func define return mode function,", child.tag)
             exit(1)
     result = ['F']
-    result.extend([i[1] for i in collections['arg_list']])
+    args = [i[1] for i in collections['arg_list']]
+    result.extend(args)
     result.append(collections['identifier'])
+    
     stmt.append(result)
+    # get the value of the parazone to args
+    for index, arg in enumerate(args):
+        stmt.append(['=', 'parazone' + str(index + 1), '_', arg])
+        # if do not exist in the memory, add it into memory
+        if not memoryzone.get(arg): 
+            memoryzone[arg] = 1
+            stmt.append(['D', '_', '_', arg])
     stmt.extend(collections['CODE_BLOCK'])
     return stmt
 
@@ -182,7 +192,7 @@ def expr_return(xmlobj):
                 substmt = call_stmt_return(funclist[funclisthead])
                 funclisthead += 1
                 stmt.extend(substmt)
-                stmt.append(['=', 'parazone0', '_', 'pausezone' + str(pausezone.index(0))])
+                stmt.append(['=', 'parazone1', '_', 'pausezone' + str(pausezone.index(0))])
                 equp[-1] = "pausezone" + str(pausezone.index(0))
                 pausezone[pausezone.index(0)] = 1
                 state = 0
@@ -363,22 +373,26 @@ def balance_tree(filein, fileout):
 # expand the 4-tuple into the X86 asm
 # -----------------------------------------
 def expand_4_tuple(code):
+    global memoryzone
     # AX, BX, CX, DX, 4 register
     AX, BX, CX, DX = None, None, None, None
     
     # write data segment
     print("DATA     SEGMENT")
     # write memory sector, scan all the 4-tuple and write the memory
+    mset = set()
     for stmt in code:
-        if stmt[0] == 'D': 
-            print(f"{stmt[3]}    DB  ?")
-            memoryzone[stmt[3]] = 1
+        if stmt[0] == 'D': mset.add(tuple(stmt))
+
+    for stmt in mset:
+        print(f"{stmt[3]}    DB  ?")
+        memoryzone[stmt[3]] = 1
     # write the pause sector, 10
     for i in range(10):
         print(f"pausezone{i}    DB      ?")
     # write the parazone, 10
     for i in range(10):
-        print(f"parazone{i}     DW      ?")
+        print(f"parazone{i}     DB      ?")
     print("DATA     ENDS\n")
     
     # write code segment
@@ -419,58 +433,58 @@ def expand_4_tuple(code):
                 print(f'\tMOV      {dest},AL')
         elif stmt[0] == '+':
             # write the real code of the program
-            source, dest = stmt[1], stmt[3]
-            if memoryzone.get(source) or source.startswith('parazone') or source.startswith('pausezone'): cs = True
-            else: cs = False
+            source1, source2, dest = stmt[1], stmt[2], stmt[3]
+            if memoryzone.get(source1) or source1.startswith('parazone') or source1.startswith('pausezone'): cs1 = True
+            else: cs1 = False
+            if memoryzone.get(source2) or source2.startswith('parazone') or source2.startswith('pausezone'): cs2 = True
+            else: cs2 = False
             if memoryzone.get(dest) or dest.startswith('parazone') or dest.startswith('pausezone'): cd = True
             else: cd = False
                 
-            if not cs and cd:
+            if cs1 and (not cs2):
                 # mov number into the memory
-                print(f"\tADD      {dest},{source}")
-            elif (cs and (not cd)) or ((not cs) and (not cd)): 
+                print(f"\tADD      {source1},{source2}")
+            elif ((not cs1) and cs2) or ((not cs1) and (not cs2)): 
                 print("something wrong with the mov command,", stmt)
                 exit(1)
             else:
                 # both the argument of the mov command is the RAM unit, check the register
-                print(f'\tMOV      AL,{dest}')
-                print(f'\tADD      AL,{source}')
-                print(f'\tMOV      {dest},AX')
+                print(f'\tMOV      AL,{source1}')
+                print(f'\tADD      AL,{source2}')
+                print(f'\tMOV      {dest},AL')
         elif stmt[0] == '-':
             # write the real code of the program
-            source, dest = stmt[1], stmt[3]
-            if memoryzone.get(source) or source.startswith('parazone') or source.startswith('pausezone'): cs = True
-            else: cs = False
+            source1, source2, dest = stmt[1], stmt[2], stmt[3]
+            if memoryzone.get(source1) or source1.startswith('parazone') or source1.startswith('pausezone'): cs1 = True
+            else: cs1 = False
+            if memoryzone.get(source2) or source2.startswith('parazone') or source2.startswith('pausezone'): cs2 = True
+            else: cs2 = False
             if memoryzone.get(dest) or dest.startswith('parazone') or dest.startswith('pausezone'): cd = True
             else: cd = False
                 
-            if not cs and cd:
+            if cs1 and (not cs2):
                 # mov number into the memory
-                print(f"\tADD      {dest},{source}")
-            elif (cs and (not cd)) or ((not cs) and (not cd)): 
+                print(f"\tADD      {source1},{source2}")
+            elif ((not cs1) and cs2) or ((not cs1) and (not cs2)): 
                 print("something wrong with the mov command,", stmt)
                 exit(1)
             else:
                 # both the argument of the mov command is the RAM unit, check the register
-                print(f'\tMOV      AL,{dest}')
-                print(f'\tSUB      AL,{source}')
-                print(f'\tMOV      {dest},AX')
+                print(f'\tMOV      AL,{source1}')
+                print(f'\tSUB      AL,{source2}')
+                print(f'\tMOV      {dest},AL')
         elif stmt[0] == '*':
             source1, source2, dest = stmt[1], stmt[2], stmt[3]
             print(f'\tMOV      AL,{source1}')
             print(f'\tMOV      BL,{source2}')
             print(f'\tMUL      BL')
-            print(f'\tMOV      {dest}, AX')
+            print(f'\tMOV      {dest}, AL')
         elif stmt[0] == '/': pass
         elif stmt[0] == 'C':
             # call function stmt[3], add the label after this code
+            # the parament saved in the parament
             count = int(parazone[0])
-            foriter = list(range(1, count + 1))
-            foriter.reverse()
-            '''
-            for i in foriter:
-                print(f'\tPUSH     parazone{i}')
-            '''
+            
             print(f'\tCALL     {stmt[3].upper()}')
     print(f'{head}     ENDP\n')
 
@@ -480,5 +494,5 @@ if __name__ == "__main__":
     
     # 4-tuple
     code = program_return(etree.parse("./test.balance.xml").getroot())
-    # pprint.pprint(code)
+    pprint.pprint(code)
     expand_4_tuple(code)

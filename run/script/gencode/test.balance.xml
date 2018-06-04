@@ -39,7 +39,17 @@
                         <FACTOR>
                           <CALL_STMT>
                             <identifier>fool</identifier><operator>(</operator><PARG_LIST>
-</PARG_LIST><operator>)</operator></CALL_STMT></FACTOR><TERM2>
+                              <PARG>
+                                <identifier>a</identifier></PARG><separate>,</separate><PARG>
+                                  <EXPR>
+                                    <TERM>
+                                      <FACTOR>
+                                        <constant>2</constant></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+                                      <operator>+</operator><TERM>
+                                        <FACTOR>
+                                          <constant>3</constant></FACTOR><TERM2>
+</TERM2></TERM></EXPR2></EXPR></PARG></PARG_LIST><operator>)</operator></CALL_STMT></FACTOR><TERM2>
 </TERM2></TERM><EXPR2>
 </EXPR2></EXPR></ASSIGN_STMT><separate>;</separate><RTN_STMT>
                       <keyword>return</keyword><EXPR>
@@ -60,7 +70,10 @@
                 <keyword>return</keyword><EXPR>
                   <TERM>
                     <FACTOR>
-                      <constant>1</constant></FACTOR><TERM2>
+                      <identifier>a</identifier></FACTOR><TERM2>
 </TERM2></TERM><EXPR2>
-</EXPR2></EXPR></RTN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK></FUNC_DEF></FUNC_LIST></CMPL_UNIT>
+                    <operator>+</operator><TERM>
+                      <FACTOR>
+                        <identifier>b</identifier></FACTOR><TERM2>
+</TERM2></TERM></EXPR2></EXPR></RTN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK></FUNC_DEF></FUNC_LIST></CMPL_UNIT>
 </PROGRAM>
