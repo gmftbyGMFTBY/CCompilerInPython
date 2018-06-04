@@ -395,142 +395,303 @@
     </token>
     <token>
       <number>57</number>
-      <value>return</value>
+      <value>int</value>
       <type>keyword</type>
       <line>12</line>
       <valid>True</valid>
     </token>
     <token>
       <number>58</number>
-      <value>a</value>
+      <value>b</value>
       <type>identifier</type>
       <line>12</line>
       <valid>True</valid>
     </token>
     <token>
       <number>59</number>
+      <value>=</value>
+      <type>operator</type>
+      <line>12</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>60</number>
+      <value>2</value>
+      <type>constant</type>
+      <line>12</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>61</number>
       <value>;</value>
       <type>separate</type>
       <line>12</line>
       <valid>True</valid>
     </token>
     <token>
-      <number>60</number>
-      <value>}</value>
-      <type>separate</type>
-      <line>13</line>
-      <valid>True</valid>
-    </token>
-    <token>
-      <number>61</number>
-      <value>int</value>
-      <type>keyword</type>
-      <line>15</line>
-      <valid>True</valid>
-    </token>
-    <token>
       <number>62</number>
-      <value>fool</value>
-      <type>identifier</type>
-      <line>15</line>
+      <value>while</value>
+      <type>keyword</type>
+      <line>13</line>
       <valid>True</valid>
     </token>
     <token>
       <number>63</number>
       <value>(</value>
       <type>operator</type>
-      <line>15</line>
+      <line>13</line>
       <valid>True</valid>
     </token>
     <token>
       <number>64</number>
-      <value>int</value>
-      <type>keyword</type>
-      <line>15</line>
+      <value>b</value>
+      <type>identifier</type>
+      <line>13</line>
       <valid>True</valid>
     </token>
     <token>
       <number>65</number>
-      <value>a</value>
-      <type>identifier</type>
-      <line>15</line>
+      <value>)</value>
+      <type>operator</type>
+      <line>13</line>
       <valid>True</valid>
     </token>
     <token>
       <number>66</number>
-      <value>,</value>
+      <value>{</value>
       <type>separate</type>
-      <line>15</line>
+      <line>13</line>
       <valid>True</valid>
     </token>
     <token>
       <number>67</number>
-      <value>int</value>
-      <type>keyword</type>
-      <line>15</line>
+      <value>a</value>
+      <type>identifier</type>
+      <line>14</line>
       <valid>True</valid>
     </token>
     <token>
       <number>68</number>
-      <value>b</value>
-      <type>identifier</type>
-      <line>15</line>
+      <value>=</value>
+      <type>operator</type>
+      <line>14</line>
       <valid>True</valid>
     </token>
     <token>
       <number>69</number>
-      <value>)</value>
-      <type>operator</type>
-      <line>15</line>
+      <value>a</value>
+      <type>identifier</type>
+      <line>14</line>
       <valid>True</valid>
     </token>
     <token>
       <number>70</number>
-      <value>{</value>
+      <value>+</value>
+      <type>operator</type>
+      <line>14</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>71</number>
+      <value>1</value>
+      <type>constant</type>
+      <line>14</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>72</number>
+      <value>;</value>
+      <type>separate</type>
+      <line>14</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>73</number>
+      <value>b</value>
+      <type>identifier</type>
+      <line>15</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>74</number>
+      <value>=</value>
+      <type>operator</type>
+      <line>15</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>75</number>
+      <value>b</value>
+      <type>identifier</type>
+      <line>15</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>76</number>
+      <value>-</value>
+      <type>operator</type>
+      <line>15</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>77</number>
+      <value>1</value>
+      <type>constant</type>
+      <line>15</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>78</number>
+      <value>;</value>
       <type>separate</type>
       <line>15</line>
       <valid>True</valid>
     </token>
     <token>
-      <number>71</number>
-      <value>return</value>
-      <type>keyword</type>
-      <line>16</line>
-      <valid>True</valid>
-    </token>
-    <token>
-      <number>72</number>
-      <value>a</value>
-      <type>identifier</type>
-      <line>16</line>
-      <valid>True</valid>
-    </token>
-    <token>
-      <number>73</number>
-      <value>+</value>
-      <type>operator</type>
-      <line>16</line>
-      <valid>True</valid>
-    </token>
-    <token>
-      <number>74</number>
-      <value>b</value>
-      <type>identifier</type>
-      <line>16</line>
-      <valid>True</valid>
-    </token>
-    <token>
-      <number>75</number>
-      <value>;</value>
-      <type>separate</type>
-      <line>16</line>
-      <valid>True</valid>
-    </token>
-    <token>
-      <number>76</number>
+      <number>79</number>
       <value>}</value>
       <type>separate</type>
+      <line>16</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>80</number>
+      <value>return</value>
+      <type>keyword</type>
       <line>17</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>81</number>
+      <value>a</value>
+      <type>identifier</type>
+      <line>17</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>82</number>
+      <value>;</value>
+      <type>separate</type>
+      <line>17</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>83</number>
+      <value>}</value>
+      <type>separate</type>
+      <line>18</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>84</number>
+      <value>int</value>
+      <type>keyword</type>
+      <line>20</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>85</number>
+      <value>fool</value>
+      <type>identifier</type>
+      <line>20</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>86</number>
+      <value>(</value>
+      <type>operator</type>
+      <line>20</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>87</number>
+      <value>int</value>
+      <type>keyword</type>
+      <line>20</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>88</number>
+      <value>a</value>
+      <type>identifier</type>
+      <line>20</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>89</number>
+      <value>,</value>
+      <type>separate</type>
+      <line>20</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>90</number>
+      <value>int</value>
+      <type>keyword</type>
+      <line>20</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>91</number>
+      <value>b</value>
+      <type>identifier</type>
+      <line>20</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>92</number>
+      <value>)</value>
+      <type>operator</type>
+      <line>20</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>93</number>
+      <value>{</value>
+      <type>separate</type>
+      <line>20</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>94</number>
+      <value>return</value>
+      <type>keyword</type>
+      <line>21</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>95</number>
+      <value>a</value>
+      <type>identifier</type>
+      <line>21</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>96</number>
+      <value>+</value>
+      <type>operator</type>
+      <line>21</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>97</number>
+      <value>b</value>
+      <type>identifier</type>
+      <line>21</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>98</number>
+      <value>;</value>
+      <type>separate</type>
+      <line>21</line>
+      <valid>True</valid>
+    </token>
+    <token>
+      <number>99</number>
+      <value>}</value>
+      <type>separate</type>
+      <line>22</line>
       <valid>True</valid>
     </token>
   </tokens>

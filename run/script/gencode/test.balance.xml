@@ -80,11 +80,45 @@
                                             <constant>3</constant></FACTOR><TERM2>
 </TERM2></TERM></EXPR2></EXPR></PARG></PARG_LIST><operator>)</operator></CALL_STMT></FACTOR><TERM2>
 </TERM2></TERM><EXPR2>
-</EXPR2></EXPR></ASSIGN_STMT><separate>;</separate><RTN_STMT>
-                        <keyword>return</keyword><EXPR>
+</EXPR2></EXPR></ASSIGN_STMT><separate>;</separate><INIT_STMT>
+                        <TYPE_SPEC>
+                          <keyword>int</keyword></TYPE_SPEC><identifier>b</identifier><operator>=</operator><EXPR>
                           <TERM>
                             <FACTOR>
-                              <identifier>a</identifier></FACTOR><TERM2>
+                              <constant>2</constant></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+</EXPR2></EXPR></INIT_STMT><separate>;</separate><ITER_STMT>
+                          <keyword>while</keyword><operator>(</operator><STMT>
+                            <EXPR>
+                              <TERM>
+                                <FACTOR>
+                                  <identifier>b</identifier></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+</EXPR2></EXPR></STMT><operator>)</operator><CODE_BLOCK>
+                            <separate>{</separate><STMT_LIST>
+                              <ASSIGN_STMT>
+                                <identifier>a</identifier><operator>=</operator><EXPR>
+                                  <TERM>
+                                    <FACTOR>
+                                      <identifier>a</identifier></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+                                    <operator>+</operator><TERM>
+                                      <FACTOR>
+                                        <constant>1</constant></FACTOR><TERM2>
+</TERM2></TERM></EXPR2></EXPR></ASSIGN_STMT><separate>;</separate><ASSIGN_STMT>
+                                  <identifier>b</identifier><operator>=</operator><EXPR>
+                                    <TERM>
+                                      <FACTOR>
+                                        <identifier>b</identifier></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+                                      <operator>-</operator><TERM>
+                                        <FACTOR>
+                                          <constant>1</constant></FACTOR><TERM2>
+</TERM2></TERM></EXPR2></EXPR></ASSIGN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK></ITER_STMT><RTN_STMT>
+                            <keyword>return</keyword><EXPR>
+                              <TERM>
+                                <FACTOR>
+                                  <identifier>a</identifier></FACTOR><TERM2>
 </TERM2></TERM><EXPR2>
 </EXPR2></EXPR></RTN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK></FUNC_DEF><FUNC_DEF>
           <TYPE_SPEC>

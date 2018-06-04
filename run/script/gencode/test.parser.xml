@@ -210,20 +210,112 @@
                     </ASSIGN_STMT>
                     <separate>;</separate>
                     <STMT_LIST>
-                      <RTN_STMT>
-                        <keyword>return</keyword>
+                      <INIT_STMT>
+                        <TYPE_SPEC>
+                          <keyword>int</keyword>
+                        </TYPE_SPEC>
+                        <identifier>b</identifier>
+                        <operator>=</operator>
                         <EXPR>
                           <TERM>
                             <FACTOR>
-                              <identifier>a</identifier>
+                              <constant>2</constant>
                             </FACTOR>
                             <TERM2/>
                           </TERM>
                           <EXPR2/>
                         </EXPR>
-                      </RTN_STMT>
+                      </INIT_STMT>
                       <separate>;</separate>
-                      <STMT_LIST/>
+                      <STMT_LIST>
+                        <ITER_STMT>
+                          <keyword>while</keyword>
+                          <operator>(</operator>
+                          <STMT>
+                            <EXPR>
+                              <TERM>
+                                <FACTOR>
+                                  <identifier>b</identifier>
+                                </FACTOR>
+                                <TERM2/>
+                              </TERM>
+                              <EXPR2/>
+                            </EXPR>
+                          </STMT>
+                          <operator>)</operator>
+                          <CODE_BLOCK>
+                            <separate>{</separate>
+                            <STMT_LIST>
+                              <ASSIGN_STMT>
+                                <identifier>a</identifier>
+                                <operator>=</operator>
+                                <EXPR>
+                                  <TERM>
+                                    <FACTOR>
+                                      <identifier>a</identifier>
+                                    </FACTOR>
+                                    <TERM2/>
+                                  </TERM>
+                                  <EXPR2>
+                                    <operator>+</operator>
+                                    <TERM>
+                                      <FACTOR>
+                                        <constant>1</constant>
+                                      </FACTOR>
+                                      <TERM2/>
+                                    </TERM>
+                                    <EXPR2/>
+                                  </EXPR2>
+                                </EXPR>
+                              </ASSIGN_STMT>
+                              <separate>;</separate>
+                              <STMT_LIST>
+                                <ASSIGN_STMT>
+                                  <identifier>b</identifier>
+                                  <operator>=</operator>
+                                  <EXPR>
+                                    <TERM>
+                                      <FACTOR>
+                                        <identifier>b</identifier>
+                                      </FACTOR>
+                                      <TERM2/>
+                                    </TERM>
+                                    <EXPR2>
+                                      <operator>-</operator>
+                                      <TERM>
+                                        <FACTOR>
+                                          <constant>1</constant>
+                                        </FACTOR>
+                                        <TERM2/>
+                                      </TERM>
+                                      <EXPR2/>
+                                    </EXPR2>
+                                  </EXPR>
+                                </ASSIGN_STMT>
+                                <separate>;</separate>
+                                <STMT_LIST/>
+                              </STMT_LIST>
+                            </STMT_LIST>
+                            <separate>}</separate>
+                          </CODE_BLOCK>
+                        </ITER_STMT>
+                        <STMT_LIST>
+                          <RTN_STMT>
+                            <keyword>return</keyword>
+                            <EXPR>
+                              <TERM>
+                                <FACTOR>
+                                  <identifier>a</identifier>
+                                </FACTOR>
+                                <TERM2/>
+                              </TERM>
+                              <EXPR2/>
+                            </EXPR>
+                          </RTN_STMT>
+                          <separate>;</separate>
+                          <STMT_LIST/>
+                        </STMT_LIST>
+                      </STMT_LIST>
                     </STMT_LIST>
                   </STMT_LIST>
                 </STMT_LIST>

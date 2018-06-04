@@ -1,57 +1,6 @@
-[['F', 'main'],
- ['D', '_', '_', 'a'],
- ['=', '1', '_', 'pausezone0'],
- ['=', 'pausezone0', '_', 'a'],
- ['=', 'a', '_', 'pausezone0'],
- ['*', 'pausezone0', '2', 'pausezone0'],
- ['=', '8', '_', 'pausezone1'],
- ['-', 'pausezone1', '6', 'pausezone1'],
- ['=', '3', '_', 'pausezone2'],
- ['*', 'pausezone2', 'pausezone1', 'pausezone2'],
- ['+', 'pausezone0', 'pausezone2', 'pausezone0'],
- ['=', 'pausezone0', '_', 'a'],
- ['=', 'a', '_', 'pausezone0'],
- ['=', 'pausezone0', '_', 'parazone1'],
- ['=', '1', '_', 'pausezone0'],
- ['=', 'pausezone0', '_', 'parazone2'],
- ['CMP', 'parazone1', 'parazone2', '_'],
- ['JA', '_', '_', 'ETRUE0'],
- ['JMP', '_', '_', 'EFALSE0'],
- ['L', '_', '_', 'ETRUE0'],
- ['=', '1', '_', 'pausezone0'],
- ['=', 'pausezone0', '_', 'a'],
- ['JMP', '_', '_', 'ENEXT0'],
- ['L', '_', '_', 'EFALSE0'],
- ['=', '2', '_', 'pausezone0'],
- ['=', 'pausezone0', '_', 'a'],
- ['L', '_', '_', 'ENEXT0'],
- ['=', '2', '_', 'parazone0'],
- ['=', 'a', '_', 'pausezone0'],
- ['=', 'pausezone0', '_', 'parazone1'],
- ['=', '2', '_', 'pausezone0'],
- ['+', 'pausezone0', '3', 'pausezone0'],
- ['=', 'pausezone0', '_', 'parazone2'],
- ['C', '_', '_', 'fool'],
- ['=', 'parazone1', '_', 'pausezone1'],
- ['=', 'pausezone1', '_', 'pausezone2'],
- ['=', 'pausezone2', '_', 'a'],
- ['=', 'a', '_', 'pausezone0'],
- ['=', '1', '_', 'parazone0'],
- ['=', 'pausezone0', '_', 'parazone1'],
- ['R', '_', '_', '_'],
- ['F', 'a', 'b', 'fool'],
- ['=', 'parazone1', '_', 'a'],
- ['D', '_', '_', 'a'],
- ['=', 'parazone2', '_', 'b'],
- ['D', '_', '_', 'b'],
- ['=', 'a', '_', 'pausezone0'],
- ['+', 'pausezone0', 'b', 'pausezone0'],
- ['=', '1', '_', 'parazone0'],
- ['=', 'pausezone0', '_', 'parazone1'],
- ['R', '_', '_', '_']]
 DATA     SEGMENT
-a    DB  ?
 b    DB  ?
+a    DB  ?
 pausezone0    DB      ?
 pausezone1    DB      ?
 pausezone2    DB      ?
@@ -104,7 +53,6 @@ MAIN    PROC    FAR
 	MOV      pausezone0,AL
 	MOV      AL,pausezone0
 	MOV      a,AL
-    
 	MOV      AL,a
 	MOV      pausezone0,AL
 	MOV      AL,pausezone0
@@ -112,21 +60,20 @@ MAIN    PROC    FAR
 	MOV      pausezone0,1
 	MOV      AL,pausezone0
 	MOV      parazone2,AL
-	MOV      AL,parazone1
-	CMP      AL,parazone2
-	JA       ETRUE0
-	JMP      EFALSE0
+	MOV    AL,parazone1
+	CMP    AL,parazone2
+	JA    ETRUE0
+	JMP    EFALSE0
 	ETRUE0:
 	MOV      pausezone0,1
 	MOV      AL,pausezone0
 	MOV      a,AL
-	JMP      ENEXT0
+	JMP    ENEXT0
 	EFALSE0:
 	MOV      pausezone0,2
 	MOV      AL,pausezone0
 	MOV      a,AL
 	ENEXT0:
-    
 	MOV      parazone0,2
 	MOV      AL,a
 	MOV      pausezone0,AL
@@ -143,6 +90,29 @@ MAIN    PROC    FAR
 	MOV      pausezone2,AL
 	MOV      AL,pausezone2
 	MOV      a,AL
+	MOV      pausezone0,2
+	MOV      AL,pausezone0
+	MOV      b,AL
+	EBEGIN1:
+	MOV      AL,b
+	MOV      pausezone0,AL
+	MOV    AL,0
+	CMP    AL,pausezone0
+	JNZ    ETRUE1
+	JMP    EFALSE1
+	ETRUE1:
+	MOV      AL,a
+	MOV      pausezone0,AL
+	ADD      pausezone0,1
+	MOV      AL,pausezone0
+	MOV      a,AL
+	MOV      AL,b
+	MOV      pausezone0,AL
+	SUB      pausezone0,1
+	MOV      AL,pausezone0
+	MOV      b,AL
+	JMP    EBEGIN1
+	EFALSE1:
 	MOV      AL,a
 	MOV      pausezone0,AL
 	MOV      parazone0,1
