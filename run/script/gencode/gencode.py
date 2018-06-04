@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/python3
 # Author: GMFTBY
 # Time  : 2018.6.4
 
@@ -11,7 +11,7 @@ value is the 4-tuple which we want.
 from lxml import etree
 import xml.etree.ElementTree as ET
 from collections import deque
-import pydot, pprint
+import pydot, pprint, sys
 
 memoryzone = dict()
 parazone   = list(range(10))
@@ -93,6 +93,7 @@ def rtn_stmt_return(xmlobj):
     result, substmt = expr_return(children[1])
     substmt.append(['=', '1', '_', 'parazone0'])
     substmt.append(['=', result, '_', 'parazone1'])
+    substmt.append(['R', '_', '_', '_'])    # back to the OSc
     return substmt
 
 # assign stmt return mode function
@@ -464,7 +465,7 @@ def expand_4_tuple(code):
                 
             if cs1 and (not cs2):
                 # mov number into the memory
-                print(f"\tADD      {source1},{source2}")
+                print(f"\tSUB      {source1},{source2}")
             elif ((not cs1) and cs2) or ((not cs1) and (not cs2)): 
                 print("something wrong with the mov command,", stmt)
                 exit(1)
@@ -486,7 +487,12 @@ def expand_4_tuple(code):
             count = int(parazone[0])
             
             print(f'\tCALL     {stmt[3].upper()}')
+        elif stmt[0] == 'R': print(f'\tRET')
+        else:
+            print('something wrong in expand 4-tuple function,', stmt)
+            exit(1)
     print(f'{head}     ENDP\n')
+    print('CODE     ENDS\n\t\tEND     MAIN')
 
 if __name__ == "__main__":
     balance_tree("./test.parser.xml", "./test.balance.xml")
@@ -494,5 +500,5 @@ if __name__ == "__main__":
     
     # 4-tuple
     code = program_return(etree.parse("./test.balance.xml").getroot())
-    pprint.pprint(code)
+    # pprint.pprint(code)
     expand_4_tuple(code)
