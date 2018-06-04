@@ -16,6 +16,8 @@ import pydot, pprint, sys
 memoryzone = dict()
 parazone   = list(range(10))
 pausezone  = list(range(10))
+if_stmt_counter = 0     # save the counter index for the global if_stmt
+iter_stmt_counter = 0   # save the counter index for the global iter_stmt
 
 # finally, xmlobj must be the root of the xml tree
 def program_return(xmlobj):
@@ -80,9 +82,105 @@ def stmt_list_return(xmlobj):
         elif child.tag == "INIT_STMT": stmt.extend(init_stmt_return(child))
         elif child.tag == "ASSIGN_STMT": stmt.extend(assign_stmt_return(child))
         elif child.tag == "RTN_STMT": stmt.extend(rtn_stmt_return(child))
+        elif child.tag == "IF_STMT": stmt.extend(if_stmt_return(child))
         else:
             print("something wrong in stmt list return mode function,", child.tag)
             exit(1)
+    return stmt
+
+# if stmt return mode function
+def if_stmt_return(xmlobj):
+    # write the if ( stmt ) code_block else code_block for the test
+    global if_stmt_counter
+    children = xmlobj.getchildren()
+    stmt, state, collections = [], 1, dict()
+    for child in children:
+        if child.tag == "keyword" or child.tag == "operator": pass
+        elif child.tag == "STMT": 
+            # the stmt always the just_stmt of expr
+            collections['just'] = stmt_return(child)
+            if collections['just'][0] in [1, 2, 3, 4]:
+                print("something wrong in if stmt function,", child.tag, result)
+                exit(1)
+        elif child.tag == "CODE_BLOCK" and state == 1:
+            # if code
+            state = 2
+            collections['CODE_BLOCK1'] = code_block_return(child)
+        elif child.tag == "CODE_BLOCK" and state == 2:
+            # else code
+            collections['CODE_BLOCK2'] = code_block_return(child)
+    # analyse
+    stmt.extend(collections['just'][1])
+    if stmt[-1][0] == '>':
+        # just stmt mode
+        stmt[-1] = ['CMP', stmt[-1][1], stmt[-1][2], '_']
+        stmt.append(['JA', '_', '_', f'ETRUE{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'EFALSE{if_stmt_counter}'])
+    elif stmt[-1][0] == '<':
+        stmt[-1] = ['CMP', stmt[-1][1], stmt[-1][2], '_']
+        stmt.append(['JB', '_', '_', f'ETRUE{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'EFALSE{if_stmt_counter}'])
+    elif stmt[-1][0] == '>=':
+        stmt[-1] = ['CMP', stmt[-1][1], stmt[-1][2], '_']
+        stmt.append(['JNB', '_', '_', f'ETRUE{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'EFALSE{if_stmt_counter}'])
+    elif stmt[-1][0] == '<=':
+        stmt[-1] = ['CMP', stmt[-1][1], stmt[-1][2], '_']
+        stmt.append(['JNA', '_', '_', f'ETRUE{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'EFALSE{if_stmt_counter}'])
+    elif stmt[-1][0] == '==':
+        stmt[-1] = ['CMP', stmt[-1][1], stmt[-1][2], '_']
+        stmt.append(['JZ', '_', '_', f'ETRUE{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'EFALSE{if_stmt_counter}'])
+    elif stmt[-1][0] == '!=':
+        stmt[-1] = ['CMP', stmt[-1][1], stmt[-1][2], '_']
+        stmt.append(['JNZ', '_', '_', f'ETRUE{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'EFALSE{if_stmt_counter}'])
+    else:
+        # expr stmt
+        stmt.append(['CMP', '0', collections['just'][0], '_'])
+        stmt.append(['JNZ', '_', '_', f'ETRUE{if_stmt_counter}'])
+        stmt.append(['JMP', '_', '_', f'EFALSE{if_stmt_counter}'])
+    stmt.append(['L', '_', '_', f'ETRUE{if_stmt_counter}'])
+    stmt.extend(collections['CODE_BLOCK1'])
+    stmt.append(['JMP', '_', '_', f'ENEXT{if_stmt_counter}'])
+    stmt.append(['L', '_', '_', f'EFALSE{if_stmt_counter}'])
+    stmt.extend(collections['CODE_BLOCK2'])
+    stmt.append(['L', '_', '_', f'ENEXT{if_stmt_counter}'])
+    if_stmt_counter += 1
+    return stmt
+        
+# stmt return mode function, which is also very important in the file
+def stmt_return(xmlobj):
+    # return 1: the result of the stmt, this set because the expr can be return, separate the different mode of the return value
+    # return 2: the stmt in 4-tuple model
+    for child in xmlobj.getchildren():
+        if child.tag == "RTN_STMT": return 1, rtn_stmt_return(child)
+        elif child.tag == "ASSIGN_STMT": return 2, assign_stmt_return(child)
+        elif child.tag == "INIT_STMT": return 3, init_stmt_return(child)
+        elif child.tag == "IF_STMT": return 4, if_stmt_return(child)
+        elif child.tag == "JUST_STMT": return "parazone1", just_stmt_return(child)
+        elif child.tag == "EXPR": return expr_return(child)
+        else:
+            print("something wrong in stmt return mode function,", child.tag)
+            exit(1)
+            
+# just stmt mode function, the pause value move to the para1, 2
+def just_stmt_return(xmlobj):
+    # ==, parazone1, parazone2, parazone1
+    stmt, expr1, expr2, operator = [], None, None, None
+    state = 1
+    for child in xmlobj.getchildren():
+        if child.tag == "operator": operator = child.text
+        elif child.tag == "EXPR" and state == 1: 
+            expr1 = expr_return(child)
+            state = 2
+        elif child.tag == "EXPR" and state == 2: expr2 = expr_return(child)
+    stmt.extend(expr1[1])
+    stmt.append(['=', expr1[0], '_', 'parazone1'])
+    stmt.extend(expr2[1])
+    stmt.append(['=', expr2[0], '_', 'parazone2'])
+    stmt.append([operator, 'parazone1', 'parazone2', 'parazone1'])
     return stmt
 
 # return stmt return mode function
@@ -488,6 +586,13 @@ def expand_4_tuple(code):
             
             print(f'\tCALL     {stmt[3].upper()}')
         elif stmt[0] == 'R': print(f'\tRET')
+        elif stmt[0] == 'L': print(f'\t{stmt[3]}:')
+        elif stmt[0] == 'JMP': print(f'\tJMP    {stmt[3]}')
+        elif stmt[0] in ['JA', 'JB', 'JNB', 'JNA', 'JZ', 'JNZ']:
+            print(f'\t{stmt[0]}    {stmt[3]}')
+        elif stmt[0] == 'CMP': 
+            print(f'\tMOV    AL,{stmt[1]}')
+            print(f'\tCMP    AL,{stmt[2]}')
         else:
             print('something wrong in expand 4-tuple function,', stmt)
             exit(1)
@@ -495,10 +600,10 @@ def expand_4_tuple(code):
     print('CODE     ENDS\n\t\tEND     MAIN')
 
 if __name__ == "__main__":
-    balance_tree("./test.parser.xml", "./test.balance.xml")
-    showtree("./test.balance.xml", "./test.balance.png")
+    # balance_tree("./test.parser.xml", "./test.balance.xml")
+    # showtree("./test.balance.xml", "./test.balance.png")
     
     # 4-tuple
-    code = program_return(etree.parse("./test.balance.xml").getroot())
-    # pprint.pprint(code)
+    code = program_return(etree.parse("./test.xml").getroot())
+    pprint.pprint(code)
     expand_4_tuple(code)

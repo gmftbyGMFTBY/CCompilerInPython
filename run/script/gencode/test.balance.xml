@@ -33,29 +33,58 @@
                                 <operator>-</operator><TERM>
                                   <FACTOR>
                                     <constant>6</constant></FACTOR><TERM2>
-</TERM2></TERM></EXPR2></EXPR><operator>)</operator></FACTOR></TERM2></TERM></EXPR2></EXPR></ASSIGN_STMT><separate>;</separate><ASSIGN_STMT>
-                    <identifier>a</identifier><operator>=</operator><EXPR>
-                      <TERM>
-                        <FACTOR>
-                          <CALL_STMT>
-                            <identifier>fool</identifier><operator>(</operator><PARG_LIST>
-                              <PARG>
-                                <identifier>a</identifier></PARG><separate>,</separate><PARG>
-                                  <EXPR>
-                                    <TERM>
-                                      <FACTOR>
-                                        <constant>2</constant></FACTOR><TERM2>
+</TERM2></TERM></EXPR2></EXPR><operator>)</operator></FACTOR></TERM2></TERM></EXPR2></EXPR></ASSIGN_STMT><separate>;</separate><IF_STMT>
+                    <keyword>if</keyword><operator>(</operator><STMT>
+                      <JUST_STMT>
+                        <EXPR>
+                          <TERM>
+                            <FACTOR>
+                              <identifier>a</identifier></FACTOR><TERM2>
 </TERM2></TERM><EXPR2>
-                                      <operator>+</operator><TERM>
+</EXPR2></EXPR><operator>&gt;</operator><EXPR>
+                          <TERM>
+                            <FACTOR>
+                              <constant>1</constant></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+</EXPR2></EXPR></JUST_STMT></STMT><operator>)</operator><CODE_BLOCK>
+                      <separate>{</separate><STMT_LIST>
+                        <ASSIGN_STMT>
+                          <identifier>a</identifier><operator>=</operator><EXPR>
+                            <TERM>
+                              <FACTOR>
+                                <constant>1</constant></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+</EXPR2></EXPR></ASSIGN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK><keyword>else</keyword><CODE_BLOCK>
+                      <separate>{</separate><STMT_LIST>
+                        <ASSIGN_STMT>
+                          <identifier>a</identifier><operator>=</operator><EXPR>
+                            <TERM>
+                              <FACTOR>
+                                <constant>2</constant></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+</EXPR2></EXPR></ASSIGN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK></IF_STMT><ASSIGN_STMT>
+                      <identifier>a</identifier><operator>=</operator><EXPR>
+                        <TERM>
+                          <FACTOR>
+                            <CALL_STMT>
+                              <identifier>fool</identifier><operator>(</operator><PARG_LIST>
+                                <PARG>
+                                  <identifier>a</identifier></PARG><separate>,</separate><PARG>
+                                    <EXPR>
+                                      <TERM>
                                         <FACTOR>
-                                          <constant>3</constant></FACTOR><TERM2>
+                                          <constant>2</constant></FACTOR><TERM2>
+</TERM2></TERM><EXPR2>
+                                        <operator>+</operator><TERM>
+                                          <FACTOR>
+                                            <constant>3</constant></FACTOR><TERM2>
 </TERM2></TERM></EXPR2></EXPR></PARG></PARG_LIST><operator>)</operator></CALL_STMT></FACTOR><TERM2>
 </TERM2></TERM><EXPR2>
 </EXPR2></EXPR></ASSIGN_STMT><separate>;</separate><RTN_STMT>
-                      <keyword>return</keyword><EXPR>
-                        <TERM>
-                          <FACTOR>
-                            <identifier>a</identifier></FACTOR><TERM2>
+                        <keyword>return</keyword><EXPR>
+                          <TERM>
+                            <FACTOR>
+                              <identifier>a</identifier></FACTOR><TERM2>
 </TERM2></TERM><EXPR2>
 </EXPR2></EXPR></RTN_STMT><separate>;</separate></STMT_LIST><separate>}</separate></CODE_BLOCK></FUNC_DEF><FUNC_DEF>
           <TYPE_SPEC>
