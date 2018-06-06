@@ -1,3 +1,7 @@
 #!/bin/bash
 
-java -jar BITMiniCC.jar test.c
+./scaner.py test.c test.token.xml
+
+./parser.py ./rules test.token.xml test.parser.xml
+
+python ./gencode.py test.parser.xml test.asm

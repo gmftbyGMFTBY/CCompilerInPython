@@ -17,6 +17,7 @@ memoryzone = dict()
 parazone   = list(range(10))
 pausezone  = list(range(10))
 if_stmt_counter = 0     # save the counter index for the global if_stmt
+fout = open(sys.argv[2], 'w')
 
 # finally, xmlobj must be the root of the xml tree
 def program_return(xmlobj):
@@ -594,34 +595,34 @@ def expand_4_tuple(code):
     AX, BX, CX, DX = None, None, None, None
     
     # write data segment
-    print("DATA     SEGMENT")
+    print("DATA     SEGMENT", file=fout)
     # write memory sector, scan all the 4-tuple and write the memory
     mset = set()
     for stmt in code:
         if stmt[0] == 'D': mset.add(tuple(stmt))
     for stmt in mset:
-        print(f"{stmt[3]}    DB  ?")
+        print(f"{stmt[3]}    DB  ?", file=fout)
         memoryzone[stmt[3]] = 1
     # write the pause sector, 10
     for i in range(10):
-        print(f"pausezone{i}    DB      ?")
+        print(f"pausezone{i}    DB      ?", file=fout)
     # write the parazone, 10
     for i in range(10):
-        print(f"parazone{i}     DB      ?")
-    print("DATA     ENDS\n")  
+        print(f"parazone{i}     DB      ?", file=fout)
+    print("DATA     ENDS\n", file=fout)  
     # write code segment
-    print("CODE     SEGMENT")
+    print("CODE     SEGMENT", file=fout)
     state = 0
     head = None
     for stmt in code:
         if stmt[0] == 'F':
             if state == 0: 
-                print(f'{stmt[-1].upper()}    PROC    FAR\n\tASSUME  CS:CODE,DS:DATA,ES:NOTHING\n\tPUSH    DS\n\tXOR     AX,AX\n\tPUSH    AX\n\tMOV     AX,DATA\n\tMOV     DS,AX\n')
+                print(f'{stmt[-1].upper()}    PROC    FAR\n\tASSUME  CS:CODE,DS:DATA,ES:NOTHING\n\tPUSH    DS\n\tXOR     AX,AX\n\tPUSH    AX\n\tMOV     AX,DATA\n\tMOV     DS,AX\n', file=fout)
                 state = 1
             else: 
                 # parament getting
-                print(f'{head}    ENDP\n')
-                print(f'{stmt[-1].upper()}     PROC')
+                print(f'{head}    ENDP\n', file=fout)
+                print(f'{stmt[-1].upper()}     PROC', file=fout)
                 # print(f'\tPUSH     BP')
                 # print(f'\tMOV      BP,SP')
                 # print(f'')
@@ -637,14 +638,14 @@ def expand_4_tuple(code):
          
             if not cs and cd:
                 # mov number into the memory
-                print(f"\tMOV      {dest},{source}")
+                print(f"\tMOV      {dest},{source}", file=fout)
             elif (cs and (not cd)) or ((not cs) and (not cd)): 
-                print("something wrong with the mov command,", stmt)
+                print("something wrong with the mov command,", stmt, file=fout)
                 exit(1)
             else:
                 # both the argument of the mov command is the RAM unit, check the register
-                print(f'\tMOV      AL,{source}')
-                print(f'\tMOV      {dest},AL')
+                print(f'\tMOV      AL,{source}', file=fout)
+                print(f'\tMOV      {dest},AL', file=fout)
         elif stmt[0] == '+':
             # write the real code of the program
             source1, source2, dest = stmt[1], stmt[2], stmt[3]
@@ -657,15 +658,15 @@ def expand_4_tuple(code):
                 
             if cs1 and (not cs2):
                 # mov number into the memory
-                print(f"\tADD      {source1},{source2}")
+                print(f"\tADD      {source1},{source2}", file=fout)
             elif ((not cs1) and cs2) or ((not cs1) and (not cs2)): 
-                print("something wrong with the mov command,", stmt)
+                print("something wrong with the mov command,", stmt, file=fout)
                 exit(1)
             else:
                 # both the argument of the mov command is the RAM unit, check the register
-                print(f'\tMOV      AL,{source1}')
-                print(f'\tADD      AL,{source2}')
-                print(f'\tMOV      {dest},AL')
+                print(f'\tMOV      AL,{source1}', file=fout)
+                print(f'\tADD      AL,{source2}', file=fout)
+                print(f'\tMOV      {dest},AL', file=fout)
         elif stmt[0] == '-':
             # write the real code of the program
             source1, source2, dest = stmt[1], stmt[2], stmt[3]
@@ -678,47 +679,47 @@ def expand_4_tuple(code):
                 
             if cs1 and (not cs2):
                 # mov number into the memory
-                print(f"\tSUB      {source1},{source2}")
+                print(f"\tSUB      {source1},{source2}", file=fout)
             elif ((not cs1) and cs2) or ((not cs1) and (not cs2)): 
-                print("something wrong with the mov command,", stmt)
+                print("something wrong with the mov command,", stmt, file=fout)
                 exit(1)
             else:
                 # both the argument of the mov command is the RAM unit, check the register
-                print(f'\tMOV      AL,{source1}')
-                print(f'\tSUB      AL,{source2}')
-                print(f'\tMOV      {dest},AL')
+                print(f'\tMOV      AL,{source1}', file=fout)
+                print(f'\tSUB      AL,{source2}', file=fout)
+                print(f'\tMOV      {dest},AL', file=fout)
         elif stmt[0] == '*':
             source1, source2, dest = stmt[1], stmt[2], stmt[3]
-            print(f'\tMOV      AL,{source1}')
-            print(f'\tMOV      BL,{source2}')
-            print(f'\tMUL      BL')
-            print(f'\tMOV      {dest}, AL')
+            print(f'\tMOV      AL,{source1}', file=fout)
+            print(f'\tMOV      BL,{source2}', file=fout)
+            print(f'\tMUL      BL', file=fout)
+            print(f'\tMOV      {dest}, AL', file=fout)
         elif stmt[0] == '/': pass
         elif stmt[0] == 'C':
             # call function stmt[3], add the label after this code
             # the parament saved in the parament
             count = int(parazone[0])
             
-            print(f'\tCALL     {stmt[3].upper()}')
-        elif stmt[0] == 'R': print(f'\tRET')
-        elif stmt[0] == 'L': print(f'\t{stmt[3]}:')
-        elif stmt[0] == 'JMP': print(f'\tJMP    {stmt[3]}')
+            print(f'\tCALL     {stmt[3].upper()}', file=fout)
+        elif stmt[0] == 'R': print(f'\tRET', file=fout)
+        elif stmt[0] == 'L': print(f'\t{stmt[3]}:', file=fout)
+        elif stmt[0] == 'JMP': print(f'\tJMP    {stmt[3]}', file=fout)
         elif stmt[0] in ['JA', 'JB', 'JNB', 'JNA', 'JZ', 'JNZ']:
-            print(f'\t{stmt[0]}    {stmt[3]}')
+            print(f'\t{stmt[0]}    {stmt[3]}', file=fout)
         elif stmt[0] == 'CMP': 
-            print(f'\tMOV    AL,{stmt[1]}')
-            print(f'\tCMP    AL,{stmt[2]}')
+            print(f'\tMOV    AL,{stmt[1]}', file=fout)
+            print(f'\tCMP    AL,{stmt[2]}', file=fout)
         else:
-            print('something wrong in expand 4-tuple function,', stmt)
+            print('something wrong in expand 4-tuple function,', stmt, file=fout)
             exit(1)
-    print(f'{head}     ENDP\n')
-    print('CODE     ENDS\n\t\tEND     MAIN')
+    print(f'{head}     ENDP\n', file=fout)
+    print('CODE     ENDS\n\t\tEND     MAIN', file=fout)
 
 if __name__ == "__main__":
-    balance_tree("./test.parser.xml", "./test.balance.xml")
-    showtree("./test.parser.xml", "./test.balance.png")
+    balance_tree(sys.argv[1], sys.argv[1])
+    # showtree("./test.parser.xml", "./test.balance.png")
     
     # 4-tuple
-    code = program_return(etree.parse("./test.balance.xml").getroot())
+    code = program_return(etree.parse(sys.argv[1]).getroot())
     # pprint.pprint(code)
     expand_4_tuple(code)

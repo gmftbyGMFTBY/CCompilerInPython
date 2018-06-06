@@ -8,7 +8,7 @@
       <phase skip="true" type="java" path="" name="semantic" />
       <phase skip="true" type="java" path="" name="icgen" />
       <phase skip="true" type="java" path="" name="optimizing" />
-      <phase skip="true" type="java" path="" name="codegen" />
+      <phase skip="false" type="python" path="./gencode.py" name="codegen" />
       <phase skip="true" type="java" path="" name="simulating" />
     </phase>
   </phases>

@@ -158,11 +158,6 @@ MAIN    PROC    FAR
 	MOV      parazone0,1
 	MOV      AL,pausezone0
 	MOV      parazone1,AL
-
-    mov ah,2
-    add al,30h
-    mov dl,al
-    int 21h
 	RET
 MAIN    ENDP
 
