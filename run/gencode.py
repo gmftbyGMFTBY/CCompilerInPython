@@ -717,7 +717,7 @@ def expand_4_tuple(code):
 
 if __name__ == "__main__":
     balance_tree(sys.argv[1], sys.argv[1])
-    # showtree("./test.parser.xml", "./test.balance.png")
+    showtree("./test.parser.xml", "./test.balance.png")
     
     # 4-tuple
     code = program_return(etree.parse(sys.argv[1]).getroot())
