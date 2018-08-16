@@ -1,11 +1,5 @@
-# bit-minic-compiler
-A C compiler framework in Java
+# CCompilerInPython
+A Simple C compiler in Python
 
-Weixing Ji (jwx@bit.edu.cn) <br> 
-Kai Li<br> 
-Guizhen Wang<br> 
-
-Contributor:<br> 
-Yu Hao, 2017<br>
-Shuofu Ning, 2016-2017<br>
-YiFan Wu, 2015-2016
+Author: GMFTBY
+Time: 2018.6.14
